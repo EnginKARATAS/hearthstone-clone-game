@@ -159,7 +159,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -178,7 +178,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -197,7 +197,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -216,7 +216,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -235,7 +235,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -254,7 +254,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -273,7 +273,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -292,7 +292,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -311,7 +311,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -330,7 +330,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -349,7 +349,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -368,7 +368,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -387,7 +387,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -406,7 +406,7 @@ const enemyCardBase: Card[] = [
     boardPairId: null
   },
   {
-    cardOwner: "player",
+    cardOwner: "enemy",
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
