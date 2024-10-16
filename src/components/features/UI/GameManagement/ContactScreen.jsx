@@ -11,7 +11,7 @@ export default function ContactScreen() {
 
   return (
     <div className="loading-screen fixed flex justify-center items-center flex-col">
-      <img src="/public/menu/loading/hearthstone.png" alt="heartstone" />
+      <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       <h1 className="loading text-5xl font-bold">Thank you for playing</h1>
       <h2 className="loading text-3xl font-bold mt-10">
         Big Surprise Counter: {surpriseCount}/5
@@ -21,7 +21,7 @@ export default function ContactScreen() {
           <p className="text-white">You have reached the secret level! Satisfaction guaranteed :D</p>
 
         <video
-          src="/public/menu/loading/thisisnotasecret.mp4"
+          src="/menu/loading/thisisnotasecret.mp4"
           autoPlay
           muted
           loop

@@ -19,7 +19,7 @@ export default function YourTurn() {
   return (
     <div>
       {openPopup && (
-        <img className="your-turn" src="/public/menu/turn/your-turn.png" alt="" />
+        <img className="your-turn" src="/menu/turn/your-turn.png" alt="" />
       )}
     </div>
   );

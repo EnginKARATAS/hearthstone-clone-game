@@ -48,7 +48,7 @@ export default function GameCard({ position, card, player, deg }) {
           }}
         >
           <img
-            src="/public/cards/card-images/blank.png"
+            src="/cards/card-images/blank.png"
             alt="game card"
             className="game-card-frame"
           />
@@ -56,7 +56,7 @@ export default function GameCard({ position, card, player, deg }) {
           <span className="absolute card-cost">{card.cardCost}</span>
           <img
             className="absolute card-image"
-            src={`/public/cards/card-images/engin-pack/${card.cardImageName}.png`}
+            src={`/cards/card-images/engin-pack/${card.cardImageName}.png`}
           />
           <svg className="absolute card-name-svg" width="100" height="20">
             <path
@@ -93,7 +93,7 @@ export default function GameCard({ position, card, player, deg }) {
             style={{
               transform: `rotate(${-deg}deg)`,
             }}
-            src={`/public/cards/card-images/card-back.png`}
+            src={`/cards/card-images/card-back.png`}
           />
         </div>
       )}

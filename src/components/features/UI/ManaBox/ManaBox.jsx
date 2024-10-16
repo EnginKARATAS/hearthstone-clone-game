@@ -19,7 +19,7 @@ export default function ManaBox({ position, player }) {
           {mana > 0 &&
             Array.from({ length: mana }).map((v, i) => (
               <img
-                src="/public/mana-bg.png"
+                src="/mana-bg.png"
                 alt="mana-crystal"
                 className="mana-cyrstal"
                 key={i}

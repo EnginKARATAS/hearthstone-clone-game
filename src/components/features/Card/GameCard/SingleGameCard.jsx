@@ -26,7 +26,7 @@ export default function SingleGameCard({ position }) {
         }}
       >
         <img
-          src="/public/cards/card-images/blank.png"
+          src="/cards/card-images/blank.png"
           alt="game card"
           className="game-single-card-image"
         />
@@ -36,7 +36,7 @@ export default function SingleGameCard({ position }) {
         </span>
         <img
           className="absolute single-card-image"
-          src={`/public/cards/card-images/${singleCard?.cardPack}/${singleCard?.cardImageName}.png`}
+          src={`/cards/card-images/${singleCard?.cardPack}/${singleCard?.cardImageName}.png`}
           alt="card artwork"
         />
         <svg className="absolute single-card-name-svg" width="180" height="40">

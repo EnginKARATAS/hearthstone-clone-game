@@ -57,8 +57,8 @@ export default function EndTurnButton() {
     <button
       style={{
         backgroundImage: isClientTurn
-          ? "url('/public/menu/turn/end-turn.png')"
-          : "url('/public/menu/turn/enemy-turn.png')",
+          ? "url('/menu/turn/end-turn.png')"
+          : "url('/menu/turn/enemy-turn.png')",
       }}
       className="end-turn-button m-3"
       onClick={onEndTurnButtonClick}

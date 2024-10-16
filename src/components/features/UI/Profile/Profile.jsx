@@ -17,21 +17,21 @@ export default function Profile({ img, position, player }) {
         <img
           className="profile-image"
           src={
-            "/public/cards/card-images/" + img.pack + "/" + img.photo + ".png"
+            "/cards/card-images/" + img.pack + "/" + img.photo + ".png"
           }
           alt=""
         />
       </div>
       
         {stats.armor > 0 && <div className="armor-bar absolute">
-          <img className="armor-bar-image absolute" src="/public/armor-bar.png" alt="" />
+          <img className="armor-bar-image absolute" src="/armor-bar.png" alt="" />
         <div className="flex justify-center items-center  ">
           <p className="text-white text-xl z-10 armor-bar-text">{stats.armor}</p>
           </div>
         </div>}
 
       <div className="health-bar absolute">
-        <img className="health-bar-image absolute" src="/public/health-bar.png" alt="" />
+        <img className="health-bar-image absolute" src="/health-bar.png" alt="" />
         <div className="flex justify-center items-center  ">
           <p className="text-white text-xl z-10 health-bar-text">{stats.health}</p>
         </div>
