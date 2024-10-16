@@ -7,7 +7,7 @@ html{
 }
 
 body {
-  background-image: url("./bg-dark.png");
+  background-image: url("/bg-dark.png");
   background-color: rgb(0, 217, 224);
   height: 930px;
   width: 1850px;
