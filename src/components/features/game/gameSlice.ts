@@ -1,13 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 export const gameSlice = createSlice({
   name: "game",
   initialState: {
     gameOver: false,
+    gameState: "menu",
   },
   reducers: {
     setGameOver: (state, action) => {
       isGameOver();
+    },
+    setGameState: (state, action) => {
+      state.gameState = action.payload;
     },
   },
 });
@@ -28,6 +33,6 @@ export const isGameOver = () => async (dispatch, getState) => {
   }
 };
 
-export const { setGameOver } = gameSlice.actions;
+export const { setGameOver, setGameState } = gameSlice.actions;
 
 export default gameSlice.reducer;

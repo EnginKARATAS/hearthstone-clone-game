@@ -8,6 +8,8 @@ import LoadingScreen from "./features/UI/GameManagement/LoadingScreen";
 import { useSelector } from "react-redux";
 import EndGameScreen from "./features/UI/GameManagement/EndGameScreen";
 import ContactScreen from "./features/UI/GameManagement/ContactScreen";
+import Menu from "./features/Menu/Menu";
+
 export default function GameBoard() {
   const [loading, setLoading] = useState(true);
   const [gameOver, setGameOver] = useState(false);
@@ -50,6 +52,7 @@ export default function GameBoard() {
 
   return (
     <div className="board ">
+      <Menu />
       <FishOrnament />
       <EnemyProfile player="enemy" />
       <YourTurn />
