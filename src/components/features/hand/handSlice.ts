@@ -310,21 +310,21 @@ export const handSlice = createSlice({
         x(state, state.hand.player.length);
         refreshBoardCardPlayer(state, state.board.player.length);
       }
-      if (state.board.enemy.length < 7 && action.player === "enemy") {
-        state.board.enemy.push(action.payload);
-        const cardIndex = state.hand.enemy.findIndex(
-          (card) => card.cardId === action.payload.cardId
-        );
-        state.hand.enemy.splice(cardIndex, 1);
-        y(state, state.hand.enemy.length);
-        refreshBoardCardEnemy(state, state.board.enemy.length);
-      }
+      //if (state.board.enemy.length < 7 && action.player === "enemy") {
+        //state.board.enemy.push(action.payload);
+        //const cardIndex = state.hand.enemy.findIndex(
+         // (card) => card.cardId === action.payload.cardId
+        //);
+        //state.hand.enemy.splice(cardIndex, 1);
+        //y(state, state.hand.enemy.length);
+        //refreshBoardCardEnemy(state, state.board.enemy.length);
+     // }
     },
-    playCardToBoard: (
+    playCardToBoard: (//enemy plays
       state: InitialState,
       action: { payload: { isEnemy: boolean } }
     ) => {
-      if (action.payload.isEnemy && state.hand.enemy.length > 0) {
+      if (action.payload.isEnemy && state.hand.enemy.length > 0 && state.board.enemy.length < 7) {
         const randomCard = Math.floor(Math.random() * state.hand.enemy.length);
         state.board.enemy.push(state.hand.enemy[randomCard]);
         state.hand.enemy.splice(randomCard, 1);

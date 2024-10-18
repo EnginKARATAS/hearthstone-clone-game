@@ -49,7 +49,7 @@
 }
 
 .single-card-attack {
-  bottom: 16px;
+  bottom: 14px;
   left: 25px;
   color: white;
   font-weight: bolder;
@@ -58,8 +58,8 @@
 }
 
 .single-card-health {
-  bottom: 13px;
-  right: 50px;
+  bottom: 14px;
+  right: 52px;
   color: white;
   font-weight: bolder;
   text-shadow: 2px 2px 1px black;
