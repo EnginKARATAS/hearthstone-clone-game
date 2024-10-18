@@ -30,7 +30,7 @@ export default function Profile({ img, position, player }) {
           </div>
         </div>}
 
-      <div className="health-bar absolute">
+      <div className="health-bar absolute ">
         <img className="health-bar-image absolute" src="/health-bar.png" alt="" />
         <div className="flex justify-center items-center  ">
           <p className="text-white text-xl z-10 health-bar-text">{stats.health}</p>

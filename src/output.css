@@ -647,10 +647,6 @@ video {
   text-align: center;
 }
 
-.font-belwebold {
-  font-family: Belwebold, sans-serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -678,6 +674,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .text-sky-400 {

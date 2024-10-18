@@ -5,12 +5,12 @@
 }
 
 .single-card-cost {
-  top: 13px;
-  left: 25px;
+  top: 3px;
+  left: 20px;
   color: white;
   font-weight: bolder;
   text-shadow: 2px 2px 1px black;
-  font-size: 45px;
+  font-size: 5rem;
 }
 
 .single-card-image {

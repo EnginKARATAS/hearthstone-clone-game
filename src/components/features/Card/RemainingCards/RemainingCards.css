@@ -1,0 +1,16 @@
+.remaining-bar-text {
+  font-size: 1.5rem;
+}
+.remaining-bar-counter {
+  color: #e5e7eb;
+    font-size: 2.5rem;
+    top: 114px;
+    right: 35px;
+}
+
+.remaining-bar-name-svg     text {
+    fill: #38bdfa;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgb(58, 52, 17)
+  }
+  
