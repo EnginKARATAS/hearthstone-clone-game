@@ -18,8 +18,6 @@ export default function EndTurnButton() {
     dispatch(syncCardBaseLenght());
     if (isClientTurn === true) {//player turn starts
       setTimeout(() => {
-        console.log("player draw card");
-        dispatch(drawCard({ isEnemy: false }));
         if (playerCardBaseCount <= 0) {
           dispatch(addHealth({ value: -1, player: "player" }));
         }
@@ -33,15 +31,16 @@ export default function EndTurnButton() {
   useEffect(() => {
     if (isClientTurn === false) {//enemy turn starts
       const timer = setTimeout(() => {
-        dispatch(drawCard({ isEnemy: false }));
+        console.log("enemy draw card");
+        dispatch(drawCard({ isEnemy: true }));
+
         if (enemyCardBaseCount <= 0) {
           dispatch(addHealth({ value: -1, player: "enemy" }));
         }
         dispatch(syncCardBaseLenght());
         dispatch(increment());
-        console.log("enemy draw card");
-        dispatch(drawCard({ isEnemy: true }));
-        setTimeout(() => {
+
+        setTimeout(() => {//enemy interaction
           console.log("enemy auto play hand to board")
           dispatch(playCardToBoard({ isEnemy: true }));
           //dispatch(clickBoardCard({ clickedCard: null, actionMaker: "enemy" }));//enemy clickling many cards, clickling timeout handling in handSlice          
@@ -49,10 +48,12 @@ export default function EndTurnButton() {
             //dispatch(advanceScenarioMove());
             setTimeout(() => {
               console.log("enemy auto close enemyturn")
+              console.log("player draw card");
+              dispatch(drawCard({ isEnemy: false }));
               dispatch(openYourTurn());//player turn starts 
-            }, GameConstants.enemyCloseTurnTime);
-        }, GameConstants.enemyHandToBoardTime);
-      }, GameConstants.enemyTurnTime);
+            }, 1000);
+        }, 1000);
+      }, 500);
 
       return () => clearTimeout(timer);
     }

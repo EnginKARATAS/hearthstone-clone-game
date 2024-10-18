@@ -3,8 +3,9 @@
   position: absolute;
   width: 114px;
   height: 63px;
-  top: 342px;
-  right: 242px; 
+  top: 343px;
+  right: 241px;
+  transform: rotate(2deg);
   transition: background-color 0.3s;
   background-size: cover;
   background-position: center;
