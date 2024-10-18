@@ -32,11 +32,7 @@ export default function ContactScreen() {
       <p className="loading text-sm mt-20 w-[800px] text-center">
         This game is a fan-made project inspired by the popular card game
         Hearthstone, developed by Blizzard Entertainment. It is not affiliated
-        with, endorsed by, or sponsored by Blizzard Entertainment or any of its
-        subsidiaries. All trademarks, copyrights, and other intellectual
-        property rights related to Hearthstone are the property of Blizzard
-        Entertainment. This project is intended for educational and
-        entertainment purposes only.
+        with, endorsed by, or sponsored by Blizzard Entertainment  
       </p>
     </div>
   );
