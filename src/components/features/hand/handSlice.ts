@@ -329,8 +329,8 @@ export const handSlice = createSlice({
         state.board.enemy.push(state.hand.enemy[randomCard]);
         state.hand.enemy.splice(randomCard, 1);
         y(state, state.hand.enemy.length);
-        refreshBoardCardEnemy(state, state.board.enemy.length);
       }
+      refreshBoardCardEnemy(state, state.board.enemy.length);
     },
     closeCard: (state: InitialState, action: { payload: Card | null }) => {
       state.singleCard = null;

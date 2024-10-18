@@ -9,7 +9,8 @@ import GameConstants from "../../../GameConstants";
 
 export default function EndTurnButton() {
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
-  const cardBaseCount = useSelector((state) => state.hand.cardBaseCount.player);
+  const playerCardBaseCount = useSelector((state) => state.hand.cardBaseCount.player);
+  const enemyCardBaseCount = useSelector((state) => state.hand.cardBaseCount.enemy);
   const dispatch = useDispatch();
 
 
@@ -19,7 +20,7 @@ export default function EndTurnButton() {
       setTimeout(() => {
         console.log("player draw card");
         dispatch(drawCard({ isEnemy: false }));
-        if (cardBaseCount <= 0) {
+        if (playerCardBaseCount <= 0) {
           dispatch(addHealth({ value: -1, player: "player" }));
         }
         console.log("Player decides move")
@@ -32,6 +33,10 @@ export default function EndTurnButton() {
   useEffect(() => {
     if (isClientTurn === false) {//enemy turn starts
       const timer = setTimeout(() => {
+        dispatch(drawCard({ isEnemy: false }));
+        if (enemyCardBaseCount <= 0) {
+          dispatch(addHealth({ value: -1, player: "enemy" }));
+        }
         dispatch(syncCardBaseLenght());
         dispatch(increment());
         console.log("enemy draw card");
