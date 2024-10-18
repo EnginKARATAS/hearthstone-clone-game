@@ -1,8 +1,6 @@
 .loading-screen {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 1422px;
+  height: 850px;
   background-color: #5c310c;
   z-index: 20;   
 }

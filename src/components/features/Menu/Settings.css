@@ -1,0 +1,15 @@
+.settings{
+    width: 1422px;
+    height: 850px;
+    background-image: url("/public/menu/menu/settings.png");
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+.bg-outer-settings{
+    background-image: url("/public/menu/menu/bg-outer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1422px;
+    height: 831px;
+}

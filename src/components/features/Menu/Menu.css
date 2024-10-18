@@ -1,6 +1,5 @@
 .menu{
     cursor: auto;
-
     width: 1422px;
     height: 850px;
     background-image: url("/public/menu/menu/menu.png");
@@ -17,6 +16,7 @@
 .bg-outer{
     background-image: url("/public/menu/menu/bg-outer.png");
     background-repeat: no-repeat;
+ 
 }
 
 
