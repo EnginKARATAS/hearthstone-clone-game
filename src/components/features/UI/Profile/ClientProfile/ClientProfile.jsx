@@ -10,7 +10,7 @@ export default function ClientProfile({ player, position }) {
   return (
     <div className="absolute client-profile">
       <Board player="player" position={{ top: -497, left: 150 }} />
-      <RemainingCards player="player" position={{ top: -545, right: -571 }} />
+      <RemainingCards player="player" position={{ top: -545, right: -558 }} />
       <Profile
         className="enemy-profile"
         img={{ pack: "engin-pack", photo: "hero-engin" }}

@@ -18,7 +18,7 @@ export default function EnemyProfile() {
       />
       <ManaBox position={{ top: 108, left: 218 }} player="enemy" />
       <Hand player="enemy" position={{ top: 12, left: -541 }}></Hand>
-      <RemainingCards player="enemy" position={{ top: 180, right: -583 }} />
+      <RemainingCards player="enemy" position={{ top: 184, right: -551 }} />
       <Board
         player="enemy"
         position={{ top: 300, left: -150 }}

@@ -24,12 +24,14 @@ export default function RemainingCards({ position, player}) {
           </textPath>
         </text>
       </svg>
-      <p
-        className="text-xl z-10 font-normal remaining-bar-counter relative"
-        style={{ transform: "rotate(90deg)", transformOrigin: "left bottom" }}
-      >
-      {remainingCards}
-      </p>
+      <div className=" fixed flex justify-center items-center flex-col">
+        <p
+          className="text-center text-xl z-10 font-normal remaining-bar-counter relative"
+          style={{ transform: "rotate(90deg)", transformOrigin: "left bottom" }}
+        >
+        {remainingCards}
+        </p>
+      </div>
     </div>
   );
 }
