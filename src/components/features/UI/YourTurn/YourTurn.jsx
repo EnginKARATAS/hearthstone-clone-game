@@ -4,9 +4,10 @@ import { useSelector } from "react-redux";
 
 export default function YourTurn() {
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
+  const gameState = useSelector((state) => state.game.gameState);
   const [openPopup, setOpenPopup] = useState(false);
   useEffect(() => {
-    if (isClientTurn === true) {
+    if (isClientTurn === true && gameState === "playing") {
       setOpenPopup(true);
       const timer = setTimeout(() => {
         setOpenPopup(false);

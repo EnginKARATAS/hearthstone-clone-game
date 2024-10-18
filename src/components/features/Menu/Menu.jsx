@@ -33,7 +33,7 @@ export default function Menu() {
       <div className="bg-outer absolute z-20">
         <div className="menu flex items-center justify-center text-center flex flex-col space-y-4 gap-3">
           <p
-            onClick={() => dispatch(setGameState("game"))}
+            onClick={() => dispatch(setGameState("playing"))}
             className="px-4 py-2 text-white menu-item"
           >
             Start Game

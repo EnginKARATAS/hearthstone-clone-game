@@ -1,11 +1,17 @@
 .loading-screen {
-  width: 1422px;
-  height: 850px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 62vw;
   background-color: #5c310c;
-  z-index: 20;   
+  z-index: 20;
+}
+
+.loading-items{
+ padding-top: 10%;
 }
 
 .loading {
-  color: #a7957b
-  
+  color: #a7957b;
 }
