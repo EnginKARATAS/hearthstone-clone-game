@@ -53,6 +53,7 @@ export default function GameBoard() {
   return (
     <div className="board ">
       <Menu />
+
       <FishOrnament />
       <EnemyProfile player="enemy" />
       <YourTurn />
