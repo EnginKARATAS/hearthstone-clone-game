@@ -1,5 +1,6 @@
 import GameBoard from "./components/GameBoard";
 import "./App.css";
+import "./styles/fonts.css";
 function App() {
   return (
     <>

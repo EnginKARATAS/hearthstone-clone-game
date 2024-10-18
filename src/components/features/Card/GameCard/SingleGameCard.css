@@ -28,8 +28,11 @@
   height: 50px;
 }
 
+.card-name-text {
+  font-size: 2rem;
+}
+
 .single-card-name-svg text {
-  font-size: 23px;
   fill: white;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
@@ -38,7 +41,7 @@
 .single-card-description {
   top: 255px;
   left: 56px;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   width: 160px;
   font-weight: 500;
@@ -46,21 +49,21 @@
 }
 
 .single-card-attack {
-  bottom: 28px;
-  left: 30px;
+  bottom: 16px;
+  left: 25px;
   color: white;
   font-weight: bolder;
   text-shadow: 2px 2px 1px black;
-  font-size: 38px;
+  font-size: 5rem;
 }
 
 .single-card-health {
-  bottom: 28px;
-  right: 55px;
+  bottom: 13px;
+  right: 50px;
   color: white;
   font-weight: bolder;
   text-shadow: 2px 2px 1px black;
-  font-size: 38px;
+  font-size: 5rem;
 }
 
 .game-card-image {

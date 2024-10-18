@@ -47,7 +47,7 @@ export default function SingleGameCard({ position }) {
             stroke="none"
           />
           <text>
-            <textPath href="#sPath" startOffset="50%" textAnchor="middle">
+            <textPath href="#sPath" startOffset="50%" textAnchor="middle" className="card-name-text">
               {singleCard?.cardName}
             </textPath>
           </text>

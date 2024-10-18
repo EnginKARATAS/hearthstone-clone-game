@@ -647,6 +647,10 @@ video {
   text-align: center;
 }
 
+.font-belwebold {
+  font-family: Belwebold, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -685,3 +689,12 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+p, span {
+  font-family: 'Belwebold', sans-serif;
+}
+
+* {
+  font-size: 12px;
+}
+
