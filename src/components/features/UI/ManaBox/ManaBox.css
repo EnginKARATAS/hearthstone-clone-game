@@ -1,6 +1,10 @@
-.mana-container {
+.mana-counter {
+  top: -5px;
+  left: -2px;
 }
-
+.mana-text{
+  font-size: 1.7rem;
+}
 .mana-cyrstal {
   width: 18px;
   height: 18px;
@@ -11,7 +15,7 @@
   -ms-user-select: none;
 }
 
-.mana-cyrstals{
+.mana-cyrstals {
   margin-left: 66px;
   margin-top: 4.5px;
   width: 229px;
