@@ -48,8 +48,6 @@ const decideDuelDestiny = (
   cacheEnemyCard: Card,
   cachePlayerCard: Card
 ) => {
-  cacheEnemyCard.cardHealth = 999;
-  cachePlayerCard.cardHealth = 999;
   const playerCard = state.board.player.find(
     (card) => card.cardId === cachePlayerCard.cardId
   );
@@ -62,17 +60,18 @@ const decideDuelDestiny = (
     //else both loose health
     playerCard!.cardHealth -= enemyCard!.cardAttack;
     enemyCard!.cardHealth -= playerCard!.cardAttack;
-    if (enemyCard!.cardHealth - playerCard!.cardAttack <= 0) {
-      const cardIndex = state.board.enemy.findIndex(
-        (card) => card.cardId === enemyCard!.cardId
-      );
-      state.board.enemy.splice(cardIndex, 1);
-    }
-    if (playerCard!.cardHealth - enemyCard!.cardAttack <= 0) {
+
+    if (playerCard!.cardHealth <= 0) {
       const cardIndex = state.board.player.findIndex(
         (card) => card.cardId === playerCard!.cardId
       );
       state.board.player.splice(cardIndex, 1);
+    }
+    if (enemyCard!.cardHealth <= 0) {
+      const cardIndex = state.board.enemy.findIndex(
+        (card) => card.cardId === enemyCard!.cardId
+      );
+      state.board.enemy.splice(cardIndex, 1);
     }
   }
 };
