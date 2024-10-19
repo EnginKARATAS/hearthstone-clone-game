@@ -1,6 +1,7 @@
 import "./YourTurn.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import GameConstants from "../../../GameConstants";
 
 export default function YourTurn() {
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
@@ -11,7 +12,7 @@ export default function YourTurn() {
       setOpenPopup(true);
       const timer = setTimeout(() => {
         setOpenPopup(false);
-      }, 500);
+      }, GameConstants.yourTurnPopupWaitTime);
 
       return () => clearTimeout(timer);
     }

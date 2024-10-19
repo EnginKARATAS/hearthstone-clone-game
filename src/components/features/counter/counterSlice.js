@@ -20,7 +20,6 @@ export const counterSlice = createSlice({
     increment: (state) => {
       if (state.value < 10) {
         state.value += 1;
-        state.isClientTurn = true;
       }
     },
     setSuccessStatus: (state, action) => {
