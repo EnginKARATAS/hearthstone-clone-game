@@ -2,7 +2,7 @@
     cursor: auto;
     width: 1422px;
     height: 850px;
-    background-image: url("/public/menu/menu/menu.png");
+    background-image: url("/menu/menu/menu.png");
     background-repeat: no-repeat;
     background-position: center;    
 }
@@ -14,7 +14,7 @@
 }
 
 .bg-outer{
-    background-image: url("/public/menu/menu/bg-outer.png");
+    background-image: url("/menu/menu/bg-outer.png");
     background-repeat: no-repeat;
  
 }

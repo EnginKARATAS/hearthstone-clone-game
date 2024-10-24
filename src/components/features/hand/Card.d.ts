@@ -1,5 +1,3 @@
- 
-
 interface InitialState {
   hand: {
     player: Card[];
@@ -15,24 +13,16 @@ interface InitialState {
   };
   singleCard: Card | null;
   profile: {
-    player: {
-      health: number;
-      armor: number;
-    };
-    enemy: {
-      health: number;
-      armor: number;
-    };
+    player: Profile;
+    enemy: Profile;
   };
-
-
   cardCache: [{player: Card | null, enemy: Card | null}];
   moveCount: number
-
 }
 
 interface Card {
   cardId: number;
+  profile: null |string;
   borderColor: string | null;
   cardOwner: "player" | "enemy" | "";
   cardName: string;
@@ -55,6 +45,11 @@ interface Card {
   deg: number;
   move: number;
   boardPairId: number|null;
+}
+
+interface Profile extends Card{
+  health: number;
+  armor: number;
 }
 
 interface EnemyCard extends Card {}

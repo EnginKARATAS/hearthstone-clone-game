@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import EndGameScreen from "./features/UI/GameManagement/EndGameScreen";
 import ContactScreen from "./features/UI/GameManagement/ContactScreen";
 import Menu from "./features/Menu/Menu";
+import GameConstants from "./GameConstants";
 import Settings from "./features/Menu/Settings";
 export default function GameBoard() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ export default function GameBoard() {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 2000 - GameConstants.debugReducedTime);
     };
 
     loadCards();
@@ -34,12 +35,12 @@ export default function GameBoard() {
       setTimeout(() => {
         setLoading(false);
         setGameOver(true);
-      }, 3000);//5000
+      }, 3000 - GameConstants.debugReducedTime);
       setTimeout(() => {
         setGameOver(false);
         setLoading(false);
         setContactScreen(true);
-      }, 7000);//7000
+      }, 7000 - GameConstants.debugReducedTimeLoading); 
     }
   }, [clientHealth, enemyHealth]);
 

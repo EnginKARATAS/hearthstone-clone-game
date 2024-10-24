@@ -1,6 +1,7 @@
 const clientCardBase: Card[] = [
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -21,6 +22,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -41,6 +43,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -61,6 +64,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -81,6 +85,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -100,6 +105,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -119,6 +125,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -138,6 +145,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -157,6 +165,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -176,6 +185,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -195,6 +205,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -214,6 +225,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -233,6 +245,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -252,6 +265,7 @@ const clientCardBase: Card[] = [
   },
   {
     cardOwner: "player",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -275,6 +289,7 @@ const clientCardBase: Card[] = [
 const enemyCardBase: Card[] = [
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -294,6 +309,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -313,6 +329,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -332,6 +349,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -351,6 +369,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -370,25 +389,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
-    borderColor: null,
-    isSelected: false,
-    cardId: Math.random(),
-    cardPack: "yavuz-pack",
-    cardName: "Çıx",
-    image: "cix",
-    cardDescription: "Rakibe 1 can azaltır.",
-    cardType: "spell",
-    cardCost: 1,
-    cardImageName: "cix",
-    cardAttack: 3,
-    cardHealth: 4,
-    cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
-    deg: 0,
-    move: 0,
-    boardPairId: null
-  },
-  {
-    cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -408,6 +409,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -427,6 +429,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -446,6 +449,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -465,6 +469,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -484,6 +489,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -503,6 +509,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -522,6 +529,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -541,6 +549,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
@@ -560,6 +569,7 @@ const enemyCardBase: Card[] = [
   },
   {
     cardOwner: "enemy",
+    profile: null,
     borderColor: null,
     isSelected: false,
     cardId: Math.random(),
