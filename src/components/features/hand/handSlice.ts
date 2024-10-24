@@ -311,6 +311,7 @@ export const handSlice = createSlice({
         (card) => card.cardId === action.payload.clickedCard.cardId
       );
       if (!clickedCard) return;
+      
       handleClickBoardCard(state, clickedCard, actionMaker);
     },
     syncCardBaseLenght: (state: InitialState) => {
@@ -355,10 +356,10 @@ export const handSlice = createSlice({
       if (cardState.length < 10 && randomCard) {
         if (action.payload.isEnemy && randomCard) {
           state.hand.enemy.push(randomCard);
-          y(state, cardState.length);
+          updateEnemyCardPositions(state, cardState.length);
         } else {
           state.hand.player.push(randomCard);
-          x(state, cardState.length);
+          updatePlayerCardPositions(state, cardState.length);
         }
       }
     },
@@ -393,7 +394,7 @@ export const handSlice = createSlice({
           (card) => card.cardId === action.payload.cardId
         );
         state.hand.player.splice(cardIndex, 1);
-        x(state, state.hand.player.length);
+        updatePlayerCardPositions(state, state.hand.player.length);
         refreshBoardCardPlayer(state, state.board.player.length);
       }
       //if (state.board.enemy.length < 7 && action.player === "enemy") {
@@ -419,7 +420,7 @@ export const handSlice = createSlice({
         const randomCard = Math.floor(Math.random() * state.hand.enemy.length);
         state.board.enemy.push(state.hand.enemy[randomCard]);
         state.hand.enemy.splice(randomCard, 1);
-        y(state, state.hand.enemy.length);
+        updateEnemyCardPositions(state, state.hand.enemy.length);
       }
       refreshBoardCardEnemy(state, state.board.enemy.length);
     },
@@ -459,7 +460,7 @@ const refreshBoardCardPlayer = (state: InitialState, cardsLength: number) => {
   });
 };
 
-const y = (state: InitialState, cardsLength: number) => {
+const updateEnemyCardPositions = (state: InitialState, cardsLength: number) => {
   state.hand.enemy = state.hand.enemy.map((card, i) => {
     const degCel = 8;
     return {
@@ -475,7 +476,7 @@ const y = (state: InitialState, cardsLength: number) => {
     };
   });
 };
-const x = (state: InitialState, cardsLength: number) => {
+const updatePlayerCardPositions = (state: InitialState, cardsLength: number) => {
   state.hand.player = state.hand.player.map((card, i) => {
     const degCel = 8;
     return {
