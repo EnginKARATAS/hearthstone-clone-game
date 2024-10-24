@@ -16,13 +16,13 @@ interface InitialState {
     player: Profile;
     enemy: Profile;
   };
-  cardCache: [{player: Card | null, enemy: Card | null}];
-  moveCount: number
+  cardCache: [{ player: Card | null; enemy: Card | null }];
+  moveCount: number;
 }
 
 interface Card {
   cardId: number;
-  profile: null |string;
+  profile: null | string;
   borderColor: string | null;
   cardOwner: "player" | "enemy" | "";
   cardName: string;
@@ -44,11 +44,10 @@ interface Card {
   };
   deg: number;
   move: number;
-  boardPairId: number|null;
+  boardPairId: number | null;
 }
 
-interface Profile extends Card{
-  health: number;
+interface Profile extends Card {
   armor: number;
 }
 

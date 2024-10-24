@@ -20,8 +20,8 @@ export const gameSlice = createSlice({
 export const isGameOver = () => async (dispatch, getState) => {
   const state = getState();
   if (
-    state.hand.profile.player.health <= 0 ||
-    state.hand.profile.enemy.health <= 0
+    state.hand.profile.player.cardHealth <= 0 ||
+    state.hand.profile.enemy.cardHealth <= 0
   ) {
     console.log("game over");
     dispatch(setGameOver(true));

@@ -2,6 +2,69 @@ import { createSlice } from "@reduxjs/toolkit";
 import { pos, getTop } from "./cardPositioningUtils.js";
 import { pullRandomCard, getCardBaseLenght } from "./cardService.ts";
 
+const initialState: InitialState = {
+  hand: {
+    player: [],
+    enemy: [],
+  },
+  board: {
+    player: [],
+    enemy: [],
+  },
+  cardBaseCount: {
+    enemy: getCardBaseLenght({ player: "enemy" }),
+    player: getCardBaseLenght({ player: "player" }),
+  },
+  singleCard: null,
+  profile: {
+    player: {
+      cardHealth: 30,
+      armor: 0,
+      profile: "player",
+      cardId: Math.random(),
+      borderColor: "",
+      cardOwner: "",
+      cardName: "",
+      cardDescription: "",
+      cardType: "",
+      cardCost: 0,
+      cardImageName: "",
+      cardAttack: 0,
+      image: "",
+      isSelected: false,
+      cardPack: "",
+      cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
+      deg: 0,
+      move: 0,
+      boardPairId: null,
+    },
+    enemy: {
+      cardHealth: 30,
+      profile: "enemy",
+      armor: 0,
+      cardId: Math.random(),
+      borderColor: "",
+      cardOwner: "",
+      cardName: "",
+      cardDescription: "",
+      cardType: "",
+      cardCost: 0,
+      cardImageName: "",
+      cardAttack: 0,
+      image: "",
+      isSelected: false,
+      cardPack: "",
+      cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
+      deg: 0,
+      move: 0,
+      boardPairId: null,
+    },
+  },
+
+  cardCache: [{ player: null, enemy: null }],
+  moveCount: 0,
+};
+
 const borderColorCode: string[] = [
   "blue",
   "red",
@@ -48,18 +111,26 @@ const decideDuelDestiny = (
   cacheEnemyCard: Card,
   cachePlayerCard: Card
 ) => {
-  const playerCard = state.board.player.find(
+  let playerCard = state.board.player.find(
     (card) => card.cardId === cachePlayerCard.cardId
   );
-  const enemyCard = state.board.enemy.find(
+  let enemyCard = state.board.enemy.find(
     (card) => card.cardId === cacheEnemyCard.cardId
   );
+
+  const enemyProfile = state.profile.enemy;
+  const clientProfile = state.profile.enemy;
+  !enemyCard && (enemyCard = enemyProfile);
+  !clientProfile && (playerCard = clientProfile);
+
+  console.log(enemyCard);
   if (cacheEnemyCard.borderColor === cachePlayerCard.borderColor) {
     //Defender(Health)-Attacker(Attack)<=0 destroy defender card
     //Attacker(Health)-Defender(Attack)<=0 destroy attacker card
     //else both loose health
     playerCard!.cardHealth -= enemyCard!.cardAttack;
     enemyCard!.cardHealth -= playerCard!.cardAttack;
+    debugger
 
     if (playerCard!.cardHealth <= 0) {
       const cardIndex = state.board.player.findIndex(
@@ -89,7 +160,6 @@ const clearMove = (state: InitialState) => {
     card.isSelected = false;
     card.boardPairId = null;
   });
-  debugger
   state.profile.player.borderColor = "";
   state.profile.enemy.borderColor = "";
   state.profile.player.isSelected = false;
@@ -168,70 +238,6 @@ const handleClickBoardCard = (
     }
   }
 };
-const initialState: InitialState = {
-  hand: {
-    player: [],
-    enemy: [],
-  },
-  board: {
-    player: [],
-    enemy: [],
-  },
-  cardBaseCount: {
-    enemy: getCardBaseLenght({ player: "enemy" }),
-    player: getCardBaseLenght({ player: "player" }),
-  },
-  singleCard: null,
-  profile: {
-    player: {
-      health: 30,
-      armor: 0,
-      profile: "player",
-      cardId: 0,
-      borderColor: "",
-      cardOwner: "",
-      cardName: "",
-      cardDescription: "",
-      cardType: "",
-      cardCost: 0,
-      cardImageName: "",
-      cardAttack: 0,
-      cardHealth: 0,
-      image: "",
-      isSelected: false,
-      cardPack: "",
-      cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
-      deg: 0,
-      move: 0,
-      boardPairId: null,
-    },
-    enemy: {
-      health: 30,
-      profile: "enemy",
-      armor: 0,
-      cardId: 0,
-      borderColor: "",
-      cardOwner: "",
-      cardName: "",
-      cardDescription: "",
-      cardType: "",
-      cardCost: 0,
-      cardImageName: "",
-      cardAttack: 0,
-      cardHealth: 0,
-      image: "",
-      isSelected: false,
-      cardPack: "",
-      cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
-      deg: 0,
-      move: 0,
-      boardPairId: null,
-    },
-  },
-
-  cardCache: [{ player: null, enemy: null }],
-  moveCount: 0,
-};
 
 export const handSlice = createSlice({
   name: "hand",
@@ -261,12 +267,12 @@ export const handSlice = createSlice({
 
         state.cardCache[state.moveCount][action.payload] =
           state.profile[action.payload];
-          
-          state.moveCount++;
-          state.cardCache[state.moveCount] = {
-            player: null,
-            enemy: null,
-          };
+
+        state.moveCount++;
+        state.cardCache[state.moveCount] = {
+          player: null,
+          enemy: null,
+        };
       } else {
         console.log("no board card not waiting pair");
       }
@@ -314,10 +320,10 @@ export const handSlice = createSlice({
         action.payload.player === "player"
           ? state.profile.player
           : state.profile.enemy;
-      profile.health += action.payload.value;
-      if (profile.health <= 0) {
+      profile.cardHealth += action.payload.value;
+      if (profile.cardHealth <= 0) {
         //TODO: game over screen
-        profile.health = 0;
+        profile.cardHealth = 0;
       }
     },
     addArmor: (
