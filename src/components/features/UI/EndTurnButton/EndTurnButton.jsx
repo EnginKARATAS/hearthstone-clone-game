@@ -51,8 +51,8 @@ export default function EndTurnButton() {
               console.log("player draw card");
               dispatch(drawCard({ isEnemy: false }));
               dispatch(openYourTurn());//player turn starts 
-            }, 1000 - debugReducedTimeLoading.debugReducedTimeShort);
-        }, 1000 - debugReducedTimeLoading.debugReducedTimeShort);
+            }, 1000 - GameConstants.debugReducedTimeShort);
+        }, 1000 - GameConstants.debugReducedTimeShort);
       }, 500);
 
       return () => clearTimeout(timer);
