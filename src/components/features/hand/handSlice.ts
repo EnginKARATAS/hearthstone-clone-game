@@ -23,7 +23,7 @@ const initialState: InitialState = {
       profile: "player",
       cardId: Math.random(),
       borderColor: "",
-      cardOwner: "",
+      cardOwner: "player",
       cardName: "",
       cardDescription: "",
       cardType: "",
@@ -44,7 +44,7 @@ const initialState: InitialState = {
       armor: 0,
       cardId: Math.random(),
       borderColor: "",
-      cardOwner: "",
+      cardOwner: "enemy",
       cardName: "",
       cardDescription: "",
       cardType: "",
@@ -130,7 +130,6 @@ const decideDuelDestiny = (
     //else both loose health
     playerCard!.cardHealth -= enemyCard!.cardAttack;
     enemyCard!.cardHealth -= playerCard!.cardAttack;
-    debugger
 
     if (playerCard!.cardHealth <= 0) {
       const cardIndex = state.board.player.findIndex(
@@ -176,6 +175,8 @@ const isCard_BelongsToActionMaker = (
   clickedCard: Card,
   actionMaker: "enemy" | "player"
 ) => {
+  // if(clickedCard.profile == "enemy" || clickedCard.profile == "player")
+  //   return true //ignore logic
   return clickedCard.cardOwner === actionMaker;
 };
 
@@ -188,10 +189,12 @@ const handleClickBoardCard = (
     if (isCard_BelongsToActionMaker(clickedCard!, actionMaker)) {
       //clear cache
       if (isActionerCacheBlank(state, actionMaker)) {
+        
         clickedCard!.borderColor = getBorderColor(state);
         clickedCard!.isSelected = true;
         state.cardCache[state.moveCount][actionMaker] = clickedCard;
       } else {
+        
         state.cardCache[state.moveCount][actionMaker]!.borderColor = "";
         state.cardCache[state.moveCount][actionMaker]!.isSelected = false;
         const boardCard = state.board[actionMaker].find(
@@ -209,11 +212,13 @@ const handleClickBoardCard = (
         clickedCard!.isSelected = true;
         state.cardCache[state.moveCount][actionMaker] = clickedCard;
       }
-    } else if (
+    }
+    else if (
       clickedCard &&
       clickedCard.cardOwner === (actionMaker === "enemy" ? "player" : "enemy")
-    ) {
-      if (isPlayerPendingPair(state, clickedCard, actionMaker)) {
+    ) 
+    {
+      if (isPlayerPendingPair(state, actionMaker)) {
         //set pairing id
         const pairingId = clickedCard.cardId;
         state.cardCache[state.moveCount][actionMaker]!.boardPairId = pairingId;
