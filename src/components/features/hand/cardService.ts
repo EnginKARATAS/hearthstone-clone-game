@@ -132,7 +132,7 @@ const clientCardBase: Card[] = [
     cardPack: "engin-pack",
     cardName: "Cat",
     image: "cat",
-    cardDescription: "Çevik ve sessiz bir avcı. Tehlikeyi fark etmeden yanınıza sokulur.",
+    cardDescription: "Çevik ve sessiz bir avcı. Kediye dönüşmüş, artık kendinde değil gibi görünüyor.",
     cardType: "minion",
     cardCost: 1,
     cardImageName: "cat",

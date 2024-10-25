@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { increment, openYourTurn } from "../../counter/counterSlice";
 import GameConstants from "../../../GameConstants";
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 export default function EndTurnButton() {
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
   const playerCardBaseCount = useSelector((state) => state.hand.cardBaseCount.player);
@@ -14,23 +16,22 @@ export default function EndTurnButton() {
   const dispatch = useDispatch();
 
 
-  const onEndTurnButtonClick = () => {
+  const onEndTurnButtonClick = async () => {
     dispatch(syncCardBaseLenght());
-    if (isClientTurn === true) {//player turn starts
-      setTimeout(() => {
-        if (playerCardBaseCount <= 0) {
-          dispatch(addHealth({ value: -1, player: "player" }));
-        }
-        console.log("Player decides move")
-        dispatch(advanceScenarioMove());
-      }, 1);
-      dispatch(closeYourTurn());//player turn ends
+    if (isClientTurn === true) {
+      await delay(1); 
+      if (playerCardBaseCount <= 0) {
+        dispatch(addHealth({ value: -1, player: "player" }));
+      }
+      console.log("Player decides move")
+      dispatch(advanceScenarioMove());
+      dispatch(closeYourTurn());
     }
   };
 
   useEffect(() => {
-    if (isClientTurn === false) {//enemy turn starts
-      const timer = setTimeout(() => {
+    if (isClientTurn === false) {
+      const timer = setTimeout(async () => {
         console.log("enemy draw card");
         dispatch(drawCard({ isEnemy: true }));
 
@@ -40,18 +41,16 @@ export default function EndTurnButton() {
         dispatch(syncCardBaseLenght());
         dispatch(increment());
 
-        setTimeout(() => {//enemy interaction
-          console.log("enemy auto play hand to board")
-          dispatch(playCardToBoard({ isEnemy: true }));
-            console.log("enemy auto decides move")
-            //dispatch(advanceScenarioMove());
-            setTimeout(() => {
-              console.log("enemy auto close enemyturn")
-              console.log("player draw card");
-              dispatch(drawCard({ isEnemy: false }));
-              dispatch(openYourTurn());//player turn starts 
-            }, 1000 - GameConstants.debugReducedTimeShort);
-        }, 1000 - GameConstants.debugReducedTimeShort);
+        await delay(1000 - GameConstants.debugReducedTimeShort); 
+        console.log("enemy auto play hand to board")
+        dispatch(playCardToBoard({ isEnemy: true }));
+        console.log("enemy auto decides move")
+        dispatch(advanceScenarioMove());
+        await delay(1000 - GameConstants.debugReducedTimeShort); 
+        console.log("enemy auto close enemy turn")
+        console.log("player draw card");
+        dispatch(drawCard({ isEnemy: false }));
+        dispatch(openYourTurn());
       }, 500);
 
       return () => clearTimeout(timer);
