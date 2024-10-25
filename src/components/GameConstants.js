@@ -6,8 +6,8 @@ export default {
   yourTurnPopupWaitTime: 700,
 
   //after debugging 2000 1000 and 7000 to 0
-  debugReducedTime: 2000,
-  debugReducedTimeShort: 1000,
-  debugReducedTimeLoading: 7000,
+  debugReducedTime: 0,
+  debugReducedTimeShort: 0,
+  debugReducedTimeLoading: 0,
 
 };
