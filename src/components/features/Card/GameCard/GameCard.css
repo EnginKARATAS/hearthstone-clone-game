@@ -37,7 +37,9 @@
   left: 25px;
   width: 100px;
 }
-
+svg > text > textPath{
+  font-size: 10px;
+}
 .card-name-svg text {
   font-size: 11px;
   fill: white;
