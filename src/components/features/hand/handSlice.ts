@@ -189,12 +189,10 @@ const handleClickBoardCard = (
     if (isCard_BelongsToActionMaker(clickedCard!, actionMaker)) {
       //clear cache
       if (isActionerCacheBlank(state, actionMaker)) {
-        
         clickedCard!.borderColor = getBorderColor(state);
         clickedCard!.isSelected = true;
         state.cardCache[state.moveCount][actionMaker] = clickedCard;
       } else {
-        
         state.cardCache[state.moveCount][actionMaker]!.borderColor = "";
         state.cardCache[state.moveCount][actionMaker]!.isSelected = false;
         const boardCard = state.board[actionMaker].find(
@@ -212,12 +210,10 @@ const handleClickBoardCard = (
         clickedCard!.isSelected = true;
         state.cardCache[state.moveCount][actionMaker] = clickedCard;
       }
-    }
-    else if (
+    } else if (
       clickedCard &&
       clickedCard.cardOwner === (actionMaker === "enemy" ? "player" : "enemy")
-    ) 
-    {
+    ) {
       if (isPlayerPendingPair(state, actionMaker)) {
         //set pairing id
         const pairingId = clickedCard.cardId;
@@ -252,7 +248,6 @@ export const handSlice = createSlice({
       state: InitialState,
       action: { payload: "player" | "enemy" }
     ) => {
-      console.log("clickedProfile", action.payload);
       if (
         isPlayerPendingPair(
           state,
@@ -261,7 +256,6 @@ export const handSlice = createSlice({
       ) {
         const actionMakerOpposite =
           action.payload === "player" ? "enemy" : "player";
-        console.log("yes board card waiting pair");
         state.profile[action.payload].borderColor = getBorderColor(state);
         state.profile[action.payload].isSelected = true;
 
@@ -279,7 +273,6 @@ export const handSlice = createSlice({
           enemy: null,
         };
       } else {
-        console.log("no board card not waiting pair");
       }
     },
 
@@ -308,7 +301,7 @@ export const handSlice = createSlice({
         (card) => card.cardId === action.payload.clickedCard.cardId
       );
       if (!clickedCard) return;
-      
+
       handleClickBoardCard(state, clickedCard, actionMaker);
     },
     syncCardBaseLenght: (state: InitialState) => {
@@ -473,7 +466,10 @@ const updateEnemyCardPositions = (state: InitialState, cardsLength: number) => {
     };
   });
 };
-const updatePlayerCardPositions = (state: InitialState, cardsLength: number) => {
+const updatePlayerCardPositions = (
+  state: InitialState,
+  cardsLength: number
+) => {
   state.hand.player = state.hand.player.map((card, i) => {
     const degCel = 8;
     return {
