@@ -14,7 +14,6 @@ import {
 import { useEffect } from "react";
 import { increment, openYourTurn } from "../../counter/counterSlice";
 import { useState } from "react";
-import GameConstants from "../../../GameConstants";
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function EndTurnButton() {
@@ -27,8 +26,10 @@ export default function EndTurnButton() {
   );
   const enemyBoardCard = useSelector((state) => state.hand.board.enemy);
   const playerBoardCard = useSelector((state) => state.hand.board.player);
+  const cannotPairedCardCount = enemyBoardCard.length - playerBoardCard.length;
   const dispatch = useDispatch();
   const [turnCount, setTurnCount] = useState(0);
+  const cardCache = useSelector((state) => state.hand.cardCache);
 
   const onEndTurnButtonClick = async () => {
     dispatch(syncCardBaseLenght());
@@ -37,37 +38,30 @@ export default function EndTurnButton() {
       if (playerCardBaseCount <= 0) {
         dispatch(addHealth({ value: -1, player: "player" }));
       }
-      console.log("Player decides move");
       dispatch(advanceScenarioMove());
       dispatch(closeYourTurn());
     }
   };
   useEffect(() => {
-    console.log(turnCount);
-    dispatch(syncCardBaseLenght());
 
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
-        console.log("enemy draw card");
         dispatch(drawCard({ isEnemy: true }));
+        dispatch(syncCardBaseLenght());
 
         if (enemyCardBaseCount <= 0) {
           dispatch(addHealth({ value: -1, player: "enemy" }));
         }
         dispatch(increment());
 
-        await delay(2222);
-        console.log("enemy auto play hand to board");
+        await delay(cardCache.length * 2000);
         dispatch(playCardToBoard({ isEnemy: true }));
-        console.log("enemy auto decides move");
-        turnCount >= 1 && enemyDecide();
-        await delay(2222);
+        enemyDecide();
+        dispatch(syncCardBaseLenght());
+        await delay(enemyBoardCard.length * 2000);
         dispatch(advanceScenarioMove());
-        console.log("enemy auto close enemy turn");
-        console.log("player draw card");
         dispatch(drawCard({ isEnemy: false }));
         setTurnCount(turnCount + 1);
-
         dispatch(openYourTurn());
       }, 500);
 
@@ -75,33 +69,51 @@ export default function EndTurnButton() {
     }
   }, [isClientTurn, dispatch]);
 
-  const enemyDecide = () => {
-    const cannotPairedCardCount =
-      enemyBoardCard.length - playerBoardCard.length;
-
-    for (let i = 0; i < playerBoardCard.length - cannotPairedCardCount; i++) {
-      setTimeout(() => {
+  const enemyDecide = async () => {
+    if (playerBoardCard.length < 1) {
+      for (let i = 0; i < enemyBoardCard.length + 1; i++) {
+        await delay(200);
         dispatch(
           clickBoardCard({
-            clickedCard: enemyBoardCard[Math.floor(Math.random() * enemyBoardCard.length-1)],
+            clickedCard: enemyBoardCard[i],
             actionMaker: "enemy",
           })
         );
-        if (playerBoardCard.length > 0) {
-          setTimeout(() => {
-            enemyBoardCard.length - playerBoardCard.length;
+        await delay(200);
+        dispatch(clickedProfile("player"));
+        await delay(200);
+      }
+    }
 
-            if (i % 5 === 0) {
-              dispatch(clickedProfile("player"));
-            } else {
-              clickBoardCard({
-                clickedCard: playerBoardCard[Math.floor(Math.random() * playerBoardCard.length-1)],
-                actionMaker: "enemy",
-              });
-            }
-          }, 1000);
-        }
-      }, 1000);
+    const pairCount = enemyBoardCard.length - cannotPairedCardCount;
+    const shuffleSequence = Array.from(Array(pairCount).keys()).sort(
+      () => Math.random() - 0.5
+    );
+    const shuffleSequenceEnemy = Array.from(Array(enemyBoardCard.length).keys()).sort(
+      () => Math.random() - 0.5
+    );
+    for (let i = 0; i <= enemyBoardCard.length; i++) {
+      await delay(500);
+      dispatch(
+        clickBoardCard({
+          clickedCard: enemyBoardCard[shuffleSequenceEnemy[i]],
+          actionMaker: "enemy",
+        })
+      );
+      await delay(500);
+      console.log(i)
+      console.log(pairCount)
+      if (i < pairCount) {
+        dispatch(
+          clickBoardCard({
+            clickedCard: playerBoardCard[shuffleSequence[i]],
+            actionMaker: "enemy",
+          })
+        );
+      } else {
+        dispatch(clickedProfile("player"));
+      }
+      await delay(500);
     }
   };
 
