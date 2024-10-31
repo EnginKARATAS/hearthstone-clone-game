@@ -1,4 +1,4 @@
-const isDebugging = false;
+const isDebugging = true;
 export default {
   enemyTurnTime: 6000,
   enemyHandToBoardTime: 1000,
