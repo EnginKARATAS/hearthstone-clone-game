@@ -76,18 +76,33 @@ export default function EndTurnButton() {
   }, [isClientTurn, dispatch]);
 
   const enemyDecide = () => {
-    console.log("objectssss");
-    setTimeout(() => {
-      dispatch(
-        clickBoardCard({ clickedCard: enemyBoardCard[0], actionMaker: "enemy" })
-      );
+    const cannotPairedCardCount =
+      enemyBoardCard.length - playerBoardCard.length;
+
+    for (let i = 0; i < playerBoardCard.length - cannotPairedCardCount; i++) {
       setTimeout(() => {
         dispatch(
-          clickedProfile("player")
-          //clickBoardCard({ clickedCard: playerBoardCard[0], actionMaker: "enemy" })
+          clickBoardCard({
+            clickedCard: enemyBoardCard[Math.floor(Math.random() * enemyBoardCard.length-1)],
+            actionMaker: "enemy",
+          })
         );
+        if (playerBoardCard.length > 0) {
+          setTimeout(() => {
+            enemyBoardCard.length - playerBoardCard.length;
+
+            if (i % 5 === 0) {
+              dispatch(clickedProfile("player"));
+            } else {
+              clickBoardCard({
+                clickedCard: playerBoardCard[Math.floor(Math.random() * playerBoardCard.length-1)],
+                actionMaker: "enemy",
+              });
+            }
+          }, 1000);
+        }
       }, 1000);
-    }, 1000);
+    }
   };
 
   return (
