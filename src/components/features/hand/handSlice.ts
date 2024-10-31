@@ -301,9 +301,6 @@ export const handSlice = createSlice({
         payload: { clickedCard: Card | any; actionMaker: "enemy" | "player" };
       }
     ) => {
-      if (action.payload.actionMaker === "enemy") {
-        action.payload.clickedCard = state.board.enemy[0];
-      }
       const actionMaker = action.payload.actionMaker;
       const cardOwner =
         action.payload.clickedCard.cardOwner === "player" ? "player" : "enemy";
