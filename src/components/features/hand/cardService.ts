@@ -576,7 +576,7 @@ const enemyCardBase: Card[] = [
     cardPack: "yavuz-pack",
     cardName: "Atıl Kedi",
     image: "tavan_kedi",
-    cardDescription: "Yavuz'un tavan arasındaki kedis, aşağı inerek hepsinin 1 canını azaltır.",
+    cardDescription: "Yavuz'un tavan arasındaki kedisi, aşağı inerek rakiplerin 1 canını azaltarak tokatlar.",
     cardType: "minion",
     cardCost: 1,
     cardImageName: "tavan_kedi",
