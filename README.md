@@ -6,6 +6,9 @@ https://hearthstone-clone-game.vercel.app/
 ## View Insights
 ### Here is the screenshoot from hearthstone clone(Newest First⬆️)
 
+## Attack To The Profile
+![image](https://github.com/user-attachments/assets/25586fb0-f2b9-4bc8-85cc-26876d3c9b84)
+
 ![image](https://github.com/user-attachments/assets/703c7924-f72d-4b43-8d07-840a4635e2a9)
 
 ![image](https://github.com/user-attachments/assets/4da084a8-9764-452e-b70e-75193880d235)
