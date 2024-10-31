@@ -112,8 +112,15 @@ const decideDuelDestiny = (
   cachePlayerCard: Card
 ) => {
   let playerCard = state.board.player.find(
-    (card) => card.cardId === cachePlayerCard.cardId
+    (card) => {
+      if(card.cardId === cachePlayerCard.cardId)
+        return card;
+    }
   );
+  if(!playerCard)
+    if(cachePlayerCard.profile === "player")
+      playerCard = state.profile.player;
+    
   let enemyCard = state.board.enemy.find(
     (card) => card.cardId === cacheEnemyCard.cardId
   );
@@ -123,13 +130,17 @@ const decideDuelDestiny = (
   !enemyCard && (enemyCard = enemyProfile);
   !clientProfile && (playerCard = clientProfile);
 
-  console.log(enemyCard);
   if (cacheEnemyCard.borderColor === cachePlayerCard.borderColor) {
     //Defender(Health)-Attacker(Attack)<=0 destroy defender card
     //Attacker(Health)-Defender(Attack)<=0 destroy attacker card
     //else both loose health
-    playerCard!.cardHealth -= enemyCard!.cardAttack;
-    enemyCard!.cardHealth -= playerCard!.cardAttack;
+    if(playerCard!.profile === "player"){
+      playerCard!.cardHealth -= enemyCard!.cardAttack;
+    }
+    else{
+      playerCard!.cardHealth -= enemyCard!.cardAttack;
+      enemyCard!.cardHealth -= playerCard!.cardAttack;
+    }
 
     if (playerCard!.cardHealth <= 0) {
       const cardIndex = state.board.player.findIndex(
