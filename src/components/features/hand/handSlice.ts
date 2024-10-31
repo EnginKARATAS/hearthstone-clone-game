@@ -272,8 +272,7 @@ export const handSlice = createSlice({
           player: null,
           enemy: null,
         };
-      } else {
-      }
+      }  
     },
 
     advanceScenarioMove: (state: InitialState) => {
