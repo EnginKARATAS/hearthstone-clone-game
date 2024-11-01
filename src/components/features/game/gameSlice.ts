@@ -23,11 +23,9 @@ export const isGameOver = () => async (dispatch, getState) => {
     state.hand.profile.player.cardHealth <= 0 ||
     state.hand.profile.enemy.cardHealth <= 0
   ) {
-    console.log("game over");
     dispatch(setGameOver(true));
     return true;
   } else {
-    console.log("game not over");
     dispatch(setGameOver(false));
     return false;
   }
