@@ -23,10 +23,11 @@ export default function GameCard({ position, card, player, deg }) {
   };
 
   const onClick = async () => {
+    
     const res = await dispatch(isCardPlayable(card));
     if (res) {
       dispatch(addCardToBoard(card, player));
-      dispatch(decrement(card));
+      dispatch(decrement({player, cardCost: 1}));
     }
   };
 

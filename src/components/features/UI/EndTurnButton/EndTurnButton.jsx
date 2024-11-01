@@ -1,6 +1,6 @@
 import "./EndTurnButton.css";
 import { useDispatch } from "react-redux";
-import { closeYourTurn } from "../../counter/counterSlice";
+import { closeYourTurn, resetInGameMana } from "../../counter/counterSlice";
 import { useSelector } from "react-redux";
 import {
   addHealth,
@@ -43,16 +43,16 @@ export default function EndTurnButton() {
     }
   };
   useEffect(() => {
-
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
+        dispatch(increment({ player: "enemy" }));
+        dispatch(resetInGameMana({player: "enemy"}));
         dispatch(drawCard({ isEnemy: true }));
         dispatch(syncCardBaseLenght());
 
         if (enemyCardBaseCount <= 0) {
           dispatch(addHealth({ value: -1, player: "enemy" }));
         }
-        dispatch(increment());
 
         dispatch(playCardToBoard({ isEnemy: true }));
         await delay(cardCache.length * 2000).then(async () => {
@@ -63,15 +63,17 @@ export default function EndTurnButton() {
           dispatch(drawCard({ isEnemy: false }));
           setTurnCount(turnCount + 1);
           dispatch(openYourTurn());
+          dispatch(increment({ player: "player" }));
+          dispatch(resetInGameMana({player: "player"}));
         });
       }, 500);
 
       return () => clearTimeout(timer);
     }
   }, [isClientTurn, dispatch]);
-  const shuffleSequenceNoEnemy = Array.from(Array(enemyBoardCard.length).keys()).sort(
-    () => Math.random() - 0.5
-  );
+  const shuffleSequenceNoEnemy = Array.from(
+    Array(enemyBoardCard.length).keys()
+  ).sort(() => Math.random() - 0.5);
   const enemyDecide = async () => {
     if (playerBoardCard.length < 1) {
       for (let i = 0; i < enemyBoardCard.length + 1; i++) {
@@ -92,9 +94,9 @@ export default function EndTurnButton() {
     const shuffleSequence = Array.from(Array(pairCount).keys()).sort(
       () => Math.random() - 0.5
     );
-    const shuffleSequenceEnemy = Array.from(Array(enemyBoardCard.length).keys()).sort(
-      () => Math.random() - 0.5
-    );
+    const shuffleSequenceEnemy = Array.from(
+      Array(enemyBoardCard.length).keys()
+    ).sort(() => Math.random() - 0.5);
     for (let i = 0; i <= enemyBoardCard.length; i++) {
       await delay(500);
       dispatch(
@@ -104,8 +106,8 @@ export default function EndTurnButton() {
         })
       );
       await delay(500);
-      console.log(i)
-      console.log(pairCount)
+      console.log(i);
+      console.log(pairCount);
       if (i < pairCount) {
         dispatch(
           clickBoardCard({
