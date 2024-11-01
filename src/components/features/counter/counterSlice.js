@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { playCardToBoard } from "../hand/handSlice";
 const initialState = {
   value: {
     player: 0,
@@ -18,7 +18,8 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     resetInGameMana: (state, action) => {
-      state.inGameMana[action.payload.player] = state.value[action.payload.player];
+      state.inGameMana[action.payload.player] =
+        state.value[action.payload.player];
     },
     openYourTurn: (state) => {
       state.isClientTurn = true;
@@ -36,15 +37,26 @@ export const counterSlice = createSlice({
       state.successStatus = action.payload;
     },
     decrement: (state, action) => {
-      console.log("yess")
       state.inGameMana[action.payload.player] -= action.payload.cardCost;
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(playCardToBoard, (state, action) => {
+      state.inGameMana[action.payload.isEnemy ? "enemy" : "player"] -=
+        Math.floor(
+          Math.random(10) *
+            state.inGameMana[action.payload.isEnemy ? "enemy" : "player"]
+        );
+    });
+  },
 });
 
- export const isCardPlayable = (card) => async (dispatch, getState) => {
+export const isCardPlayable = (card) => async (dispatch, getState) => {
   const state = getState();
-  if (state.counter.value[card.cardOwner] > 0 && state.counter.value[card.cardOwner] >= card.cardCost) {
+  if (
+    state.counter.value[card.cardOwner] > 0 &&
+    state.counter.value[card.cardOwner] >= card.cardCost
+  ) {
     dispatch(setSuccessStatus(true));
     return true;
   } else {
@@ -53,7 +65,13 @@ export const counterSlice = createSlice({
   }
 };
 
-export const { increment, openYourTurn, closeYourTurn, setSuccessStatus, decrement, resetInGameMana } =
-  counterSlice.actions;
+export const {
+  increment,
+  openYourTurn,
+  closeYourTurn,
+  setSuccessStatus,
+  decrement,
+  resetInGameMana,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;
