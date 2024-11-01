@@ -30,6 +30,7 @@ export default function EndTurnButton() {
   const dispatch = useDispatch();
   const [turnCount, setTurnCount] = useState(0);
   const cardCache = useSelector((state) => state.hand.cardCache);
+  const enemyHandCard = useSelector((state) => state.hand.hand.enemy);
 
   const onEndTurnButtonClick = async () => {
     dispatch(syncCardBaseLenght());
@@ -46,7 +47,7 @@ export default function EndTurnButton() {
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
         dispatch(increment({ player: "enemy" }));
-        dispatch(resetInGameMana({player: "enemy"}));
+        dispatch(resetInGameMana({ player: "enemy" }));
         dispatch(syncCardBaseLenght());
         dispatch(drawCard({ isEnemy: true }));
 
@@ -55,7 +56,8 @@ export default function EndTurnButton() {
         }
 
         await delay(cardCache.length * 2000).then(async () => {
-          dispatch(playCardToBoard({ isEnemy: true }));
+          if (enemyHandCard.length > 2)
+            dispatch(playCardToBoard({ isEnemy: true }));
           enemyDecide();
           dispatch(syncCardBaseLenght());
           await delay(enemyBoardCard.length * 2000);
@@ -63,7 +65,7 @@ export default function EndTurnButton() {
           setTurnCount(turnCount + 1);
           dispatch(openYourTurn());
           dispatch(increment({ player: "player" }));
-          dispatch(resetInGameMana({player: "player"}));
+          dispatch(resetInGameMana({ player: "player" }));
         });
       }, 500);
 
