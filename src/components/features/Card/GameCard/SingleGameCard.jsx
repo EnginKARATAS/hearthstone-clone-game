@@ -7,13 +7,6 @@ import { useEffect } from "react";
 export default function SingleGameCard({ position }) {
   const singleCard = useSelector((state) => state.hand.singleCard);
   const dispatch = useDispatch();
-  //useEffect(() => {
-  // console.log("singleCard", singleCard);
-  //setTimeout(() => {
-  //   dispatch(closeSingleCard());
-  //}, 5000);
-  // }, [singleCard]);
-
   return (
     singleCard && (
       <div
