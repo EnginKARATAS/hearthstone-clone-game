@@ -17,7 +17,7 @@ export default function ClientProfile({ player, position }) {
         position={{ left: 4, bottom: 216 }}
         player="player"
       />
-      <ManaBox position={{ top: -149, left: 246 }} />
+      <ManaBox position={{ top: -149, left: 246 }} player="player" />
       <Hand
         position={{ bottom: -15, left: -580 }}
         player={player}

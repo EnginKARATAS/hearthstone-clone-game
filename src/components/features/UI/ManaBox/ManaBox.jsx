@@ -12,7 +12,7 @@ export default function ManaBox({ position, player }) {
       }}
     >
       <div className="mana-counter flex justify-center items-center absolute">
-        <p className="mana-text text-sky-400 px-2">{mana}/10</p>
+        <p className="mana-text text-sky-400 px-2">{mana[player]}/10</p>
       </div>
       {player !== "enemy" && (
         <div className="mana-cyrstals flex flex-row gap-1 absolute">

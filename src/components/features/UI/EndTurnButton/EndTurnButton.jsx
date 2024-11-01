@@ -54,28 +54,31 @@ export default function EndTurnButton() {
         }
         dispatch(increment());
 
-        await delay(cardCache.length * 2000);
         dispatch(playCardToBoard({ isEnemy: true }));
-        enemyDecide();
-        dispatch(syncCardBaseLenght());
-        await delay(enemyBoardCard.length * 2000);
-        dispatch(advanceScenarioMove());
-        dispatch(drawCard({ isEnemy: false }));
-        setTurnCount(turnCount + 1);
-        dispatch(openYourTurn());
+        await delay(cardCache.length * 2000).then(async () => {
+          enemyDecide();
+          dispatch(syncCardBaseLenght());
+          await delay(enemyBoardCard.length * 2000);
+          dispatch(advanceScenarioMove());
+          dispatch(drawCard({ isEnemy: false }));
+          setTurnCount(turnCount + 1);
+          dispatch(openYourTurn());
+        });
       }, 500);
 
       return () => clearTimeout(timer);
     }
   }, [isClientTurn, dispatch]);
-
+  const shuffleSequenceNoEnemy = Array.from(Array(enemyBoardCard.length).keys()).sort(
+    () => Math.random() - 0.5
+  );
   const enemyDecide = async () => {
     if (playerBoardCard.length < 1) {
       for (let i = 0; i < enemyBoardCard.length + 1; i++) {
         await delay(200);
         dispatch(
           clickBoardCard({
-            clickedCard: enemyBoardCard[i],
+            clickedCard: enemyBoardCard[shuffleSequenceNoEnemy[i]],
             actionMaker: "enemy",
           })
         );

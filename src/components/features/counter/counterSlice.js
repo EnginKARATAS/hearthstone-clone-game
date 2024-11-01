@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  value: {
+    player: 0,
+    enemy: 0,
+  },
   isClientTurn: false,
   successStatus: false,
 };
