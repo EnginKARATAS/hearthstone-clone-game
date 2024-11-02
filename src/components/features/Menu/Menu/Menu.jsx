@@ -8,7 +8,6 @@ import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelec
 export default function Menu() {
   const gameState = useSelector((state) => state.game.gameState);
   const dispatch = useDispatch();
-  const [openMenuOption, setOpenMenuOption] = useState("menu");
   const dispatchGameState = (state) => {
     console.log(state);
     dispatch(setGameState(state));
@@ -19,7 +18,7 @@ export default function Menu() {
       <div>
         <div className="bg-outer absolute z-20 bg">
           <h1>Settings</h1>
-          <Settings />
+          <Settings dispatchGameState={dispatchGameState} />
         </div>
       </div>
     );

@@ -3,6 +3,8 @@ import "./App.css";
 import "./styles/fonts.css";
 import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect } from "react";
+import { setCardBase } from "./components/features/hand/cardService";
+
 function App() {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
@@ -12,7 +14,8 @@ function App() {
   }, [windowHeight, windowWidth]);
 
   if (windowWidth <= windowHeight) return <RotateScreen />;
-
+  setCardBase({ p1Name: "engin-pack", p2Name: "yavuz-pack" });
+ 
   return (
     <>
       <div className="bg">

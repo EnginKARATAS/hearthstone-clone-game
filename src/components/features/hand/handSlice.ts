@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { pos, getTop } from "./cardPositioningUtils.js";
-import { pullRandomCard, getCardBaseLenght } from "./cardService.ts";
+import { pullRandomCard, getCardBaseLenght, setEnemyCardBase } from "./cardService.ts";
 
 const initialState: InitialState = {
   hand: {
@@ -255,6 +255,9 @@ export const handSlice = createSlice({
   name: "hand",
   initialState,
   reducers: {
+    setCardBase: (state: InitialState, action: { payload: { characters: { p1Name: String, p2Name: String }} }) => {
+      setEnemyCardBase(action.payload.characters);
+    },
     clickedProfile: (
       state: InitialState,
       action: { payload: "player" | "enemy" }
@@ -510,5 +513,6 @@ export const {
   clickBoardCard,
   advanceScenarioMove,
   clickedProfile,
+  setCardBase,
 } = handSlice.actions;
 export default handSlice.reducer;
