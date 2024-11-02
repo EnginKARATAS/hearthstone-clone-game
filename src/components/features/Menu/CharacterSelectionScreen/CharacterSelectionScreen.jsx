@@ -60,7 +60,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
             />
           ))}
         </div>
-        <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex flex-row items-center justify-center ">
+        <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center ">
           <MiniCharacterCards selectedCharacterPack={selectedCharacterPack} />
         </div>
       </div>
