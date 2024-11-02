@@ -11,12 +11,15 @@ import ContactScreen from "./features/UI/GameManagement/ContactScreen";
 import Menu from "./features/Menu/Menu/Menu";
 import GameConstants from "./GameConstants";
 import Settings from "./features/Menu/Settings/Settings";
+import setGameState from "./features/game/gameSlice.ts";
+
 export default function GameBoard() {
   const [loading, setLoading] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [contactScreen, setContactScreen] = useState(false);
   const clientHealth = useSelector((state) => state.hand.profile.player.cardHealth);
   const enemyHealth = useSelector((state) => state.hand.profile.enemy.cardHealth);
+  const gameState = useSelector((state) => state.game.gameState);
   useEffect(() => {
     const loadCards = async () => {
       await new Promise((resolve) => setTimeout(resolve, 200));
@@ -31,26 +34,23 @@ export default function GameBoard() {
 
   useEffect(() => {
     if (clientHealth <= 0 || enemyHealth <= 0) {
-      setLoading(true);
+      setGameState("loading")
       setTimeout(() => {
-        setLoading(false);
-        setGameOver(true);
+        setGameState("gameOver");
       }, 3000 - GameConstants.debugReducedTime);
       setTimeout(() => {
-        setGameOver(false);
-        setLoading(false);
-        setContactScreen(true);
+        setGameState("contactScreen");
       }, 7000 - GameConstants.debugReducedTimeLoading); 
     }
   }, [clientHealth, enemyHealth]);
 
-  if (loading) {
+  if (gameState === "loading") {
     return <LoadingScreen />;
   }
-  if (gameOver) {
+  if (gameState === "gameOver") {
     return <EndGameScreen />;
   }
-  if (contactScreen) {
+  if (gameState === "contactScreen") {
     return <ContactScreen />;
   }
 
