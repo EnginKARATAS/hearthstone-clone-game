@@ -120,9 +120,25 @@ export default function EndTurnButton() {
       await delay(500);
     }
   };
-
+  const chooseHero = ()=>{
+    
+  }
   return (
     <div className="end-turn">
+      <button
+        style={{
+          background: "black",
+          padding: "10px",
+          borderRadius: "10%",
+          color: "white",
+          right: 400,
+          top: 350,
+        }}
+        className="end-turn-button"
+        onClick={chooseHero}
+      >
+        Enemy Karar Ver
+      </button>
       <button
         style={{
           backgroundImage: isClientTurn

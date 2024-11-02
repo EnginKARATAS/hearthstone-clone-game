@@ -8,9 +8,9 @@ import LoadingScreen from "./features/UI/GameManagement/LoadingScreen";
 import { useSelector } from "react-redux";
 import EndGameScreen from "./features/UI/GameManagement/EndGameScreen";
 import ContactScreen from "./features/UI/GameManagement/ContactScreen";
-import Menu from "./features/Menu/Menu";
+import Menu from "./features/Menu/Menu/Menu";
 import GameConstants from "./GameConstants";
-import Settings from "./features/Menu/Settings";
+import Settings from "./features/Menu/Settings/Settings";
 export default function GameBoard() {
   const [loading, setLoading] = useState(true);
   const [gameOver, setGameOver] = useState(false);

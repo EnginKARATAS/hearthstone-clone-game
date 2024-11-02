@@ -1,7 +1,7 @@
 import GameBoard from "./components/GameBoard";
 import "./App.css";
 import "./styles/fonts.css";
-import RotateScreen from "./components/features/Menu/RotateScreen";
+import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect } from "react";
 function App() {
   const windowHeight = window.innerHeight;
