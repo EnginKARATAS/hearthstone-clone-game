@@ -2,6 +2,8 @@
 https://hearthstone-clone-game.vercel.app/
 * UI Finished
 * state management in progress
+## Select character screen
+![image](https://github.com/user-attachments/assets/7be864db-250a-4b6f-8b8a-2fcf4f1f69ba)
 
 ## View Insights
 ### Here is the screenshoot from hearthstone clone(Newest First⬆️)
