@@ -1,24 +1,35 @@
 .select-enemy-screen {
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 100vw;
   height: 62vw;
-  background-color: #aa6039;
+  background-image: url("/menu/menu/bg-outer.png");
+  background-repeat: no-repeat;
+  background-position: inherit;
   z-index: 20;
 }
-
+.screen-center-container{
+}
 .select-enemy-items {
   padding-top: 10%;
 }
 
 .select-enemy {
-  color: #a7957b;
+  background-color: #b41eb992;
+  top: 350px;
+  padding: 15px;
+}
+
+.select-enemy-cards {
+  padding: 30px;
+  background-color: #b9781e92;
+  top: 280px;
 }
 
 .middle-image {
-  top: 20%;
-  width: 200px;
+  top: 14%;
+  width: 378px;
 }
 
 .player-name-container {

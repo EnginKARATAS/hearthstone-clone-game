@@ -12,7 +12,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   };
   return (
     <div
-      onClick={() => dispatchGameState("playing")}
+      //onClick={() => dispatchGameState("playing")}
       className="select-enemy-screen fixed flex justify-center items-center flex-col"
     >
       <div className="middle-image absolute">
@@ -34,7 +34,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         </div>
       </div>
 
-      <div className="p2-character-container text-5xl font-bold  absolute">
+      <div className="p2-character-container text-5xl font-bold absolute">
         <img
           className="absolute red-pennant"
           src="/menu/menu/selection/red-pennant.png"
@@ -50,18 +50,20 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         </div>
       </div>
 
-      <span className="select-enemy text-2xl font-bold mt-10 absolute p-select flex flex-row">
-        {Object.keys(characterPack).map((characterPack) => (
-          <CharactersInComponent
-            key={characterPack}
-            characterPack={characterPack}
-            handleCharacterPackChange={handleCharacterPackChange}
-          />
-        ))}
-      </span>
-      <p className="select-enemy text-sm mt-80 w-[800px] text-center absolute p-cards">
-        <MiniCharacterCards selectedCharacterPack={selectedCharacterPack} />
-      </p>
+      <div className="screen-center-container flex flex-row justify-center items-center">
+        <div className="select-enemy text-2xl font-bold mt-10 absolute p-select flex flex-row  ">
+          {Object.keys(characterPack).map((characterPack) => (
+            <CharactersInComponent
+              key={characterPack}
+              characterPack={characterPack}
+              handleCharacterPackChange={handleCharacterPackChange}
+            />
+          ))}
+        </div>
+        <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex flex-row items-center justify-center ">
+          <MiniCharacterCards selectedCharacterPack={selectedCharacterPack} />
+        </div>
+      </div>
     </div>
   );
 }
