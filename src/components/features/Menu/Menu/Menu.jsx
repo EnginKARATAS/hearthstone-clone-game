@@ -4,7 +4,7 @@ import "./Menu.css";
 import Settings from "../Settings/Settings.jsx";
 import { useState } from "react";
 import Contact from "../Contact/Contact.jsx";
-import SelectEnemyScreen from "../SelectEnemyScreen/SelectEnemyScreen.jsx";
+import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
 export default function Menu() {
   const gameState = useSelector((state) => state.game.gameState);
   const dispatch = useDispatch();
@@ -24,11 +24,11 @@ export default function Menu() {
       </div>
     );
   }
-  else if (gameState === "selectEnemy") {
+  else if (gameState === "characterSelection") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
-          <SelectEnemyScreen />
+          <CharacterSelectionScreen />
         </div>
       </div>
     );
@@ -48,7 +48,7 @@ export default function Menu() {
       <div className="bg-outer absolute z-20">
         <div className="menu flex items-center justify-center text-center flex flex-col space-y-4 gap-3">
           <p
-            onClick={() => dispatchGameState("selectEnemy")}
+            onClick={() => dispatchGameState("characterSelection")}
             className="px-4 py-2 text-white menu-item"
           >
             Start Game
