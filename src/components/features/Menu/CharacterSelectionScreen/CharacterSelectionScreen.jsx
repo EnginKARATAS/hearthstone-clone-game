@@ -29,6 +29,9 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           src={`/cards/card-images/${"engin-pack"}/${"engin-pack"}.png`}
           alt="left-character"
         />
+        <div className="flex justify-center items-center player-name-container absolute">
+          <h1 className="p1-character-name">Player 1</h1>
+        </div>
       </div>
 
       <div className="p2-character-container text-5xl font-bold  absolute">
@@ -42,8 +45,11 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           src={`/cards/card-images/${selectedCharacterPack}/${selectedCharacterPack}.png`}
           alt="right-character"
         />
+        <div className="flex justify-center items-center player-name-container absolute">
+          <h1 className="p2-character-name">Player 2</h1>
+        </div>
       </div>
-     
+
       <span className="select-enemy text-2xl font-bold mt-10 absolute p-select flex flex-row">
         {Object.keys(characterPack).map((characterPack) => (
           <CharactersInComponent
