@@ -1,6 +1,6 @@
-export default function CharactersInComponent({ characterPack }) {
+export default function CharactersInComponent({ characterPack, handleCharacterPackChange }) {
   return (
-    <div className="">
+    <div onClick={() => handleCharacterPackChange(characterPack)}>
       <img
         width="50"
         src={

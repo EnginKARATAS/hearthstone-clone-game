@@ -214,7 +214,7 @@ export const characterPack = {
       borderColor: null,
       isSelected: false,
       cardId: Math.random(),
-      cardPack: "engin-pack",
+    cardPack: "engin-pack",
       cardName: "Kyk",
       image: "kyk",
       cardDescription:

@@ -1,32 +1,43 @@
 .select-enemy-screen {
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 62vw;
-    background-color: #5c310c;
-    z-index: 20;
-  }
-  
-  .select-enemy-items{
-   padding-top: 10%;
-  }
-  
-  .select-enemy {
-    color: #a7957b;
-  }
-  
-  .middle-image{
-    top: 20%;
-    width: 200px;
-  }
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 62vw;
+  background-color: #5c310c;
+  z-index: 20;
+}
 
-  .p1-character{
-    top: 144px;
-    left: 50px;
-   }
+.select-enemy-items {
+  padding-top: 10%;
+}
 
-  .p2-character{
-    top: 144px;
-    right: 50px;
-  }
+.select-enemy {
+  color: #a7957b;
+}
+
+.middle-image {
+  top: 20%;
+  width: 200px;
+}
+
+.p1-character-container {
+  left: 200px;
+  top: 150px;
+}
+
+.p1-character {
+  width: 155px;
+  top: 60px;
+  left: 1px;
+}
+
+.p2-character-container {
+  right: 200px;
+  top: 150px;
+}
+.p2-character {
+  width: 155px;
+  top: 60px;
+  right: -1px;
+}
