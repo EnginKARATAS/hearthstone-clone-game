@@ -18,7 +18,7 @@ export default function Menu() {
       <div>
         <div className="bg-outer absolute z-20 bg">
           <h1>Settings</h1>
-          <Settings dispatchGameState={dispatchGameState} />
+          <Settings  />
         </div>
       </div>
     );
@@ -27,7 +27,7 @@ export default function Menu() {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
-          <CharacterSelectionScreen />
+          <CharacterSelectionScreen dispatchGameState={dispatchGameState}/>
         </div>
       </div>
     );

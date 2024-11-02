@@ -1,7 +1,13 @@
-export default function CharactersInComponent() {
+export default function CharactersInComponent({ characterPack }) {
   return (
-    <div>
-      <h1>Characters</h1>
+    <div className="">
+      <img
+        width="50"
+        src={
+          "/cards/card-images/" + characterPack + "/" + characterPack + ".png"
+        }
+        alt={characterPack}
+      />
     </div>
   );
 }

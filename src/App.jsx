@@ -3,7 +3,7 @@ import "./App.css";
 import "./styles/fonts.css";
 import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect } from "react";
-import { setCardBase } from "./components/features/hand/cardService";
+import { setCardBase } from "./components/features/hand/handSlice";
 
 function App() {
   const windowHeight = window.innerHeight;

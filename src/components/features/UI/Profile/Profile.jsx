@@ -26,7 +26,7 @@ export default function Profile({ img, position, player }) {
         <img
           className="profile-image"
           src={
-            "/cards/card-images/" + img.pack + "/" + img.photo + ".png"
+            "/cards/card-images/" + img.pack + "/" + img.pack + ".png"
           }
           alt=""
           style={{border: profile.borderColor ? `3px solid ${profile.borderColor}` : "none",}}
