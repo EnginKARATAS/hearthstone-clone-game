@@ -12,7 +12,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   };
   return (
     <div
-      //onClick={() => dispatchGameState("characterSelection")}
+      onClick={() => dispatchGameState("playing")}
       className="select-enemy-screen fixed flex justify-center items-center flex-col"
     >
       <div className="middle-image absolute">

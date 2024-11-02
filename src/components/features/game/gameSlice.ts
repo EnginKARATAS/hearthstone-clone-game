@@ -5,7 +5,7 @@ export const gameSlice = createSlice({
   name: "game",
   initialState: {
     gameOver: false,
-    gameState: "characterSelection",
+    gameState: "menu",
   },
   reducers: {
     setGameOver: (state, action) => {

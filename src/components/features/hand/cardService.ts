@@ -9,7 +9,8 @@ let enemyCardBase: Card[] = [
  
 ];
 
-export const setEnemyCardBase = (characters: { p1Name: String, p2Name: String }) => {
+export const setFirstCardBase = (characters: { p1Name: String, p2Name: String }) => {
+  console.log(characters.p1Name, characters.p2Name);
   enemyCardBase = characterPack[characters.p2Name];
   clientCardBase = characterPack[characters.p1Name];
 };

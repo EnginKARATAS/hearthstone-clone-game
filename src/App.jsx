@@ -4,18 +4,19 @@ import "./styles/fonts.css";
 import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect } from "react";
 import { setCardBase } from "./components/features/hand/handSlice";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
   useEffect(() => {
     console.log(windowHeight);
     console.log(windowWidth);
   }, [windowHeight, windowWidth]);
-
+  dispatch(setCardBase({characters: { p1Name: "engin-pack", p2Name: "yavuz-pack" }}));
   if (windowWidth <= windowHeight) return <RotateScreen />;
-  setCardBase({ p1Name: "engin-pack", p2Name: "yavuz-pack" });
- 
+
   return (
     <>
       <div className="bg">
