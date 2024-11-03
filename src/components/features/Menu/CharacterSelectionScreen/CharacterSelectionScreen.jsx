@@ -30,7 +30,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
     setLastSelectedCharacterPack(characterPack);
   };
   const handleCharacterPackLeave = () => {
-    setLastSelectedCharacterPack("engin-pack");
+    setLastSelectedCharacterPack("");
   };
   return (
     <div
@@ -40,6 +40,18 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
       <div className="middle-image absolute">
         <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       </div>
+      <img
+        width="33px"
+        src="/left-arrow.svg"
+        style={{
+          height: 59,
+          bottom: 0,
+          right: 0,
+          width: 64,
+        }}
+        className="pause-button p-2 rounded-md absolute"
+        onClick={() => dispatchGameState("menu")}
+      ></img>
       <div className="p1-character-container text-5xl font-bold  absolute">
         <img
           className="absolute green-pennant"
@@ -56,7 +68,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           </>
         )}
         <div className="flex justify-center items-center player-name-container absolute">
-          <h1 className="p1-character-name">Player 1</h1>
+          <h1 className="p1-character-name">{t("player1")}</h1>
         </div>
       </div>
 
@@ -76,7 +88,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           </>
         )}
         <div className="flex justify-center items-center player-name-container absolute">
-          <h1 className="p2-character-name">Player 2</h1>
+          <h1 className="p2-character-name">{t("player2")}</h1>
         </div>
       </div>
 

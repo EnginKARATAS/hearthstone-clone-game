@@ -8,11 +8,10 @@
     left: 502px;
     height: 210px;
     border-radius: 10px;
-    
 }
 
 .pause-button {
-    background-color: #d3b751;
+    background-color: #d3b75158;
     color: rgb(29, 32, 15);
     padding: 10px 20px;
     border-radius: 5px;

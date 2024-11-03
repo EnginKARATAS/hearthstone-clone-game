@@ -18,6 +18,8 @@ i18n.use(initReactI18next).init({
             "yavuz-pack":
               "Yavuz, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
           },
+          player1: "Your Character",
+          player2: "Your Enemy",
       },
     },
     tr: {
@@ -31,10 +33,12 @@ i18n.use(initReactI18next).init({
         selectCharacter: "Karakter Seçin",
         characterDescription: {
           "engin-pack":
-            "Zırh kazanımı odaklı bir karakter, kartları da her ne kadar az hasar verse de, rakibi oyalayarak bir çok yönden hasar verir. Masayı boş olmazsa şans sizden yana olacak.",
+            "Zırh kazanımı odaklı bir karakter, kartları da her ne kadar az hasar verse de, rakibi oyalayarak bir çok yönden hasar verir. Masayı boş bırakmayın, şans sizden yana olacak.",
           "yavuz-pack":
             "Yavuz, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
         },
+        player1: "Karakterin",
+        player2: "Düşmanın",
       },
     },
   },

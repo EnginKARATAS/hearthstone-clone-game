@@ -15,13 +15,13 @@
 
 .start-game-button {
   font-weight: 700;
-  width: 222px;
+  width: 164px;
   background: #ffff2fc4;
   padding: 10px;
   border-radius: 10%;
   color: white;
-  right: 600px;
-  top: 326px;
+  right: 647px;
+  top: 330px;
 }
 .select-character-title {
   font-size: 2rem;
@@ -125,23 +125,23 @@
 }
 
 .p1-character-container > .player-name-container {
-  border: 8px solid #c71207;
+  border: 8px solid #7cb65e;
   left: 180px;
 }
 
 .p2-character-container > .player-name-container {
-  border: 8px solid #a8b1ff;
+  border: 8px solid #000;
   right: 180px;
 }
 
 .p1-character-name {
-  color: #c71207;
+  color: #7cb65e;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .p2-character-name {
-  color: #171f63;
+  color: #000;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
