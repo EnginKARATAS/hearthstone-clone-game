@@ -23,7 +23,12 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         setCharacters([characters[0], characterPack]);
       }
     }
+  };
+  const handleCharacterPackHover = (characterPack) => {
     setLastSelectedCharacterPack(characterPack);
+  };
+  const handleCharacterPackLeave = () => {
+    setLastSelectedCharacterPack("");
   };
   return (
     <div
@@ -39,11 +44,15 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           src="/menu/menu/selection/green-pennant.png"
           alt="green-pennant"
         />
-        <img
-          className="relative p1-character"
-          src={`/cards/card-images/${characters[0]}/${characters[0]}.png`}
-          alt="left-character"
-        />
+        {characters[0] && (
+          <>
+            <img
+              className="relative p1-character"
+              src={`/cards/card-images/${characters[0]}/${characters[0]}.png`}
+              alt="left-character"
+            />
+          </>
+        )}
         <div className="flex justify-center items-center player-name-container absolute">
           <h1 className="p1-character-name">Player 1</h1>
         </div>
@@ -55,11 +64,15 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           src="/menu/menu/selection/red-pennant.png"
           alt="red-pennant"
         />
-        <img
-          className="relative p2-character"
-          src={`/cards/card-images/${characters[1]}/${characters[1]}.png`}
-          alt="right-character"
-        />
+        {characters[1] && (
+          <>
+            <img
+              className="relative p2-character"
+              src={`/cards/card-images/${characters[1]}/${characters[1]}.png`}
+              alt="right-character"
+            />
+          </>
+        )}
         <div className="flex justify-center items-center player-name-container absolute">
           <h1 className="p2-character-name">Player 2</h1>
         </div>
@@ -73,14 +86,18 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               characterPack={characterPack}
               handleCharacterPackChange={handleCharacterPackChange}
               characters={characters}
+              handleCharacterPackHover={handleCharacterPackHover}
+              handleCharacterPackLeave={handleCharacterPackLeave}
             />
           ))}
         </div>
-        <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center ">
-          <MiniCharacterCards
-            lastSelectedCharacterPack={lastSelectedCharacterPack}
-          />
-        </div>
+        {lastSelectedCharacterPack && (
+          <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center ">
+            <MiniCharacterCards
+              lastSelectedCharacterPack={lastSelectedCharacterPack}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
