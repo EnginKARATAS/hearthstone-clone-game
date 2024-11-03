@@ -4,6 +4,8 @@ https://hearthstone-clone-game.vercel.app/
 * state management in progress
 ## Select character screen
 
+![image](https://github.com/user-attachments/assets/317c70b8-60a7-4f5b-8618-1d3e29f94d2f)
+
 ![image](https://github.com/user-attachments/assets/0c26d4a8-7e07-4c95-a888-4ea3051636f4)
 
 ![image](https://github.com/user-attachments/assets/7be864db-250a-4b6f-8b8a-2fcf4f1f69ba)
