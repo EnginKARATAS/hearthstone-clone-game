@@ -11,27 +11,25 @@ export default function Menu() {
     console.log(state);
     dispatch(setGameState(state));
   };
-  
+
   if (gameState === "settings") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
           <h1>Settings</h1>
-          <Settings  />
+          <Settings />
         </div>
       </div>
     );
-  }
-  else if (gameState === "characterSelection") {
+  } else if (gameState === "characterSelection") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
-          <CharacterSelectionScreen dispatchGameState={dispatchGameState}/>
+          <CharacterSelectionScreen dispatchGameState={dispatchGameState} />
         </div>
       </div>
     );
-  }
-  else if (gameState === "contact") {
+  } else if (gameState === "contact") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
@@ -42,7 +40,7 @@ export default function Menu() {
     );
   }
   return (
-     gameState === "menu" && (
+    gameState === "menu" && (
       <div className="bg-outer absolute z-20">
         <div className="menu flex items-center justify-center text-center flex flex-col space-y-4 gap-3">
           <p

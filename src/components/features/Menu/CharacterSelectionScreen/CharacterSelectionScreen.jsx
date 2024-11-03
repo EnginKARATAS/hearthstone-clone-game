@@ -4,11 +4,26 @@ import { characterPack } from "../../../../assets/characterPack";
 import MiniCharacterCards from "./MiniCharacterCards/MiniCharacterCards";
 import { useState } from "react";
 export default function CharacterSelectionScreen({ dispatchGameState }) {
-  const [selectedCharacterPack, setSelectedCharacterPack] =
-    useState("engin-pack");
-
+  const [lastSelectedCharacterPack, setLastSelectedCharacterPack] =
+    useState("");
+  const [characters, setCharacters] = useState([null, null]);
   const handleCharacterPackChange = (characterPack) => {
-    setSelectedCharacterPack(characterPack);
+    if (characters[0] === null && characters[1] === null) {
+      setCharacters([characterPack, null]);
+    } else {
+      if (characterPack === characters[0] && characters[1] === null) {
+        setCharacters([null, null]);
+      } else if (characters[1]) {
+        if (characterPack === characters[1]) {
+          setCharacters([null, null]);
+        } else {
+          setCharacters([characters[0], null]);
+        }
+      } else {
+        setCharacters([characters[0], characterPack]);
+      }
+    }
+    setLastSelectedCharacterPack(characterPack);
   };
   return (
     <div
@@ -26,7 +41,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         />
         <img
           className="relative p1-character"
-          src={`/cards/card-images/${"engin-pack"}/${"engin-pack"}.png`}
+          src={`/cards/card-images/${characters[0]}/${characters[0]}.png`}
           alt="left-character"
         />
         <div className="flex justify-center items-center player-name-container absolute">
@@ -42,7 +57,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         />
         <img
           className="relative p2-character"
-          src={`/cards/card-images/${selectedCharacterPack}/${selectedCharacterPack}.png`}
+          src={`/cards/card-images/${characters[1]}/${characters[1]}.png`}
           alt="right-character"
         />
         <div className="flex justify-center items-center player-name-container absolute">
@@ -57,11 +72,14 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               key={characterPack}
               characterPack={characterPack}
               handleCharacterPackChange={handleCharacterPackChange}
+              characters={characters}
             />
           ))}
         </div>
         <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center ">
-          <MiniCharacterCards selectedCharacterPack={selectedCharacterPack} />
+          <MiniCharacterCards
+            lastSelectedCharacterPack={lastSelectedCharacterPack}
+          />
         </div>
       </div>
     </div>
