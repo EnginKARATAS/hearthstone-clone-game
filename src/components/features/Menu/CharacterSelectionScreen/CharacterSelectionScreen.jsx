@@ -3,7 +3,9 @@ import CharactersInComponent from "./CharactersInComponent/CharactersInComponent
 import { characterPack } from "../../../../assets/characterPack";
 import MiniCharacterCards from "./MiniCharacterCards/MiniCharacterCards";
 import { useState } from "react";
+import { useTranslation } from "react-i18next"; 
 export default function CharacterSelectionScreen({ dispatchGameState }) {
+  const { t } = useTranslation();
   const [lastSelectedCharacterPack, setLastSelectedCharacterPack] =
     useState("");
   const [characters, setCharacters] = useState([null, null]);
@@ -106,7 +108,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         className="start-game-button absolute"
       >
         <span className="text-black text-xl">
-          Start Game
+          {t("start")}
         </span>
       </button>
         {lastSelectedCharacterPack && (
@@ -121,7 +123,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
                 {lastSelectedCharacterPack.split("-")[0].toUpperCase()}{" "}
                 {lastSelectedCharacterPack.split("-")[1].toUpperCase()}
               </h3>
-              <h3 className="mini-character-text absolute">Lorem ipsum  adipisicing elit. Natus dolore accusamus fugiat repudiandae quasi nisi harum dignissimos consequuntur optio earum voluptates sunt id quibusdam, ratione consequatur incidunt, explicabo ea aperiam, tenetur sequi? Saepe, qui dolorum accusamus laboriosam maxime excepturi doloremque cupiditate. Voluptatum ipsum reprehenderit reiciendis eligendi.</h3>
+              <h3 className="mini-character-text absolute">{t("characterDescription")}</h3>
             </div>
             <div className="mini-character-cards absolute">
               <MiniCharacterCards
