@@ -14,7 +14,7 @@ i18n.use(initReactI18next).init({
         selectLanguage: "Select Language",
         characterDescription: {
             "engin-pack":
-              "asdadsa",
+              "A character focused on armor gain, their cards may not deal much damage, but they can distract the opponent and deal damage from many angles. If the table is not empty, luck will be on your side.",
             "yavuz-pack":
               "Yavuz, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
           },

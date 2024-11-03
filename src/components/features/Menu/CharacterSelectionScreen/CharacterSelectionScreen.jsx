@@ -96,12 +96,14 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
             ))}
           </div>
         </div>
-        <button
-          className="start-game-button absolute"
-          onClick={() => dispatchGameState("playing")}
-        >
-          <span className="text-black text-xl ">{t("start")}</span>
-        </button>
+        {characters[0] && characters[1] && (
+          <button
+            className="start-game-button absolute"
+            onClick={() => dispatchGameState("playing")}
+          >
+            <span className="text-black text-xl ">{t("start")}</span>
+          </button>
+        )}
         {lastSelectedCharacterPack && (
           <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
             <img
