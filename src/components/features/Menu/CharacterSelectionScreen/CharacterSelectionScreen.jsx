@@ -94,6 +94,21 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
             ))}
           </div>
         </div>
+        <button
+        style={{
+          background: "black",
+          padding: "10px",
+          borderRadius: "10%",
+          color: "white",
+          right: 400,
+          top: 350,
+        }}
+        className="start-game-button absolute"
+      >
+        <span className="text-black text-xl">
+          Start Game
+        </span>
+      </button>
         {lastSelectedCharacterPack && (
           <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
             <img
@@ -106,7 +121,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
                 {lastSelectedCharacterPack.split("-")[0].toUpperCase()}{" "}
                 {lastSelectedCharacterPack.split("-")[1].toUpperCase()}
               </h3>
-              <h3 className="mini-character-text absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore accusamus fugiat repudiandae quasi nisi harum dignissimos consequuntur optio earum voluptates sunt id quibusdam, ratione consequatur incidunt, explicabo ea aperiam, tenetur sequi? Saepe, qui dolorum accusamus laboriosam maxime excepturi doloremque cupiditate. Voluptatum ipsum reprehenderit reiciendis eligendi.</h3>
+              <h3 className="mini-character-text absolute">Lorem ipsum  adipisicing elit. Natus dolore accusamus fugiat repudiandae quasi nisi harum dignissimos consequuntur optio earum voluptates sunt id quibusdam, ratione consequatur incidunt, explicabo ea aperiam, tenetur sequi? Saepe, qui dolorum accusamus laboriosam maxime excepturi doloremque cupiditate. Voluptatum ipsum reprehenderit reiciendis eligendi.</h3>
             </div>
             <div className="mini-character-cards absolute">
               <MiniCharacterCards

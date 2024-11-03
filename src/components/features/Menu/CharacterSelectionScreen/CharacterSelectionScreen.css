@@ -8,11 +8,21 @@
 }
 
 .select-character {
-  top: 256px;
+  top: 178px;
   background-color: #bf343470;
   padding: 16px;
 }
 
+.start-game-button {
+  font-weight: 700;
+  width: 222px;
+  background: #ffff2fc4;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  right: 600px;
+  top: 326px;
+}
 .select-character-title {
   font-size: 2rem;
   color: rgb(207, 207, 48);
@@ -54,12 +64,12 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 586px;
-  top: 177px;
+  top: 143 px;
   left: 421px;
 }
 
 .middle-image {
-  top: 14%;
+  top: 10%;
   left: 37%;
   width: 378px;
 }
@@ -73,12 +83,12 @@
 
 .p1-character-container {
   left: 10%;
-  top: 150px;
+  top: 200px;
 }
 
 .p2-character-container {
   right: 10%;
-  top: 150px;
+  top: 200px;
 }
 
 .p1-character {
@@ -88,15 +98,16 @@
 }
 
 .mini-character-text-container {
-  top: 78px;
-  left: 110px;
+  top: 80px;
+  left: 106px;
 }
 
 .mini-character-text {
-  top: 59px;
-  width: 182px;
+  line-height: 15px;
+  top: 55px;
+  width: 187px;
   text-align: justify;
-  left: -32px;
+  left: -31px;
 }
 
 .mini-character-title {
