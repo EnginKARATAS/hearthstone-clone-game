@@ -1,0 +1,26 @@
+.pause {
+    background-image: url(/menu/menu/bg-outer.png);
+    background-repeat: no-repeat;
+    background-position: revert;
+    padding: 6px;
+    width: 350px;
+    top: 270px;
+    left: 502px;
+    height: 210px;
+    border-radius: 10px;
+    
+}
+
+.pause-button {
+    background-color: #d3b751;
+    color: rgb(29, 32, 15);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.pause-container{
+    top: 0;
+    width: 1420px;
+    background: #18000045;
+    height: 852px;
+}

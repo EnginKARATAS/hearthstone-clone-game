@@ -5,6 +5,7 @@ import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
 import { useTranslation } from "react-i18next"; 
+import Pause from "../Pause/Pause.jsx";
 export default function Menu() {
   const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
@@ -36,6 +37,15 @@ export default function Menu() {
         <div className="bg-outer absolute z-20 bg">
           <h1>Contact</h1>
           <Contact onClick={dispatchGameState("contact")} />
+        </div>
+      </div>
+    );
+  } else if (gameState === "pause") {
+    return (
+      <div>
+        <div className="bg-outer absolute z-20 bg">
+          <h1>Pause</h1>
+          <Pause />
         </div>
       </div>
     );

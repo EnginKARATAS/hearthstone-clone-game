@@ -64,7 +64,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 586px;
-  top: 143 px;
+  top: 143px;
   left: 421px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .p2-character-container > .player-name-container {
-  border: 8px solid #1b2895;
+  border: 8px solid #a8b1ff;
   right: 180px;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .p2-character-name {
-  color: #1b2895;
+  color: #171f63;
   font-style: italic;
   font-size: 1.5rem;
 }

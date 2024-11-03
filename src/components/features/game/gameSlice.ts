@@ -8,6 +8,12 @@ export const gameSlice = createSlice({
     gameState: "menu",
   },
   reducers: {
+    resetGame: (state) => {
+      state.gameOver = true;//useless
+      //TODO: reset game
+      //handSlice listening to this will reset the game
+      state.gameState = "menu";
+    },
     setGameOver: (state, action) => {
       isGameOver();
     },
@@ -31,6 +37,6 @@ export const isGameOver = () => async (dispatch, getState) => {
   }
 };
 
-export const { setGameOver, setGameState } = gameSlice.actions;
+export const { setGameOver, setGameState, resetGame } = gameSlice.actions;
 
 export default gameSlice.reducer;

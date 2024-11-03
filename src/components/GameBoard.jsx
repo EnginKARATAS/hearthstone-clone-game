@@ -1,3 +1,4 @@
+import "./GameBoard.css";
 import EndTurnButton from "./features/UI/EndTurnButton/EndTurnButton";
 import FishOrnament from "./features/UI/FishOrnament";
 import YourTurn from "./features/UI/YourTurn/YourTurn";
@@ -11,9 +12,11 @@ import ContactScreen from "./features/UI/GameManagement/ContactScreen";
 import Menu from "./features/Menu/Menu/Menu";
 import GameConstants from "./GameConstants";
 import Settings from "./features/Menu/Settings/Settings";
-import setGameState from "./features/game/gameSlice.ts";
+import { setGameState } from "./features/game/gameSlice.ts";
+import { useDispatch } from "react-redux";
 
 export default function GameBoard() {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [contactScreen, setContactScreen] = useState(false);
@@ -55,13 +58,14 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="board ">
+    <div className="board">
       <Menu />
       <FishOrnament />
       <EnemyProfile player="enemy" />
       <YourTurn />
       <EndTurnButton />
       <ClientProfile player="player" />
+      <img onClick={() => dispatch(setGameState("pause"))} className="settings-icon absolute" width="50" src="/menu/menu/settings/settings-icon.png" alt="settings" />
     </div>
   );
 }
