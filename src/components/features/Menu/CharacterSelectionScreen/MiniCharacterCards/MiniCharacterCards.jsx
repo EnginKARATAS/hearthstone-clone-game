@@ -2,8 +2,7 @@ import "./MiniCharacterCards.css";
 import { characterPack } from "../../../../../assets/characterPack";
 export default function MiniCharacterCards({ lastSelectedCharacterPack }) {
   return (
-    <div className="mini-character-cards">
-      <div className="grid grid-cols-8">
+      <div className="grid grid-cols-4">
         {characterPack[lastSelectedCharacterPack]?.map((character) => (
           <div key={character.cardId}>
           <img
@@ -14,6 +13,5 @@ export default function MiniCharacterCards({ lastSelectedCharacterPack }) {
           </div>
         ))}
       </div>
-    </div>
   );
 }

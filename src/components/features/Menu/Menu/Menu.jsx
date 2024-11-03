@@ -8,7 +8,6 @@ export default function Menu() {
   const gameState = useSelector((state) => state.game.gameState);
   const dispatch = useDispatch();
   const dispatchGameState = (state) => {
-    console.log(state);
     dispatch(setGameState(state));
   };
 

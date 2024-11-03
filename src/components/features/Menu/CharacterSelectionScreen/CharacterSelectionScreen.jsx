@@ -28,7 +28,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
     setLastSelectedCharacterPack(characterPack);
   };
   const handleCharacterPackLeave = () => {
-    setLastSelectedCharacterPack("");
+    setLastSelectedCharacterPack("engin-pack");
   };
   return (
     <div
@@ -78,24 +78,41 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         </div>
       </div>
 
-      <div className="screen-center-container flex flex-row justify-center items-center">
-        <div className="select-enemy text-2xl font-bold mt-10 absolute p-select flex flex-row  ">
-          {Object.keys(characterPack).map((characterPack) => (
-            <CharactersInComponent
-              key={characterPack}
-              characterPack={characterPack}
-              handleCharacterPackChange={handleCharacterPackChange}
-              characters={characters}
-              handleCharacterPackHover={handleCharacterPackHover}
-              handleCharacterPackLeave={handleCharacterPackLeave}
-            />
-          ))}
+      <div className="mini-container flex flex-row justify-center items-center">
+        <div className="select-character text-2xl font-bold mt-10 absolute p-select flex flex-col  ">
+          <h3 className="select-character-title">Select Character</h3>
+          <div className="flex flex-row justify-center items-center">
+            {Object.keys(characterPack).map((characterPack) => (
+              <CharactersInComponent
+                key={characterPack}
+                characterPack={characterPack}
+                handleCharacterPackChange={handleCharacterPackChange}
+                characters={characters}
+                handleCharacterPackHover={handleCharacterPackHover}
+                handleCharacterPackLeave={handleCharacterPackLeave}
+              />
+            ))}
+          </div>
         </div>
         {lastSelectedCharacterPack && (
-          <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center ">
-            <MiniCharacterCards
-              lastSelectedCharacterPack={lastSelectedCharacterPack}
+          <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
+            <img
+              className="absolute mini-character-image-left"
+              src={`/cards/card-images/${lastSelectedCharacterPack}/${lastSelectedCharacterPack}.png`}
+              alt="selected-character"
             />
+            <div className="absolute mini-character-text-container flex justify-center items-center">
+              <h3 className="mini-character-title text-center">
+                {lastSelectedCharacterPack.split("-")[0].toUpperCase()}{" "}
+                {lastSelectedCharacterPack.split("-")[1].toUpperCase()}
+              </h3>
+              <h3 className="mini-character-text absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore accusamus fugiat repudiandae quasi nisi harum dignissimos consequuntur optio earum voluptates sunt id quibusdam, ratione consequatur incidunt, explicabo ea aperiam, tenetur sequi? Saepe, qui dolorum accusamus laboriosam maxime excepturi doloremque cupiditate. Voluptatum ipsum reprehenderit reiciendis eligendi.</h3>
+            </div>
+            <div className="mini-character-cards absolute">
+              <MiniCharacterCards
+                lastSelectedCharacterPack={lastSelectedCharacterPack}
+              />
+            </div>
           </div>
         )}
       </div>

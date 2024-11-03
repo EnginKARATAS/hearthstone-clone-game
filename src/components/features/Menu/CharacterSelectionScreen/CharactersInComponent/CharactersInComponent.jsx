@@ -5,8 +5,6 @@ export default function CharactersInComponent({
   handleCharacterPackHover,
   handleCharacterPackLeave,
 }) {
-  console.log(characters);
-  console.log(characterPack);
   const handleBorder = (characterPack) => {
     if (characters[0] === characterPack) {
       return "1px solid white";

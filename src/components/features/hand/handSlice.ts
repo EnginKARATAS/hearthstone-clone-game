@@ -256,7 +256,6 @@ export const handSlice = createSlice({
   initialState,
   reducers: {
     setCardBase: (state: InitialState, action: { payload: { characters: { p1Name: String, p2Name: String }} }) => {
-      console.log("state", state);
       setFirstCardBase(action.payload.characters);
     },
     clickedProfile: (

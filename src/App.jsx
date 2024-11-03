@@ -11,8 +11,6 @@ function App() {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
   useEffect(() => {
-    console.log(windowHeight);
-    console.log(windowWidth);
   }, [windowHeight, windowWidth]);
   dispatch(setCardBase({characters: { p1Name: "engin-pack", p2Name: "yavuz-pack" }}));
   if (windowWidth <= windowHeight) return <RotateScreen />;

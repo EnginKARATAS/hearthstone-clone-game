@@ -7,9 +7,35 @@
   background-position: inherit;
 }
 
- 
-.screen-center-container{
+.select-character {
+  top: 256px;
+  background-color: #bf343470;
+  padding: 16px;
 }
+
+.select-character-title {
+  font-size: 2rem;
+  color: rgb(207, 207, 48);
+}
+
+.mini-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mini-character-image-left {
+  border-radius: 36%;
+  left: 328px;
+  width: 74px;
+  top: 245px;
+}
+
+.mini-character-cards {
+  width: 172px;
+  right: 86px;
+  top: 75px;
+}
+
 .select-enemy-items {
   padding-top: 10%;
 }
@@ -21,9 +47,15 @@
 }
 
 .select-enemy-cards {
-  padding: 30px;
-  background-color: #b9781e92;
-  top: 280px;
+  border-radius: 11%;
+  background-size: 766px;
+  background-image: url(/menu/menu/selection/minibg.png);
+  height: 405px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 586px;
+  top: 177px;
+  left: 421px;
 }
 
 .middle-image {
@@ -55,32 +87,48 @@
   left: 1px;
 }
 
+.mini-character-text-container {
+  top: 78px;
+  left: 110px;
+}
+
+.mini-character-text {
+  top: 59px;
+  width: 182px;
+  text-align: justify;
+  left: -32px;
+}
+
+.mini-character-title {
+  color: rgb(0 0 0);
+  font-weight: 400;
+
+  font-size: 1.9rem;
+}
 .p2-character {
   width: 155px;
   top: 60px;
   right: -1px;
 }
 
- 
-
 .p1-character-container > .player-name-container {
-  border: 4px solid #7db95d;
+  border: 8px solid #c71207;
   left: 180px;
 }
 
 .p2-character-container > .player-name-container {
-  border: 4px solid #738BA6;
+  border: 8px solid #1b2895;
   right: 180px;
 }
 
 .p1-character-name {
-  color: #7db95d;
+  color: #c71207;
   font-style: italic;
   font-size: 1.5rem;
 }
 
 .p2-character-name {
-  color: #738BA6;
+  color: #1b2895;
   font-style: italic;
   font-size: 1.5rem;
 }
