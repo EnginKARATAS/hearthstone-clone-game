@@ -36,6 +36,7 @@ export default function EndTurnButton() {
     dispatch(syncCardBaseLenght());
     if (isClientTurn === true) {
       await delay(1);
+
       if (playerCardBaseCount <= 0) {
         dispatch(addHealth({ value: -1, player: "player" }));
       }
@@ -66,6 +67,7 @@ export default function EndTurnButton() {
           dispatch(openYourTurn());
           dispatch(increment({ player: "player" }));
           dispatch(resetInGameMana({ player: "player" }));
+          dispatch(drawCard({ isEnemy: false }));
         });
       }, 500);
 
@@ -120,9 +122,7 @@ export default function EndTurnButton() {
       await delay(500);
     }
   };
-  const chooseHero = ()=>{
-    
-  }
+  const chooseHero = () => {};
   return (
     <div className="end-turn">
       <button

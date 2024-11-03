@@ -99,8 +99,9 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         <button
  
         className="start-game-button absolute"
+        onClick={() => dispatchGameState("playing")}
       >
-        <span className="text-black text-xl">
+        <span className="text-black text-xl ">
           {t("start")}
         </span>
       </button>
