@@ -14,3 +14,11 @@
     background-repeat: no-repeat;
     background-position: center;  
 }
+
+.settings-language{
+    width: 345px;
+    height: 300px;
+    top: 207px;
+    left: 752px;
+    background: #7a6449;
+}

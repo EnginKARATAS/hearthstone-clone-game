@@ -82,7 +82,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
 
       <div className="mini-container flex flex-row justify-center items-center">
         <div className="select-character text-2xl font-bold mt-10 absolute p-select flex flex-col  ">
-          <h3 className="select-character-title">Select Character</h3>
+          <h3 className="select-character-title">{t("selectCharacter")}</h3>
           <div className="flex flex-row justify-center items-center">
             {Object.keys(characterPack).map((characterPack) => (
               <CharactersInComponent
@@ -97,14 +97,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           </div>
         </div>
         <button
-        style={{
-          background: "black",
-          padding: "10px",
-          borderRadius: "10%",
-          color: "white",
-          right: 400,
-          top: 350,
-        }}
+ 
         className="start-game-button absolute"
       >
         <span className="text-black text-xl">

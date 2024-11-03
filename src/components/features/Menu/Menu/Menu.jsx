@@ -4,7 +4,9 @@ import { setGameState } from "../../game/gameSlice.ts";
 import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
+import { useTranslation } from "react-i18next"; 
 export default function Menu() {
+  const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
   const dispatch = useDispatch();
   const dispatchGameState = (state) => {
@@ -46,25 +48,25 @@ export default function Menu() {
             onClick={() => dispatchGameState("characterSelection")}
             className="px-4 py-2 text-white menu-item"
           >
-            Start Game
+            {t("start")}
           </p>
           <p
             className="px-4 py-2 text-white menu-item"
             onClick={() => dispatchGameState("settings")}
           >
-            Settings
+            {t("settings")}
           </p>
           <p
             className="px-4 py-2 text-white menu-item"
             onClick={() => dispatchGameState("contact")}
           >
-            Contact
+            {t("contact")}
           </p>
           <p
             onClick={() => dispatchGameState("credits")}
             className="px-4 py-2 text-white menu-item"
           >
-            Credits
+            {t("credits")}
           </p>
         </div>
       </div>
