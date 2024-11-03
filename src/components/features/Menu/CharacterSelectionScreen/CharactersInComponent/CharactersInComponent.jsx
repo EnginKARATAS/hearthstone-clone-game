@@ -24,6 +24,9 @@ export default function CharactersInComponent({
         style={{
           border: handleBorder(characterPack),
         }}
+        style={{
+          border: handleBorder(characterPack),
+        }}
         src={
           "/cards/card-images/" + characterPack + "/" + characterPack + ".png"
         }
