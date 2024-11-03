@@ -1,14 +1,13 @@
-.select-enemy-screen {
-  transform: translate(-50%, -50%);
-  top: 55%;
-  left: 50%;
-  width: 100vw;
-  height: 62vw;
+.character-selection-screen {
+  cursor: auto;
+  width: 1422px;
+  height: 850px;
   background-image: url("/menu/menu/bg-outer.png");
   background-repeat: no-repeat;
   background-position: inherit;
-  z-index: 20;
 }
+
+ 
 .screen-center-container{
 }
 .select-enemy-items {
@@ -29,6 +28,7 @@
 
 .middle-image {
   top: 14%;
+  left: 37%;
   width: 378px;
 }
 

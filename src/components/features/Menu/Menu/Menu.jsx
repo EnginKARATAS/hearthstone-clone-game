@@ -1,6 +1,6 @@
+import "./Menu.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setGameState } from "../../game/gameSlice.ts";
-import "./Menu.css";
 import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";

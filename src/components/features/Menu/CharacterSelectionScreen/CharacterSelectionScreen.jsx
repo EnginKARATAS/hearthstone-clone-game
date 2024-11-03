@@ -13,7 +13,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   return (
     <div
       //onClick={() => dispatchGameState("playing")}
-      className="select-enemy-screen fixed flex justify-center items-center flex-col"
+      className="character-selection-screen absolute z-25"
     >
       <div className="middle-image absolute">
         <img src="/menu/loading/hearthstone.png" alt="heartstone" />
