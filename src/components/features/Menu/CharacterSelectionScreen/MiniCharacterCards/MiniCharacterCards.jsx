@@ -3,11 +3,12 @@ import { characterPack } from "../../../../../assets/characterPack";
 export default function MiniCharacterCards({ lastSelectedCharacterPack }) {
   return (
     <div className="mini-character-cards">
-      <div className="grid grid-cols-4">
+      <div className=" flex flex-row-reverse flex-wrap">
         {characterPack[lastSelectedCharacterPack]?.map((character) => (
           <div key={character.cardId}>
             <img
-              width="50"
+            className="gridding"
+              width="45"
               src={`/cards/card-images/${lastSelectedCharacterPack}/${character.image}.png`}
               alt={character.image}
             />
