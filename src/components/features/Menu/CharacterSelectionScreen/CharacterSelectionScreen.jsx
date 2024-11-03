@@ -3,7 +3,7 @@ import CharactersInComponent from "./CharactersInComponent/CharactersInComponent
 import { characterPack } from "../../../../assets/characterPack";
 import MiniCharacterCards from "./MiniCharacterCards/MiniCharacterCards";
 import { useState } from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 export default function CharacterSelectionScreen({ dispatchGameState }) {
   const { t } = useTranslation();
   const [lastSelectedCharacterPack, setLastSelectedCharacterPack] =
@@ -97,14 +97,11 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           </div>
         </div>
         <button
- 
-        className="start-game-button absolute"
-        onClick={() => dispatchGameState("playing")}
-      >
-        <span className="text-black text-xl ">
-          {t("start")}
-        </span>
-      </button>
+          className="start-game-button absolute"
+          onClick={() => dispatchGameState("playing")}
+        >
+          <span className="text-black text-xl ">{t("start")}</span>
+        </button>
         {lastSelectedCharacterPack && (
           <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
             <img
@@ -117,7 +114,9 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
                 {lastSelectedCharacterPack.split("-")[0].toUpperCase()}{" "}
                 {lastSelectedCharacterPack.split("-")[1].toUpperCase()}
               </h3>
-              <h3 className="mini-character-text absolute">{t("characterDescription")}</h3>
+              <h3 className="mini-character-text absolute">
+                {t(`characterDescription.${lastSelectedCharacterPack}`)}
+              </h3>
             </div>
             <div className="mini-character-cards absolute ">
               <MiniCharacterCards
