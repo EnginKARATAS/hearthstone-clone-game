@@ -32,6 +32,10 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   const handleCharacterPackLeave = () => {
     setLastSelectedCharacterPack("");
   };
+
+  const startGame = () => {
+    dispatchGameState("playing")
+  }
   return (
     <div
       //onClick={() => dispatchGameState("playing")}
@@ -111,7 +115,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         {characters[0] && characters[1] && (
           <button
             className="start-game-button absolute"
-            onClick={() => dispatchGameState("playing")}
+            onClick={startGame}
           >
             <span className="text-black text-xl ">{t("start")}</span>
           </button>
