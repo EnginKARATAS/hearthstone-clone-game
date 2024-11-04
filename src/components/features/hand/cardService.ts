@@ -10,8 +10,8 @@ let enemyCardBase: Card[] = [
 ];
 
 export const setFirstCardBase = (characters: { p1Name: String, p2Name: String }) => {
-  enemyCardBase = characterPack[characters.p2Name];
-  clientCardBase = characterPack[characters.p1Name];
+  enemyCardBase = characterPack[characters.p2Name].map((card: Card) => ({...card, cardOwner: "enemy"}));
+  clientCardBase = characterPack[characters.p1Name].map((card: Card) => ({...card, cardOwner: "player"}));
 };
 
 export const getCardBaseLenght = ({
