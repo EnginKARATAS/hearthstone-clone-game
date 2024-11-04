@@ -41,19 +41,14 @@ export default function Menu() {
         </div>
       </div>
     );
-  } else if (gameState === "pause") {
-    return (
-      <div>
-        <div className="bg-outer absolute z-20 bg">
-          <Pause />
-        </div>
-      </div>
-    );
-  }
-  else if (gameState === "playing") {
+  }  
+  else if (gameState === "playing" || gameState === "pause") {
     return (
       <div>
           <GameBoard className="board" />
+          <div className="bg-outer absolute z-20 bg">
+          <Pause />
+        </div>
       </div>
     );
   }

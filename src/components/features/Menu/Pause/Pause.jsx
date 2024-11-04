@@ -2,9 +2,11 @@ import "./Pause.css";
 import { useDispatch } from "react-redux";
 import { setGameState } from "../../game/gameSlice.ts";
 import { resetGame } from "../../game/gameSlice.ts";
+import { useSelector } from "react-redux";
 export default function Pause() {
   const dispatch = useDispatch();
-  return (
+  const gameState = useSelector((state) => state.game.gameState);
+  if (gameState === "pause") return (
     <div className="pause-container absolute">
       <div
         className="pause-container"
