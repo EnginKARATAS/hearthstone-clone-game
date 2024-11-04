@@ -51,10 +51,12 @@ svg > text > textPath{
 
 .card-description {
   font-size: 9px;
+  font-family: none;
+
   text-align: center;
   width: 88px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 10px;
   top: 141px;
   left: 33px;
 }

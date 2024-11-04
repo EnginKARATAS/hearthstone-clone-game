@@ -57,7 +57,7 @@ export default function GameCard({ position, card, player, deg }) {
           <span className="absolute card-cost">{card.cardCost}</span>
           <img
             className="absolute card-image"
-            src={`/cards/card-images/engin-pack/${card.cardImageName}.png`}
+            src={`/cards/card-images/${card.cardPack}/${card.cardImageName}.png`}
           />
           <svg className="absolute card-name-svg" width="100" height="20">
             <path

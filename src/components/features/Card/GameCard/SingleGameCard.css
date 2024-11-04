@@ -39,6 +39,7 @@
 }
 
 .single-card-description {
+  font-family: none;
   top: 255px;
   left: 56px;
   font-size: 15px;
