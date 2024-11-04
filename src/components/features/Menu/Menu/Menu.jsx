@@ -4,9 +4,12 @@ import { setGameState } from "../../game/gameSlice.ts";
 import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import Pause from "../Pause/Pause.jsx";
 import GameBoard from "../../../GameBoard.jsx";
+import LoadingScreen from "../../UI/GameManagement/LoadingScreen.jsx";
+import EndGameScreen from "../../UI/GameManagement/EndGameScreen.jsx";
+import ContactScreen from "../../UI/GameManagement/ContactScreen.jsx";
 export default function Menu() {
   const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
@@ -15,7 +18,13 @@ export default function Menu() {
     dispatch(setGameState(state));
   };
 
-  if (gameState === "settings") {
+  if (gameState === "loading") {
+    return <LoadingScreen />;
+  } else if (gameState === "gameOver") {
+    return <EndGameScreen />;
+  } else if (gameState === "contactScreen") {
+    return <ContactScreen />;
+  } else if (gameState === "settings") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
@@ -41,12 +50,11 @@ export default function Menu() {
         </div>
       </div>
     );
-  }  
-  else if (gameState === "playing" || gameState === "pause") {
+  } else if (gameState === "playing" || gameState === "pause") {
     return (
       <div>
-          <GameBoard className="board" />
-          <div className="bg-outer absolute z-20 bg">
+        <GameBoard className="board" />
+        <div className="bg-outer absolute z-20 bg">
           <Pause />
         </div>
       </div>

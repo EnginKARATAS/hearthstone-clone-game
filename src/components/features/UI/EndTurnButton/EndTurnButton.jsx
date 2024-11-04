@@ -14,6 +14,7 @@ import {
 import { useEffect } from "react";
 import { increment, openYourTurn } from "../../counter/counterSlice";
 import { useState } from "react";
+import { setGameState } from "../../game/gameSlice";
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function EndTurnButton() {

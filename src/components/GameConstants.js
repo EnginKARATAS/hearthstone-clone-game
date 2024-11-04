@@ -1,10 +1,10 @@
-const isDebugging = true;
+const isDebugging = false;
 export default {
-  enemyTurnTime: 6000,
-  enemyHandToBoardTime: 1000,
-  enemyCloseTurnTime: 2000,
-  totalEnemyWaitTime: 5000,
-  yourTurnPopupWaitTime: 700,
+  enemyTurnTime: isDebugging ? 6000 : 0,
+  enemyHandToBoardTime: isDebugging ? 1000 : 0,
+  enemyCloseTurnTime: isDebugging ? 2000 : 0,
+  totalEnemyWaitTime: isDebugging ? 5000 : 0,
+  yourTurnPopupWaitTime: isDebugging ? 700 : 0,
 
   //for debugging 2000 1000 700 
   debugReducedTime: isDebugging ? 2000 : 0,
