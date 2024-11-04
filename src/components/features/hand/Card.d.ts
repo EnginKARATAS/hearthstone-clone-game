@@ -13,8 +13,8 @@ interface InitialState {
   };
   singleCard: Card | null;
   profile: {
-    player: Profile;
-    enemy: Profile;
+    player: Profile | null;
+    enemy: Profile | null;
   };
   cardCache: [{ player: Card | null; enemy: Card | null }];
   moveCount: number;

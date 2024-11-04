@@ -1,18 +1,15 @@
 import { characterPack } from "../../../assets/characterPack.js";
+import profilePack from "../../../assets/profilePack.js";
 
-let clientCardBase: Card[] = [
-  
+let clientCardBase: Card[] = [];
 
-];
+let enemyCardBase: Card[] = [];
 
-let enemyCardBase: Card[] = [
- 
-];
-
-export const setFirstCardBase = (characters: { p1Name: String, p2Name: String }) => {
-  enemyCardBase = characterPack[characters.p2Name].map((card: Card) => ({...card, cardOwner: "enemy"}));
-  clientCardBase = characterPack[characters.p1Name].map((card: Card) => ({...card, cardOwner: "player"}));
+let profile: { player: Profile | null; enemy: Profile | null } = {
+  player: null,
+  enemy: null,
 };
+
 
 export const getCardBaseLenght = ({
   player,
@@ -36,4 +33,28 @@ export const pullRandomCard = ({ isEnemy }: { isEnemy: boolean }) => {
   }
 
   return randomCard ? randomCard : null;
+};
+
+export const setFirstCardBase = (characters: {
+  p1Name: String;
+  p2Name: String;
+}) => {
+  enemyCardBase = characterPack[characters.p2Name].map((card: Card) => ({
+    ...card,
+    cardOwner: "enemy",
+  }));
+  clientCardBase = characterPack[characters.p1Name].map((card: Card) => ({
+    ...card,
+    cardOwner: "player",
+  }));
+};
+export const setProfileBase = (characters: {
+  p1Name: string;
+  p2Name: string;
+}) => {
+  profile.player = profilePack[characters.p1Name];
+  profile.enemy = profilePack[characters.p2Name];
+};
+export const getProfile = () => {
+  return profile;
 };

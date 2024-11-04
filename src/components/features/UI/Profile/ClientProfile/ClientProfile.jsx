@@ -6,14 +6,16 @@ import SingleGameCard from "../../../Card/GameCard/SingleGameCard";
 import Board from "../../../Card/Board/Board";
 import RemainingCards from "../../../Card/RemainingCards/RemainingCards";
 import { useSelector } from "react-redux";
+
 export default function ClientProfile({ player, position }) {
+  const profile = useSelector((state) => state.hand.profile.player);
   return (
     <div className="absolute client-profile">
       <Board player="player" position={{ top: -497, left: 150 }} />
       <RemainingCards player="player" position={{ top: -545, right: -558 }} />
       <Profile
         className="enemy-profile"
-        img={{ pack: "engin-pack", photo: "hero-engin" }}
+        img={{ pack: profile.cardPack }}
         position={{ left: 4, bottom: 216 }}
         player="player"
       />

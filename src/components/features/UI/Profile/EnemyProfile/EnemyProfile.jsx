@@ -8,11 +8,11 @@ import RemainingCards from "../../../Card/RemainingCards/RemainingCards";
 
 export default function EnemyProfile() {
   const enemyBoardCards = useSelector((state) => state.hand.board.enemy);
- 
+  const profile = useSelector((state) => state.hand.profile.enemy);
   return (
     <div className="absolute enemy-profile">
       <Profile
-        img={{ pack: "yavuz-pack", photo: "hero-yavuz" }}
+        img={{ pack: profile.cardPack, photo: "hero-yavuz" }}
         position={{ top: 153, left: 6 }}
         player="enemy"
       />

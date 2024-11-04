@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { pos, getTop } from "./cardPositioningUtils.js";
-import { pullRandomCard, getCardBaseLenght, setFirstCardBase } from "./cardService.ts";
+import {
+  pullRandomCard,
+  getCardBaseLenght,
+  setFirstCardBase,
+  setProfileBase,
+  getProfile,
+} from "./cardService.ts";
 
 const initialState: InitialState = {
   hand: {
@@ -111,16 +117,12 @@ const decideDuelDestiny = (
   cacheEnemyCard: Card,
   cachePlayerCard: Card
 ) => {
-  let playerCard = state.board.player.find(
-    (card) => {
-      if(card.cardId === cachePlayerCard.cardId)
-        return card;
-    }
-  );
-  if(!playerCard)
-    if(cachePlayerCard.profile === "player")
-      playerCard = state.profile.player;
-    
+  let playerCard = state.board.player.find((card) => {
+    if (card.cardId === cachePlayerCard.cardId) return card;
+  });
+  if (!playerCard)
+    if (cachePlayerCard.profile === "player") playerCard = state.profile.player;
+
   let enemyCard = state.board.enemy.find(
     (card) => card.cardId === cacheEnemyCard.cardId
   );
@@ -134,10 +136,9 @@ const decideDuelDestiny = (
     //Defender(Health)-Attacker(Attack)<=0 destroy defender card
     //Attacker(Health)-Defender(Attack)<=0 destroy attacker card
     //else both loose health
-    if(playerCard!.profile === "player"){
+    if (playerCard!.profile === "player") {
       playerCard!.cardHealth -= enemyCard!.cardAttack;
-    }
-    else{
+    } else {
       playerCard!.cardHealth -= enemyCard!.cardAttack;
       enemyCard!.cardHealth -= playerCard!.cardAttack;
     }
@@ -255,8 +256,19 @@ export const handSlice = createSlice({
   name: "hand",
   initialState,
   reducers: {
-    setCardBase: (state: InitialState, action: { payload: { characters: { p1Name: String, p2Name: String }} }) => {
+    setProfile: (
+      state: InitialState,
+      action: { payload: { p1Name: string; p2Name: string } }
+    ) => {
+      state.profile.player = getProfile().player;
+      state.profile.enemy = getProfile().enemy;
+    },
+    setCardBase: (
+      state: InitialState,
+      action: { payload: { characters: { p1Name: string; p2Name: string } } }
+    ) => {
       setFirstCardBase(action.payload.characters);
+      setProfileBase(action.payload.characters);
     },
     clickedProfile: (
       state: InitialState,
@@ -286,7 +298,7 @@ export const handSlice = createSlice({
           player: null,
           enemy: null,
         };
-      }  
+      }
     },
 
     advanceScenarioMove: (state: InitialState) => {
@@ -514,5 +526,6 @@ export const {
   advanceScenarioMove,
   clickedProfile,
   setCardBase,
+  setProfile,
 } = handSlice.actions;
 export default handSlice.reducer;
