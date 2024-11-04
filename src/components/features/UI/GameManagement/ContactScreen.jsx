@@ -16,14 +16,16 @@ export default function ContactScreen() {
     <div className="loading-screen fixed flex justify-center items-center flex-col">
       <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       <h1 className="loading text-5xl font-bold">Thank you for playing</h1>
-      {surpriseCount % 5 === 0 && (
-        <h2 className="loading text-3xl font-bold mt-10">
-          Big Surprise Counter: {surpriseCount % 5}/5
-        </h2>
-      )}
-      {surpriseCount % 5 === 0 ? (
+      {surpriseCount < 5 ? (
         <div className="flex flex-col items-center">
-          <p className="text-white">Gizli seviyeyi açtınız :D</p>
+          <h2 className="loading text-3xl font-bold mt-10">
+            Big Surprise Counter: {surpriseCount }/5
+          </h2>
+
+        </div>
+      ) : (
+        <div className="">
+          <p className="text-white">Gizli seviyeyi açtınız</p>
           <video
             src="/menu/loading/thisisnotasecret.mp4"
             autoPlay
@@ -32,10 +34,8 @@ export default function ContactScreen() {
             className="w-[400px] h-[400px]"
           ></video>
         </div>
-      ) : (
-        <p className="text-white">Büyük ödülü gördünüz</p>
       )}
-      <button onClick={() => dispatch(setGameState("menu"))}>Play Again</button>
+      <button className="play-again-btn" onClick={() => dispatch(setGameState("menu"))}>Play Again</button>
 
       <p className="loading text-sm mt-20 w-[800px] text-center">
         This game is a fan-made project inspired by the popular card game
