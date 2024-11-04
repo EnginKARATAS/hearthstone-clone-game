@@ -17,23 +17,9 @@ import { useDispatch } from "react-redux";
 
 export default function GameBoard() {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
-  const [gameOver, setGameOver] = useState(false);
-  const [contactScreen, setContactScreen] = useState(false);
   const clientHealth = useSelector((state) => state.hand.profile.player.cardHealth);
   const enemyHealth = useSelector((state) => state.hand.profile.enemy.cardHealth);
   const gameState = useSelector((state) => state.game.gameState);
-  useEffect(() => {
-    const loadCards = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 200));
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000 - GameConstants.debugReducedTime);
-    };
-
-    loadCards();
-  }, []);
 
   useEffect(() => {
     if (clientHealth <= 0 || enemyHealth <= 0) {
