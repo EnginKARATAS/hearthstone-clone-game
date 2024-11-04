@@ -26,7 +26,7 @@ export default function RemainingCards({ position, player}) {
       </svg>
       <div className=" fixed flex justify-center items-center flex-col">
         <p
-          className="text-center text-xl z-10 font-normal remaining-bar-counter relative"
+          className="text-center text-xl z-10 font-normal remaining-bar-counter absolute"
           style={{ transform: "rotate(90deg)", transformOrigin: "left bottom" }}
         >
         {remainingCards}
