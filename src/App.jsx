@@ -5,21 +5,20 @@ import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect } from "react";
 import { setCardBase, setProfile } from "./components/features/hand/handSlice";
 import { useDispatch } from "react-redux";
-
+import Menu from "./components/features/Menu/Menu/Menu";
+import FishOrnament from "./components/features/UI/FishOrnament";
 function App() {
   const dispatch = useDispatch();
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  useEffect(() => {
-  }, [windowHeight, windowWidth]);
-  dispatch(setCardBase({characters: { p1Name: "yavuz-pack", p2Name: "engin-pack" }}));
-  dispatch(setProfile({p1Name: "yavuz-pack", p2Name: "engin-pack"}))
+  useEffect(() => {}, [windowHeight, windowWidth]);
   if (windowWidth <= windowHeight) return <RotateScreen />;
 
   return (
     <>
-      <div className="bg">
-        <GameBoard className="board" />
+      <div className="bg absolute board">
+        <Menu />
+        <FishOrnament />
       </div>
     </>
   );

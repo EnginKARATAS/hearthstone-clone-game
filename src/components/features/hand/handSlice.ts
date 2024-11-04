@@ -268,6 +268,7 @@ export const handSlice = createSlice({
       action: { payload: { characters: { p1Name: string; p2Name: string } } }
     ) => {
       setFirstCardBase(action.payload.characters);
+      console.log(action.payload.characters)
       setProfileBase(action.payload.characters);
     },
     clickedProfile: (

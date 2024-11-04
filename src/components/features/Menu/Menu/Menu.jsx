@@ -6,6 +6,7 @@ import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
 import { useTranslation } from "react-i18next"; 
 import Pause from "../Pause/Pause.jsx";
+import GameBoard from "../../../GameBoard.jsx";
 export default function Menu() {
   const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
@@ -46,6 +47,13 @@ export default function Menu() {
         <div className="bg-outer absolute z-20 bg">
           <Pause />
         </div>
+      </div>
+    );
+  }
+  else if (gameState === "playing") {
+    return (
+      <div>
+          <GameBoard className="board" />
       </div>
     );
   }

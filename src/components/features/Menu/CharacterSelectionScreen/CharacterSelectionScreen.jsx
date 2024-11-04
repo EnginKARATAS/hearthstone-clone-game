@@ -4,11 +4,17 @@ import { characterPack } from "../../../../assets/characterPack";
 import MiniCharacterCards from "./MiniCharacterCards/MiniCharacterCards";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import GameBoard from "../../../GameBoard"; // Import the GameBoard component
+import { useDispatch } from "react-redux";
+import { setCardBase, setProfile } from "../../hand/handSlice";
 export default function CharacterSelectionScreen({ dispatchGameState }) {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const [lastSelectedCharacterPack, setLastSelectedCharacterPack] =
     useState("");
   const [characters, setCharacters] = useState([null, null]);
+  const [gameStarted, setGameStarted] = useState(false); // New state to track game start
+
   const handleCharacterPackChange = (characterPack) => {
     if (characters[0] === null && characters[1] === null) {
       setCharacters([characterPack, null]);
@@ -26,21 +32,30 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
       }
     }
   };
+
   const handleCharacterPackHover = (characterPack) => {
     setLastSelectedCharacterPack(characterPack);
   };
+
   const handleCharacterPackLeave = () => {
     setLastSelectedCharacterPack("");
   };
 
   const startGame = () => {
-    dispatchGameState("playing")
+    if (characters[0] && characters[1]) { // Check if both characters are selected
+      dispatch(setCardBase({characters: { p1Name: characters[0], p2Name: characters[1] }}));
+      dispatch(setProfile({p1Name: characters[0], p2Name: characters[1]}))
+      setGameStarted(true); // Set game started to true
+      dispatchGameState("playing");
+    }
   }
+
   return (
     <div
       //onClick={() => dispatchGameState("playing")}
       className="character-selection-screen absolute z-25"
-    >
+    >    
+
       <div className="middle-image absolute">
         <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       </div>
@@ -112,7 +127,9 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
             ))}
           </div>
         </div>
-        {characters[0] && characters[1] && (
+        {gameStarted ? ( // Conditionally render GameBoard
+          <GameBoard className="board" />
+        ) : (
           <button
             className="start-game-button absolute"
             onClick={startGame}

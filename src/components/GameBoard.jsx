@@ -9,10 +9,8 @@ import LoadingScreen from "./features/UI/GameManagement/LoadingScreen";
 import { useSelector } from "react-redux";
 import EndGameScreen from "./features/UI/GameManagement/EndGameScreen";
 import ContactScreen from "./features/UI/GameManagement/ContactScreen";
-import Menu from "./features/Menu/Menu/Menu";
-import GameConstants from "./GameConstants";
-import Settings from "./features/Menu/Settings/Settings";
-import { setGameState } from "./features/game/gameSlice.ts";
+ import GameConstants from "./GameConstants";
+ import { setGameState } from "./features/game/gameSlice.ts";
 import { useDispatch } from "react-redux";
 
 export default function GameBoard() {
@@ -44,14 +42,13 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="board">
-      <Menu />
-      <FishOrnament />
-      <EnemyProfile player="enemy" />
-      <YourTurn />
-      <EndTurnButton />
-      <ClientProfile player="player" />
-      <img onClick={() => dispatch(setGameState("pause"))} className="settings-icon absolute" width="50" src="/menu/menu/settings/settings-icon.png" alt="settings" />
-    </div>
+
+      <div className="">
+        <EnemyProfile player="enemy" />
+        <YourTurn />
+        <EndTurnButton />
+        <ClientProfile player="player" />
+        <img onClick={() => dispatch(setGameState("pause"))} className="settings-icon absolute" width="50" src="/menu/menu/settings/settings-icon.png" alt="settings" />
+      </div>
   );
 }
