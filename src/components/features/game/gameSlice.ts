@@ -6,7 +6,7 @@ export const gameSlice = createSlice({
   name: "game",
   initialState: {
     gameOver: false,
-    gameState: "menu",
+    gameState: "contact",
   },
   reducers: {
     resetGame: (state) => {
