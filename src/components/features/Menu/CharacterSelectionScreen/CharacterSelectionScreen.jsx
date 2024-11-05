@@ -184,10 +184,17 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           )}
         </div>
         {gameStarted && <GameBoard key={playCount} className="board" />}
-        {!characters.includes(null) && (
-          <button className="start-game-button absolute" onClick={startGame}>
-            <span className="text-black text-xl ">{t("start")}</span>
-          </button>
+        {!characters.includes(null) &&
+          selectGameMode === false &&
+          clickAdventureMode === false && (
+            <div className="">
+              <button className="start-game-button absolute" onClick={startGame}>
+              <span className="text-black text-xl ">{t("start")}</span>
+            </button>
+            <button className="start-game-button absolute mt-20" onClick={() => {setSelectGameMode(true); setClickAdventureMode(false); setCharacters([null, null])}}>
+                <span className="text-black text-xl ">{t("goBack")}</span>
+              </button>
+            </div>
         )}
         {lastSelectedCharacterPack && (
           <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
