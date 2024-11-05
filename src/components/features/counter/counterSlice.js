@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { playCardToBoard } from "../hand/handSlice";
+import { playCardToBoard, addCardToBoard } from "../hand/handSlice";
 const initialState = {
   value: {
     player: 0,
@@ -37,7 +37,9 @@ export const counterSlice = createSlice({
       state.successStatus = action.payload;
     },
     decrement: (state, action) => {
-      state.inGameMana[action.payload.player] -= action.payload.cardCost;
+      if (state.inGameMana[action.payload.cardOwner] - action.payload.cardCost >= 0)
+
+        state.inGameMana[action.payload.cardOwner] -= action.payload.cardCost;
     },
   },
   extraReducers: (builder) => {
@@ -47,6 +49,9 @@ export const counterSlice = createSlice({
           Math.random(10) *
             state.inGameMana[action.payload.isEnemy ? "enemy" : "player"]
         );
+    });
+    builder.addCase(addCardToBoard, (state, action) => {
+      counterSlice.caseReducers.decrement(state, action);
     });
   },
 });

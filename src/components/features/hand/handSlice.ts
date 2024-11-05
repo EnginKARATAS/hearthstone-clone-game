@@ -413,15 +413,6 @@ export const handSlice = createSlice({
         updatePlayerCardPositions(state, state.hand.player.length);
         refreshBoardCardPlayer(state, state.board.player.length);
       }
-      //if (state.board.enemy.length < 7 && action.player === "enemy") {
-      //state.board.enemy.push(action.payload);
-      //const cardIndex = state.hand.enemy.findIndex(
-      // (card) => card.cardId === action.payload.cardId
-      //);
-      //state.hand.enemy.splice(cardIndex, 1);
-      //y(state, state.hand.enemy.length);
-      //refreshBoardCardEnemy(state, state.board.enemy.length);
-      // }
     },
     playCardToBoard: (
       //enemy plays
