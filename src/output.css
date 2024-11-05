@@ -586,6 +586,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -594,8 +598,16 @@ video {
   margin-top: 5rem;
 }
 
-.mt-80 {
-  margin-top: 20rem;
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-\[280px\] {
+  margin-top: 280px;
 }
 
 .flex {
@@ -702,6 +714,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -724,6 +741,18 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -778,7 +807,7 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-p, span, h1, h2, h3, h4, h5, h6 {
+p, span, h1, h2, h3, h4, h5, h6, li {
   font-family: 'Belwebold', sans-serif;
 }
 

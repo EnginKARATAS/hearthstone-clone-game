@@ -1,14 +1,13 @@
 const isDebugging = false;
 export default {
-  enemyTurnTime: isDebugging ? 6000 : 0,
-  enemyHandToBoardTime: isDebugging ? 1000 : 0,
-  enemyCloseTurnTime: isDebugging ? 2000 : 0,
-  totalEnemyWaitTime: isDebugging ? 5000 : 0,
-  yourTurnPopupWaitTime: isDebugging ? 700 : 0,
+  enemyTurnTime: isDebugging ? 0 : 6000,
+  enemyHandToBoardTime: isDebugging ? 0 : 1000,
+  enemyCloseTurnTime: isDebugging ? 0 : 2000,
+  totalEnemyWaitTime: isDebugging ? 0 : 5000,
+  yourTurnPopupWaitTime: isDebugging ? 0 : 700,
 
-  //for debugging 2000 1000 700 
-  debugReducedTime: isDebugging ? 2000 : 0,
-  debugReducedTimeShort: isDebugging ? 1000 : 0,
-  debugReducedTimeLoading: isDebugging ? 7000 : 0,
+  endTurnDisplayTime: isDebugging ? 0 : 700,
+  debugReducedTimeShort: isDebugging ? 0 : 1000,
+  debugReducedTimeLoading: isDebugging ? 0 : 7000,
 
 };

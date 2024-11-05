@@ -6,7 +6,7 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         welcome: "Welcome to the game",
-        credits: "Credits",
+        credits: "About",
         start: "Start Game",
         settings: "Settings",
         contact: "Contact",
@@ -46,7 +46,7 @@ i18n.use(initReactI18next).init({
     tr: {
       translation: {
         welcome: "Oyuna hoş geldiniz",
-        credits: "Geliştiriciler",
+        credits: "Hakkında",
         start: "Oyunu Başlat",
         settings: "Ayarlar",
         selectLanguage: "Dil Seçin",

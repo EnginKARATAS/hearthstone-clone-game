@@ -10,6 +10,7 @@ import GameBoard from "../../../GameBoard.jsx";
 import LoadingScreen from "../../UI/GameManagement/LoadingScreen.jsx";
 import EndGameScreen from "../../UI/GameManagement/EndGameScreen.jsx";
 import ContactScreen from "../../UI/GameManagement/ContactScreen.jsx";
+import Credits from "../Credits/Credits.jsx";
 export default function Menu() {
   const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
@@ -50,6 +51,14 @@ export default function Menu() {
         </div>
       </div>
     );
+  } else if (gameState === "credits") {
+    return (
+      <div>
+        <div className="bg-outer absolute z-20 bg">
+          <Credits onClick={dispatchGameState("credits")} />
+        </div>
+      </div>
+    );
   } else if (gameState === "playing" || gameState === "pause") {
     return (
       <div>
@@ -84,7 +93,7 @@ export default function Menu() {
           </p>
           <p
             onClick={() => dispatchGameState("credits")}
-            className="px-4 py-2 text-white menu-item"
+            className="px-4 py-2 text-white menu-item pt-3"
           >
             {t("credits")}
           </p>

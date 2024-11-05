@@ -23,9 +23,9 @@ export default function GameBoard() {
     (async () => {
       if (clientHealth <= 0 || enemyHealth <= 0) {
         dispatch(setGameState("loading"));
-        await delay(2000 - GameConstants.debugReducedTime);
+        await delay(GameConstants.debugReducedTime);
         dispatch(setGameState("gameOver"));
-        await delay(7000 - GameConstants.debugReducedTime);
+        await delay(GameConstants.debugReducedTime);
         dispatch(setGameState("contactScreen"));
       }
     })();
