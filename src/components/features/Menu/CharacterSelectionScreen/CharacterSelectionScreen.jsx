@@ -91,11 +91,11 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               src={`/cards/card-images/${characters[0]}/${characters[0]}.png`}
               alt="left-character"
             />
+            <div className="flex justify-center items-center player-name-container absolute">
+              <h1 className="p1-character-name">{t("player1")}</h1>
+            </div>
           </>
         )}
-        <div className="flex justify-center items-center player-name-container absolute">
-          <h1 className="p1-character-name">{t("player1")}</h1>
-        </div>
       </div>
 
       <div className="p2-character-container text-5xl font-bold absolute">
@@ -111,11 +111,11 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               src={`/cards/card-images/${characters[1]}/${characters[1]}.png`}
               alt="right-character"
             />
+            <div className="flex justify-center items-center player-name-container absolute">
+              <h1 className="p2-character-name">{t("player2")}</h1>
+            </div>
           </>
         )}
-        <div className="flex justify-center items-center player-name-container absolute">
-          <h1 className="p2-character-name">{t("player2")}</h1>
-        </div>
       </div>
 
       <div className="mini-container flex flex-row justify-center items-center">
@@ -170,8 +170,14 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
                 <h3 className="text-2xl font-bold text-center text-white">
                   {t("adventureModeText")}
                 </h3>
-                <button className="select-game-mode-button absolute mt-8" onClick={() => {setSelectGameMode(true); setClickAdventureMode(false)}}>
-                  <span className="text-black text-xl" >{t("goBack")}</span>
+                <button
+                  className="select-game-mode-button absolute mt-8"
+                  onClick={() => {
+                    setSelectGameMode(true);
+                    setClickAdventureMode(false);
+                  }}
+                >
+                  <span className="text-black text-xl">{t("goBack")}</span>
                 </button>
               </div>
             </div>
