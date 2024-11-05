@@ -7,11 +7,8 @@ export default function Pause() {
   const dispatch = useDispatch();
   const gameState = useSelector((state) => state.game.gameState);
   if (gameState === "pause") return (
-    <div className="pause-container absolute">
-      <div
-        className="pause-container"
-        onClick={() => dispatch(setGameState("playing"))}
-      ></div>
+    <div className="absolute">
+
       <div className="pause flex flex-col items-center justify-center absolute gap-3">
         <button
           className="pause-button p-2 rounded-md"
@@ -32,6 +29,10 @@ export default function Pause() {
           Main Menu
         </button>
       </div>
+      <div
+        className="pause-container"
+        onClick={() => dispatch(setGameState("playing"))}
+      ></div>
     </div>
   );
 }
