@@ -6,7 +6,9 @@ import {
   setFirstCardBase,
   setProfileBase,
   getProfile,
+  resetCardBase,
 } from "./cardService.ts";
+import { resetGame } from "../game/gameSlice.js";
 
 const initialState: InitialState = {
   hand: {
@@ -434,6 +436,44 @@ export const handSlice = createSlice({
     closeCard: (state: InitialState, action: { payload: Card | null }) => {
       state.singleCard = null;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(resetGame, (state) => { 
+      console.log("object")
+      resetCardBase();
+      state.hand = {
+        player: [],
+        enemy: []
+      };
+      state.board = {
+        player: [],
+        enemy: []
+      };
+      state.cardBaseCount = {
+        enemy: getCardBaseLenght({ player: "enemy" }),
+        player: getCardBaseLenght({ player: "player" })
+      };
+      state.singleCard = null;
+      state.cardCache = [{ player: null, enemy: null }];
+      state.moveCount = 0;
+      
+      // Reset profiles to initial state
+      if (state.profile.player) {
+        state.profile.player.cardHealth = 30;
+        state.profile.player.armor = 0;
+        state.profile.player.borderColor = "";
+        state.profile.player.isSelected = false;
+        state.profile.player.boardPairId = null;
+      }
+      
+      if (state.profile.enemy) {
+        state.profile.enemy.cardHealth = 30;
+        state.profile.enemy.armor = 0;
+        state.profile.enemy.borderColor = "";
+        state.profile.enemy.isSelected = false;
+        state.profile.enemy.boardPairId = null;
+      }
+    });
   },
 });
 

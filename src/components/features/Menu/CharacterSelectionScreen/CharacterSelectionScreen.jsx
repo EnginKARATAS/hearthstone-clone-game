@@ -7,7 +7,9 @@ import { useTranslation } from "react-i18next";
 import GameBoard from "../../../GameBoard"; // Import the GameBoard component
 import { useDispatch } from "react-redux";
 import { setCardBase, setProfile } from "../../hand/handSlice";
+import { useSelector } from "react-redux";
 export default function CharacterSelectionScreen({ dispatchGameState }) {
+  const playCount = useSelector((state) => state.game.playCount);
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const [lastSelectedCharacterPack, setLastSelectedCharacterPack] =
@@ -128,7 +130,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           </div>
         </div>
         {gameStarted ? ( // Conditionally render GameBoard
-          <GameBoard className="board" />
+          <GameBoard key={playCount} className="board" />
         ) : (
           <button
             className="start-game-button absolute"

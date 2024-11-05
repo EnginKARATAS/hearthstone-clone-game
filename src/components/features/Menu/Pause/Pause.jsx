@@ -6,6 +6,10 @@ import { useSelector } from "react-redux";
 export default function Pause() {
   const dispatch = useDispatch();
   const gameState = useSelector((state) => state.game.gameState);
+  const goMainMenu = () => {
+    dispatch(resetGame());
+    dispatch(setGameState("menu"));
+  }
   if (gameState === "pause") return (
     <div className="absolute">
 
@@ -24,7 +28,7 @@ export default function Pause() {
         </button>
         <button
           className="pause-button p-2 rounded-md w-[150px]"
-          onClick={() => dispatch(setGameState("menu"))}
+          onClick={goMainMenu}
         >
           Main Menu
         </button>

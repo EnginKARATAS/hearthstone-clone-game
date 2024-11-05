@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { AppDispatch, RootState } from "../../store";
 
 
 export const gameSlice = createSlice({
@@ -9,25 +10,30 @@ export const gameSlice = createSlice({
   },
   reducers: {
     resetGame: (state) => {
-      state.gameOver = true;//useless
-      //TODO: reset game
-      //handSlice listening to this will reset the game
+      state.gameOver = false;
       state.gameState = "menu";
     },
     setGameOver: (state, action) => {
       isGameOver();
     },
     setGameState: (state, action) => {
+      // below code does not triggering extra reducers
+      //if (action.payload === "menu") {
+        //gameSlice.caseReducers.resetGame(state);
+      //}
       state.gameState = action.payload;
     },
   },
 });
 
-export const isGameOver = () => async (dispatch, getState) => {
+export const isGameOver = () => async (
+  dispatch: AppDispatch,
+  getState: () => RootState
+) => {
   const state = getState();
   if (
-    state.hand.profile.player.cardHealth <= 0 ||
-    state.hand.profile.enemy.cardHealth <= 0
+    state.hand.profile.player?.cardHealth <= 0 ||
+    state.hand.profile.enemy?.cardHealth <= 0
   ) {
     dispatch(setGameOver(true));
     return true;

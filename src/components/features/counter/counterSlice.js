@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { playCardToBoard, addCardToBoard } from "../hand/handSlice";
+import { resetGame } from "../game/gameSlice";
 const initialState = {
   value: {
     player: 0,
@@ -52,6 +53,18 @@ export const counterSlice = createSlice({
     });
     builder.addCase(addCardToBoard, (state, action) => {
       counterSlice.caseReducers.decrement(state, action);
+    });
+    builder.addCase(resetGame, (state) => {
+      state.value = {
+        player: 0,
+        enemy: 0
+      };
+      state.inGameMana = {
+        player: 0,
+        enemy: 0
+      };
+      state.isClientTurn = false;
+      state.successStatus = false;
     });
   },
 });

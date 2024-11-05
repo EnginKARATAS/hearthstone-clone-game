@@ -58,3 +58,8 @@ export const setProfileBase = (characters: {
 export const getProfile = () => {
   return profile;
 };
+
+export const resetCardBase = () => {
+  clientCardBase = [];
+  enemyCardBase = [];
+};

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setGameState } from "../../game/gameSlice.ts";
+import { resetGame, setGameState } from "../../game/gameSlice.ts";
 
 export default function ContactScreen() {
   const dispatch = useDispatch();
@@ -12,11 +12,15 @@ export default function ContactScreen() {
     setSurpriseCount(surpriseCount);
   }, []);
 
+  const goMainMenu = () => {
+    dispatch(resetGame());
+    dispatch(setGameState("menu"));
+  }
   return (
     <div className="loading-screen fixed flex justify-center items-center flex-col">
       <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       <h1 className="loading text-5xl font-bold">Thank you for playing</h1>
-      {surpriseCount < 5 ? (
+      {surpriseCount < 5 || surpriseCount > 5 ? (
         <div className="flex flex-col items-center">
           <h2 className="loading text-3xl font-bold mt-10">
             Big Surprise Counter: {surpriseCount }/5
@@ -25,7 +29,7 @@ export default function ContactScreen() {
         </div>
       ) : (
         <div className="">
-          <p className="text-white">Gizli seviyeyi açtınız</p>
+          <p className="text-white">Gizli seviyeyi açtınız Ödül:</p>
           <video
             src="/menu/loading/thisisnotasecret.mp4"
             autoPlay
@@ -35,7 +39,7 @@ export default function ContactScreen() {
           ></video>
         </div>
       )}
-      <button className="play-again-btn" onClick={() => dispatch(setGameState("menu"))}>Play Again</button>
+      <button className="play-again-btn" onClick={goMainMenu}>Play Again</button>
 
       <p className="loading text-sm mt-20 w-[800px] text-center">
         This game is a fan-made project inspired by the popular card game
