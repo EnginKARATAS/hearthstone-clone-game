@@ -16,7 +16,8 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
     useState("");
   const [characters, setCharacters] = useState([null, null]);
   const [gameStarted, setGameStarted] = useState(false); // New state to track game start
-
+  const [selectGameMode, setSelectGameMode] = useState(true);
+  const [clickAdventureMode, setClickAdventureMode] = useState(false);
   const handleCharacterPackChange = (characterPack) => {
     if (characters[0] === null && characters[1] === null) {
       setCharacters([characterPack, null]);
@@ -44,20 +45,24 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   };
 
   const startGame = () => {
-    if (characters[0] && characters[1]) { // Check if both characters are selected
-      dispatch(setCardBase({characters: { p1Name: characters[0], p2Name: characters[1] }}));
-      dispatch(setProfile({p1Name: characters[0], p2Name: characters[1]}))
+    if (characters[0] && characters[1]) {
+      // Check if both characters are selected
+      dispatch(
+        setCardBase({
+          characters: { p1Name: characters[0], p2Name: characters[1] },
+        })
+      );
+      dispatch(setProfile({ p1Name: characters[0], p2Name: characters[1] }));
       setGameStarted(true); // Set game started to true
       dispatchGameState("playing");
     }
-  }
+  };
 
   return (
     <div
       //onClick={() => dispatchGameState("playing")}
       className="character-selection-screen absolute z-25"
-    >    
-
+    >
       <div className="middle-image absolute">
         <img src="/menu/loading/hearthstone.png" alt="heartstone" />
       </div>
@@ -115,27 +120,66 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
 
       <div className="mini-container flex flex-row justify-center items-center">
         <div className="select-character text-2xl font-bold mt-10 absolute p-select flex flex-col  ">
-          <h3 className="select-character-title">{t("selectCharacter")}</h3>
-          <div className="flex flex-row justify-center items-center">
-            {Object.keys(characterPack).map((characterPack) => (
-              <CharactersInComponent
-                key={characterPack}
-                characterPack={characterPack}
-                handleCharacterPackChange={handleCharacterPackChange}
-                characters={characters}
-                handleCharacterPackHover={handleCharacterPackHover}
-                handleCharacterPackLeave={handleCharacterPackLeave}
-              />
-            ))}
-          </div>
+          {selectGameMode === true && (
+            <>
+              <h3 className="select-character-title">{t("selectGameMode")}</h3>
+              <div className="flex flex-row justify-center items-center">
+                <button
+                  className="select-game-mode-button absolute mt-1"
+                  onClick={() => setSelectGameMode(false)}
+                >
+                  <span className="text-black text-xl ">
+                    {t("playWithComputer")}
+                  </span>
+                </button>
+                <button
+                  className="select-game-mode-button absolute mt-20"
+                  onClick={() => {
+                    setSelectGameMode(false);
+                    setClickAdventureMode(true);
+                  }}
+                >
+                  <span className="text-black text-xl ">
+                    {t("adventureMode")}
+                  </span>
+                </button>
+              </div>
+            </>
+          )}
+          {selectGameMode === false && clickAdventureMode === false && (
+            <div className="">
+              <h3 className="select-character-title">{t("selectCharacter")}</h3>
+              <div className="flex flex-row justify-center items-center">
+                {Object.keys(characterPack).map((characterPack) => (
+                  <CharactersInComponent
+                    key={characterPack}
+                    characterPack={characterPack}
+                    handleCharacterPackChange={handleCharacterPackChange}
+                    characters={characters}
+                    handleCharacterPackHover={handleCharacterPackHover}
+                    handleCharacterPackLeave={handleCharacterPackLeave}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+          {selectGameMode === false && clickAdventureMode === true && (
+            <div className="">
+              <h3 className="select-character-title">{t("selectCharacter")}</h3>
+              <div className="flex flex-row justify-center items-center">
+                <h3 className="text-2xl font-bold text-center text-white">
+                  {t("adventureModeText")}
+                </h3>
+                <button className="select-game-mode-button absolute mt-8" onClick={() => {setSelectGameMode(true); setClickAdventureMode(false)}}>
+                  <span className="text-black text-xl" >{t("goBack")}</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
-        {gameStarted ? ( // Conditionally render GameBoard
-          <GameBoard key={playCount} className="board" />
-        ) : (
-          <button
-            className="start-game-button absolute"
-            onClick={startGame}
-          >
+        {gameStarted && <GameBoard key={playCount} className="board" />}
+        {!characters.includes(null) && (
+          <button className="start-game-button absolute" onClick={startGame}>
             <span className="text-black text-xl ">{t("start")}</span>
           </button>
         )}

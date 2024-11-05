@@ -23,6 +23,15 @@
   right: 647px;
   top: 330px;
 }
+.select-game-mode-button {
+  font-weight: 700;
+  width: 164px;
+  background: #ffff2fc4;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  top: 50px;
+}
 .select-character-title {
   font-size: 2rem;
   color: rgb(207, 207, 48);
