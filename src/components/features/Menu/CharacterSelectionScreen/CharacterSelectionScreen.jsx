@@ -197,7 +197,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
             </div>
         )}
         {lastSelectedCharacterPack && (
-          <div className="select-enemy-cards text-sm mt-80 w-[800px] text-center absolute p-cards flex  items-center justify-center">
+          <div className="select-enemy-cards text-sm mt-[280px] w-[800px] text-center absolute p-cards flex  items-center justify-center">
             <img
               className="absolute mini-character-image-left"
               src={`/cards/card-images/${lastSelectedCharacterPack}/${lastSelectedCharacterPack}.png`}
