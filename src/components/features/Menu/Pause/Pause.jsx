@@ -9,21 +9,21 @@ export default function Pause() {
   if (gameState === "pause") return (
     <div className="absolute">
 
-      <div className="pause flex flex-col items-center justify-center absolute gap-3">
+      <div className="pause flex flex-col items-center justify-center absolute gap-4">
         <button
-          className="pause-button p-2 rounded-md"
+          className="pause-button p-2 rounded-md w-[150px]"
           onClick={() => dispatch(setGameState("playing"))}
         >
           Resume
         </button>
         <button
-          className="pause-button p-2 rounded-md"
+          className="pause-button p-2 rounded-md w-[150px]"
           onClick={() => dispatch(resetGame())}
         >
           Concade
         </button>
         <button
-          className="pause-button p-2 rounded-md"
+          className="pause-button p-2 rounded-md w-[150px]"
           onClick={() => dispatch(setGameState("menu"))}
         >
           Main Menu
