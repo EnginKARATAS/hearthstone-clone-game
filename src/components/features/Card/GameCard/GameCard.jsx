@@ -3,8 +3,10 @@ import { useDispatch } from "react-redux";
 import { hoverSingleCard, addCardToBoard } from "../../hand/handSlice.ts";
 import { useState } from "react";
 import { decrement, isCardPlayable } from "../../counter/counterSlice";
+import { useSelector } from "react-redux";
 export default function GameCard({ position, card, player, deg }) {
   const dispatch = useDispatch();
+  const isClientTurn = useSelector((state) => state.counter.isClientTurn);
 
   const [zIndex, setZIndex] = useState(0);
 
@@ -23,9 +25,8 @@ export default function GameCard({ position, card, player, deg }) {
   };
 
   const onClick = async () => {
-    
     const res = await dispatch(isCardPlayable(card));
-    if (res) {
+    if (res && isClientTurn === true) {
       dispatch(addCardToBoard(card, player));
       dispatch(decrement({player, cardCost: 1}));
     }

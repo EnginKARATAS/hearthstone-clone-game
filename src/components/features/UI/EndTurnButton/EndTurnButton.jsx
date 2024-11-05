@@ -33,8 +33,8 @@ export default function EndTurnButton() {
   const cardCache = useSelector((state) => state.hand.cardCache);
   const enemyHandCard = useSelector((state) => state.hand.hand.enemy);
 
+  dispatch(syncCardBaseLenght());
   const onEndTurnButtonClick = async () => {
-    dispatch(syncCardBaseLenght());
     if (isClientTurn === true) {
       await delay(1);
 

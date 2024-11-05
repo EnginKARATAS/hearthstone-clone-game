@@ -1,12 +1,20 @@
 import { useSelector } from "react-redux";
 import "./RemainingCards.css";
 
-export default function RemainingCards({ position, player}) {
-  const remainingCards = useSelector(state=>state.hand.cardBaseCount[player==="player"?"player":"enemy"])
+export default function RemainingCards({ position, player }) {
+  const remainingCards = useSelector(
+    (state) =>
+      state.hand.cardBaseCount[player === "player" ? "player" : "enemy"]
+  );
 
   return (
     <div className="remaining-cards absolute" style={position}>
-      <svg className="absolute remaining-bar-text remaining-bar-name-svg" width="180"  height="40" style={{transform: 'rotate(93deg)', transformOrigin: 'left bottom'}}>
+      <svg
+        className="absolute remaining-bar-text remaining-bar-name-svg"
+        width="180"
+        height="40"
+        style={{ transform: "rotate(93deg)", transformOrigin: "left bottom" }}
+      >
         <path
           id="sPath"
           d="M10,50 Q40,35 90,30 T200,30"
@@ -24,12 +32,12 @@ export default function RemainingCards({ position, player}) {
           </textPath>
         </text>
       </svg>
-      <div className=" fixed flex justify-center items-center flex-col">
+      <div className=" ">
         <p
-          className="text-center text-xl z-10 font-normal remaining-bar-counter absolute"
+          className="text-center text-xl z-10 font-normal remaining-bar-counter  fixed flex flex-col justify-center items-center absolute"
           style={{ transform: "rotate(90deg)", transformOrigin: "left bottom" }}
         >
-        {remainingCards}
+          {remainingCards}
         </p>
       </div>
     </div>
