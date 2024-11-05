@@ -21,7 +21,7 @@ export const profilePack = {
     boardPairId: null,
   },
   "yavuz-pack": {
-    cardHealth: 0,
+    cardHealth: 30,
     profile: "player",
     armor: 0,
     cardId: Math.random(),
