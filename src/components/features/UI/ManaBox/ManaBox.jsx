@@ -13,19 +13,33 @@ export default function ManaBox({ position, player }) {
       }}
     >
       <div className="mana-counter flex justify-center items-center absolute">
-        <p className="mana-text text-sky-400 px-4 py-1">{inGameMana[player]}/{mana[player]}</p>
+        <p className="mana-text text-sky-400 px-4 py-1">
+          {inGameMana[player]}/{mana[player]}
+        </p>
       </div>
       {player !== "enemy" && (
         <div className="mana-cyrstals flex flex-row gap-1 absolute">
-          {mana > 0 &&
-            Array.from({ length: mana }).map((v, i) => (
-              <img
-                src="/mana-bg.png"
-                alt="mana-crystal"
-                className="mana-cyrstal"
-                key={i}
-              />
-            ))}
+          {inGameMana[player] > 0 &&
+            Array.from({ length: mana[player] - inGameMana[player] }).map(
+              (v, i) => (
+                <img
+                  src="/empty-mana-bg.png"
+                  alt="mana-crystal"
+                  className="mana-cyrstal"
+                  key={i}
+                />
+              )
+            )}
+          {Array.from({
+            length: mana[player] - (mana[player] - inGameMana[player]),
+          }).map((v, i) => (
+            <img
+              src="/mana-bg.png"
+              alt="mana-crystal"
+              className="mana-cyrstal"
+              key={i}
+            />
+          ))}
         </div>
       )}
     </div>
