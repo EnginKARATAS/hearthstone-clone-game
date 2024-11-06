@@ -203,7 +203,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               src={`/cards/card-images/${lastSelectedCharacterPack}/${lastSelectedCharacterPack}.png`}
               alt="selected-character"
             />
-            <div className="absolute mini-character-text-container flex justify-end items-center">
+            <div className="absolute mini-character-text-container flex justify-end items-center justify-center w-[200px]">
               <h3 className="mini-character-title text-center">
                 {lastSelectedCharacterPack.split("-")[0].toUpperCase()}{" "}
                 {lastSelectedCharacterPack.split("-")[1].toUpperCase()}

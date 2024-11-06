@@ -17,6 +17,8 @@ i18n.use(initReactI18next).init({
               "A character focused on armor gain, their cards may not deal much damage, but they can distract the opponent and deal damage from many angles. If the table is not empty, luck will be on your side.",
             "yavuz-pack":
               "Yavuz, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
+            "mustafa-pack":
+              "Mustafa, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
           },
           player1: "Your Character",
           player2: "Your Enemy",
@@ -57,6 +59,8 @@ i18n.use(initReactI18next).init({
             "Zırh kazanımı odaklı bir karakter, kartları da her ne kadar az hasar verse de, rakibi oyalayarak bir çok yönden hasar verir. Masayı boş bırakmayın, şans sizden yana olacak.",
           "yavuz-pack":
             "Yavuz, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
+            "mustafa-pack":
+            "Mustafa, kartlarıyla kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir. Kısa mesafede kendini koruyan bir karakterdir.",
         },
         player1: "Karakterin",
         player2: "Düşmanın",

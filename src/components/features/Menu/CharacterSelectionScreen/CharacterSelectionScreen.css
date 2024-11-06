@@ -108,7 +108,7 @@
 
 .mini-character-text-container {
   top: 80px;
-  left: 106px;
+  left: 75px;
 }
 
 .mini-character-text {
@@ -118,13 +118,12 @@
   font-size: 1.2em;
   text-align: justify;
   line-height: 15px;
-  left: -31px;
+  left: -2px;
 }
 
 .mini-character-title {
   color: rgb(0 0 0);
   font-weight: 400;
-
   font-size: 1.9rem;
 }
 .p2-character {
