@@ -2,6 +2,11 @@
 https://hearthstone-clone-game.vercel.app/
 * UI Finished
 * state management in progress
+
+# Cards
+
+![11-07-2024 (02-52-33)](https://github.com/user-attachments/assets/3e42b5c9-7a7f-449f-b24f-4d807b9b9cd3)
+
 ## Select character screen screenshots
 
 ![image](https://github.com/user-attachments/assets/317c70b8-60a7-4f5b-8618-1d3e29f94d2f)
