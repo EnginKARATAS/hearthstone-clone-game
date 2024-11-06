@@ -19,7 +19,8 @@ export default function ManaBox({ position, player }) {
       </div>
       {player !== "enemy" && (
         <div className="mana-cyrstals flex flex-row gap-1 absolute">
-          {inGameMana[player] > 0 &&
+          {inGameMana[player] >= 0 &&
+          
             Array.from({ length: mana[player] - inGameMana[player] }).map(
               (v, i) => (
                 <img
