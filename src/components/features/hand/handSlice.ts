@@ -9,6 +9,7 @@ import {
   resetCardBase,
 } from "./cardService.ts";
 import { resetGame } from "../game/gameSlice.js";
+import { InitialState } from "./Card.js";
 
 const initialState: InitialState = {
   hand: {
@@ -258,6 +259,11 @@ export const handSlice = createSlice({
   name: "hand",
   initialState,
   reducers: {
+    makeLastCardsPlayable: (state: InitialState, action: { payload: "player" | "enemy" }) => {
+      state.board[action.payload].forEach((card) => {
+        card.isPlayedLastTurn = true;
+      });
+    },
     setProfile: (
       state: InitialState,
       action: { payload: { p1Name: string; p2Name: string } }
@@ -559,5 +565,6 @@ export const {
   clickedProfile,
   setCardBase,
   setProfile,
+  makeLastCardsPlayable
 } = handSlice.actions;
 export default handSlice.reducer;

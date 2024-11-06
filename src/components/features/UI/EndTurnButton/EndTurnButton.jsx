@@ -1,6 +1,11 @@
 import "./EndTurnButton.css";
 import { useDispatch } from "react-redux";
-import { closeYourTurn, resetInGameMana } from "../../counter/counterSlice";
+import {
+  closeYourTurn,
+  resetInGameMana,
+  increment,
+  openYourTurn,
+} from "../../counter/counterSlice";
 import { useSelector } from "react-redux";
 import {
   addHealth,
@@ -10,11 +15,10 @@ import {
   playCardToBoard,
   clickBoardCard,
   clickedProfile,
+  makeLastCardsPlayable,
 } from "../../hand/handSlice";
 import { useEffect } from "react";
-import { increment, openYourTurn } from "../../counter/counterSlice";
 import { useState } from "react";
-import { setGameState } from "../../game/gameSlice";
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function EndTurnButton() {
@@ -65,6 +69,7 @@ export default function EndTurnButton() {
           await delay(enemyBoardCard.length * 2000);
           dispatch(advanceScenarioMove());
           setTurnCount(turnCount + 1);
+          dispatch(makeLastCardsPlayable("player"));
           dispatch(openYourTurn());
           dispatch(increment({ player: "player" }));
           dispatch(resetInGameMana({ player: "player" }));

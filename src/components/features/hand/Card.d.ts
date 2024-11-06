@@ -20,8 +20,9 @@ interface InitialState {
   moveCount: number;
 }
 
-interface Card {
+export interface Card {
   cardId: number;
+  isPlayedLastTurn: boolean;
   profile: null | string;
   borderColor: string | null;
   cardOwner: "player" | "enemy" | "";

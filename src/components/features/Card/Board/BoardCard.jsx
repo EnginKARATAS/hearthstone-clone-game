@@ -1,10 +1,14 @@
 import "./BoardCard.css";
 import { useDispatch } from "react-redux";
-import { hoverSingleCard, closeSingleCard, clickBoardCard } from "../../hand/handSlice";
+import {
+  hoverSingleCard,
+  closeSingleCard,
+  clickBoardCard,
+} from "../../hand/handSlice";
 
 export default function BoardCard({ position, boardCard }) {
   const dispatch = useDispatch();
-     const onMouseOver = (card) => {
+  const onMouseOver = (card) => {
     setTimeout(() => {
       dispatch(hoverSingleCard(card));
     }, 200);
@@ -17,8 +21,10 @@ export default function BoardCard({ position, boardCard }) {
   };
 
   const onClickBoardCard = (card) => {
-    dispatch(closeSingleCard());
-    dispatch(clickBoardCard({clickedCard: card, actionMaker: "player"}));
+    if (card.isPlayedLastTurn) {
+      dispatch(closeSingleCard());
+      dispatch(clickBoardCard({ clickedCard: card, actionMaker: "player" }));
+    }
   };
 
   return (
@@ -30,13 +36,12 @@ export default function BoardCard({ position, boardCard }) {
       style={{
         left: position.left,
         marginRight: position.offset,
-        border: boardCard?.borderColor ? `4px solid ${boardCard?.borderColor}` : "none",
+        border: boardCard?.borderColor
+          ? `4px solid ${boardCard?.borderColor}`
+          : "none",
       }}
     >
-      <img
-        src="/cards/card-images/board_blank.png"
-        className="board-frame"
-      />
+      <img src="/cards/card-images/board_blank.png" className="board-frame" />
       <img
         className=" board-card-image absolute"
         src={`/cards/card-images/${boardCard?.cardPack}/${boardCard?.cardImageName}.png`}

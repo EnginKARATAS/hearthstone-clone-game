@@ -1,4 +1,4 @@
-import { characterPack } from "../../../assets/characterPack.js";
+import { characterPack } from "../../../assets/characterPack.ts";
 import profilePack from "../../../assets/profilePack.js";
 
 let clientCardBase: Card[] = [];
