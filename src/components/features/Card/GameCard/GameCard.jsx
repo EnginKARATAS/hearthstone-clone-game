@@ -36,7 +36,7 @@ export default function GameCard({ position, card, player, deg }) {
     <div>
       {player === "player" ? (
         <div
-          className="game-card relative"
+          className="game-card relative transform transition-all duration-300 ease-in-out"
           onMouseOver={() => onMouseOver(card)}
           onMouseLeave={() => onMouseLeave(card)}
           onClick={() => onClick(card)}
@@ -81,7 +81,7 @@ export default function GameCard({ position, card, player, deg }) {
         </div>
       ) : (
         <div
-          className="backside-game-card relative"
+          className="backside-game-card relative transition-all duration-300 ease-in-out"
           style={{
             left: position.x,
             width: position.size,
