@@ -6,7 +6,7 @@ import {
   clickBoardCard,
 } from "../../hand/handSlice";
 
-export default function BoardCard({ position, boardCard }) {
+export default function BoardCard({position, boardCard }) {
   const dispatch = useDispatch();
   const onMouseOver = (card) => {
     setTimeout(() => {
@@ -21,7 +21,7 @@ export default function BoardCard({ position, boardCard }) {
   };
 
   const onClickBoardCard = (card) => {
-    if (card.isPlayedLastTurn) {
+    if (card.isPlayedLastTurn || card.cardOwner !== "player") {//do not chech last turn if not player (is enemy)
       dispatch(closeSingleCard());
       dispatch(clickBoardCard({ clickedCard: card, actionMaker: "player" }));
     }
