@@ -46,6 +46,7 @@ export default function EndTurnButton() {
         dispatch(addHealth({ value: -1, player: "player" }));
       }
       dispatch(advanceScenarioMove());
+      dispatch(makeLastCardsPlayable("enemy"));
       dispatch(closeYourTurn());
     }
   };
@@ -62,7 +63,7 @@ export default function EndTurnButton() {
         }
 
         await delay(cardCache.length * 2000).then(async () => {
-          if (enemyHandCard.length > 2)
+          if (enemyHandCard.length > 1)
             dispatch(playCardToBoard({ isEnemy: true }));
           enemyDecide();
           dispatch(syncCardBaseLenght());
@@ -107,6 +108,7 @@ export default function EndTurnButton() {
       Array(enemyBoardCard.length).keys()
     ).sort(() => Math.random() - 0.5);
     for (let i = 0; i <= enemyBoardCard.length; i++) {
+      if(enemyBoardCard[shuffleSequenceEnemy[i]].isPlayedLastTurn){//if last turn is played, than play
       await delay(500);
       dispatch(
         clickBoardCard({
@@ -127,8 +129,9 @@ export default function EndTurnButton() {
       }
       await delay(500);
     }
+    }
   };
-  const chooseHero = () => {};
+ 
   return (
     <div className="end-turn">
       <button
