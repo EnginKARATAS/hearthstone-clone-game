@@ -9,7 +9,7 @@ import {
   resetCardBase,
 } from "./cardService.ts";
 import { resetGame } from "../game/gameSlice.js";
-import { InitialState } from "./Card.js";
+import { InitialState } from "../../../types/Card.js";
 
 const initialState: InitialState = {
   hand: {

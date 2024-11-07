@@ -22,6 +22,7 @@ interface InitialState {
 
 export interface Card {
   cardId: number;
+  cardSkills: Skill[];
   isPlayedLastTurn: boolean;
   profile: null | string;
   borderColor: string | null;
