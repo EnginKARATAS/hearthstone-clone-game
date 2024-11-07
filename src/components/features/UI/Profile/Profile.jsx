@@ -1,6 +1,6 @@
 import { clickBoardCard } from "../../hand/handSlice";
 import "./Profile.css";
-import {useSelector, useDispatch} from "react-redux"
+import { useSelector, useDispatch } from "react-redux";
 import { clickedProfile } from "../../hand/handSlice";
 export default function Profile({ img, position, player }) {
   const profile = useSelector((state) => state.hand.profile[player]);
@@ -22,28 +22,45 @@ export default function Profile({ img, position, player }) {
         bottom: position.bottom,
       }}
     >
-      <div className="image-container">
+      <div className="image-container transition-all duration-300 ease-in-out hover:-translate-y-2 ">
         <img
           className="profile-image"
-          src={
-            "/cards/card-images/" + img.pack + "/" + img.pack + ".png"
-          }
+          src={"/cards/card-images/" + img.pack + "/" + img.pack + ".png"}
           alt=""
-          style={{border: profile.borderColor ? `3px solid ${profile.borderColor}` : "none",}}
+          style={{
+            border: profile.borderColor
+              ? `3px solid ${profile.borderColor}`
+              : "none",
+            borderRadius: "50%",
+          }}
         />
       </div>
-      
-        {profile.armor > 0 && <div className="armor-bar absolute">
-          <img className="armor-bar-image absolute" src="/armor-bar.png" alt="" />
-        <div className="flex justify-center items-center  ">
-          <p className="text-white text-xl z-10 armor-bar-text">{profile.armor}</p>
+
+      {profile.armor > 0 && (
+        <div className="armor-bar absolute">
+          <img
+            className="armor-bar-image absolute"
+            src="/armor-bar.png"
+            alt=""
+          />
+          <div className="flex justify-center items-center  ">
+            <p className="text-white text-xl z-10 armor-bar-text">
+              {profile.armor}
+            </p>
           </div>
-        </div>}
+        </div>
+      )}
 
       <div className="health-bar absolute ">
-        <img className="health-bar-image absolute" src="/health-bar.png" alt="" />
+        <img
+          className="health-bar-image absolute"
+          src="/health-bar.png"
+          alt=""
+        />
         <div className="flex justify-center items-center  ">
-          <p className="text-white text-xl z-10 health-bar-text">{profile.cardHealth}</p>
+          <p className="text-white text-xl z-10 health-bar-text">
+            {profile.cardHealth}
+          </p>
         </div>
       </div>
     </div>
