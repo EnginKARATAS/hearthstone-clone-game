@@ -23,6 +23,7 @@ export default function Pause() {
   if (gameState === "pause") return (
     <div className="absolute">
       <div className="pause flex flex-col items-center justify-center absolute gap-4">
+        <h2 className="pause-title">Pause</h2>
         <button
           className="pause-button p-2 rounded-md w-[150px]"
           onClick={() => dispatch(setGameState("playing"))}
@@ -49,6 +50,7 @@ export default function Pause() {
       
       {showConfirm === "menu" && (
         <YouSure
+          title="Main Menu"
           message="Are you sure you want to return to the main menu?"
           onConfirm={goMainMenu}
           onCancel={() => setShowConfirm(null)}
@@ -56,6 +58,7 @@ export default function Pause() {
       )}
       {showConfirm === "concede" && (
         <YouSure
+          title="Concede"
           message="Are you sure you want to concede the game?"
           onConfirm={handleConcede}
           onCancel={() => setShowConfirm(null)}

@@ -22,4 +22,10 @@
     width: 1420px;
     background: #18000045;
     height: 852px;
+    margin-bottom: 10px;
+}
+
+.pause-title {
+    color: wheat;
+    font-size: 1.5rem;
 }
