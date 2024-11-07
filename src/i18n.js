@@ -69,7 +69,7 @@ i18n.use(initReactI18next).init({
         bigSurpriseCounter: "Büyük Ödül Sayacı",
         bigSurprise: "Büyük Şutun Ödülü",
         nextPrize: "Bir sonraki ödül için 10 tur oynayınız.",
-        playAgain: "Tekrar Oynat",
+        playAgain: "Tekrar Oyna",
         waitFor7SecondsToGoToSecretLevel: "7 saniye bekleyiniz, gizli seviyeye gideceksiniz.",
         theGameHasComeToAnEnd: "Oyun sona erdi.",
         thankYouFor: "",

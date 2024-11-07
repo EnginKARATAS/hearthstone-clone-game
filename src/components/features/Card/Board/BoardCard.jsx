@@ -39,7 +39,7 @@ export default function BoardCard({position, boardCard }) {
         marginRight: position.offset,
         border: boardCard?.borderColor
           ? `4px solid ${boardCard?.borderColor}`
-          : "4px solid red",
+          : "none",
       }}
     >
       <img src="/cards/card-images/board_blank.png" className="board-frame" />
