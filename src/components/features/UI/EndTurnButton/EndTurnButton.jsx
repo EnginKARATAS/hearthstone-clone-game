@@ -139,8 +139,9 @@ export default function EndTurnButton() {
           backgroundImage: isClientTurn
             ? "url('/menu/turn/end-turn.png')"
             : "url('/menu/turn/enemy-turn.png')",
+          transition: "all 0.3s ease-in-out"
         }}
-        className="end-turn-button m-3"
+        className="end-turn-button m-3" 
         onClick={onEndTurnButtonClick}
       ></button>
     </div>
