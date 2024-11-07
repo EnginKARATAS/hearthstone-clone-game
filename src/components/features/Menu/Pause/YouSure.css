@@ -1,0 +1,54 @@
+.you-sure-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 0, 0, 0.271);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.you-sure-popup {
+  background-image: url(/menu/menu/bg-outer.png);
+  background-repeat: no-repeat;
+  background-position: revert;
+  padding: 6px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: rgb(29, 32, 15);
+}
+
+.you-sure-message {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  padding: 0 20px;
+  text-align: center;
+  color: wheat;
+}
+
+.you-sure-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.you-sure-button {
+  background-color: #cdb14de6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.you-sure-button:hover {
+  background-color: #bea346e6;
+}
