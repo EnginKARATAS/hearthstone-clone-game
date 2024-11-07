@@ -29,16 +29,17 @@ export default function BoardCard({position, boardCard }) {
 
   return (
     <div
+      key={boardCard.id}
       onClick={() => onClickBoardCard(boardCard)}
       onMouseOver={() => onMouseOver(boardCard)}
       onMouseLeave={() => onMouseLeave(boardCard)}
-      className="absolute board-card"
+      className="absolute board-card transition-all duration-300 ease-in-out hover:-translate-y-2"
       style={{
         left: position.left,
         marginRight: position.offset,
         border: boardCard?.borderColor
           ? `4px solid ${boardCard?.borderColor}`
-          : "none",
+          : "4px solid red",
       }}
     >
       <img src="/cards/card-images/board_blank.png" className="board-frame" />
