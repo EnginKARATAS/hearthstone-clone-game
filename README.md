@@ -2,7 +2,12 @@
 https://hearthstone-clone-game.vercel.app/
 * UI Finished
 * state management in progress
-## Select character screen
+
+# Cards
+
+![11-07-2024 (02-52-33)](https://github.com/user-attachments/assets/3e42b5c9-7a7f-449f-b24f-4d807b9b9cd3)
+
+## Select character screen screenshots
 
 ![image](https://github.com/user-attachments/assets/317c70b8-60a7-4f5b-8618-1d3e29f94d2f)
 
@@ -13,7 +18,10 @@ https://hearthstone-clone-game.vercel.app/
 ## View Insights
 ### Here is the screenshoot from hearthstone clone(Newest First⬆️)
 
-## Attack To The Profile
+## In game screenshots
+
+![image](https://github.com/user-attachments/assets/2a158bfe-7112-4d35-a63a-3f4fd6c1d631)
+
 ![image](https://github.com/user-attachments/assets/25586fb0-f2b9-4bc8-85cc-26876d3c9b84)
 
 ![image](https://github.com/user-attachments/assets/703c7924-f72d-4b43-8d07-840a4635e2a9)
