@@ -33,7 +33,7 @@ export default function BoardCard({position, boardCard }) {
       onClick={() => onClickBoardCard(boardCard)}
       onMouseOver={() => onMouseOver(boardCard)}
       onMouseLeave={() => onMouseLeave(boardCard)}
-      className="absolute board-card transition-all duration-300 ease-in-out hover:-translate-y-2"
+      className="absolute board-card transition-all duration-100 ease-in-out hover:-translate-y-2"
       style={{
         left: position.left,
         marginRight: position.offset,
