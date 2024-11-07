@@ -42,31 +42,36 @@ export default function EndTurnButton() {
     if (isClientTurn === true) {
       await delay(1);
 
-      if (playerCardBaseCount <= 0) {
-        dispatch(addHealth({ value: -1, player: "player" }));
-      }
+
       dispatch(advanceScenarioMove());
       dispatch(makeLastCardsPlayable("enemy"));
       dispatch(closeYourTurn());
     }
   };
+
+  const isEnemyLowOnCards = (enemyCardBaseCount, playerCardBaseCount) => {
+    if (enemyCardBaseCount <= 0) {
+      dispatch(addHealth({ value: -1, player: "enemy" }));
+    }
+    if (playerCardBaseCount <= 0) {
+      dispatch(addHealth({ value: -1, player: "player" }));
+    }
+    dispatch(syncCardBaseLenght());
+
+  }
   useEffect(() => {
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
         dispatch(increment({ player: "enemy" }));
         dispatch(resetInGameMana({ player: "enemy" }));
-        dispatch(syncCardBaseLenght());
         dispatch(drawCard({ isEnemy: true }));
 
-        if (enemyCardBaseCount <= 0) {
-          dispatch(addHealth({ value: -1, player: "enemy" }));
-        }
-
+        syncCardBaseLenght()
         await delay(cardCache.length * 2000).then(async () => {
           if (enemyHandCard.length > 1)
             dispatch(playCardToBoard({ isEnemy: true }));
           enemyDecide();
-          dispatch(syncCardBaseLenght());
+          isEnemyLowOnCards(enemyCardBaseCount, playerCardBaseCount);
           await delay(enemyBoardCard.length * 2000);
           dispatch(advanceScenarioMove());
           setTurnCount(turnCount + 1);
