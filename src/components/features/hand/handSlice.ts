@@ -9,8 +9,9 @@ import {
   resetCardBase,
 } from "./cardService.ts";
 import { resetGame } from "../game/gameSlice.js";
-import { InitialState } from "../../../types/Card.js";
-
+import { Card, InitialState } from "../../../types/Card.js";
+import { SkillManager } from "../../../skillManagement/skillManager/concrate/SkillManager.js";
+const skillManager = new SkillManager();
 const initialState: InitialState = {
   hand: {
     player: [],
@@ -413,6 +414,7 @@ export const handSlice = createSlice({
       action: { payload: Card; player: "player" | "enemy" }
     ) => {
       if (state.board.player.length < 7) {
+        skillManager.castSkills(state, action.payload);
         state.board.player.push(action.payload);
         const cardIndex = state.hand.player.findIndex(
           (card) => card.cardId === action.payload.cardId
