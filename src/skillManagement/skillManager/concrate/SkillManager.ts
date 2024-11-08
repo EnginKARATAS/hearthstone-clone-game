@@ -1,17 +1,17 @@
-import { Card, InitialState } from "../../../types/Card";
-import { Castable } from "../../cast/abstract/Castable";
-import { HealAllCards } from "../../cast/spells/concrates/heal/HealAllCards";
-import { HealHero } from "../../cast/spells/concrates/heal/HealHero";
-import { HealCard } from "../../cast/spells/concrates/heal/HealCard";
-import { Skillable } from "../abstract/Skillable";
-import { DealAllEnemyMinions } from "../../cast/spells/concrates/damage/DealAllEnemyMinions";
-import { DealAll } from "../../cast/spells/concrates/damage/DealAll";
-import { DealAllEnemy } from "../../cast/spells/concrates/damage/DealAllEnemy";
-import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEnemy";
-import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard";
-import { HealRandomCard } from "../../cast/spells/concrates/heal/HealRandomCard";
-import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor";
-import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand";
+import { Card, InitialState } from "../../../types/Card.ts";
+import { Castable } from "../../cast/abstract/Castable.ts";
+import { HealAllCards } from "../../cast/spells/concrates/heal/HealAllCards.ts";
+import { HealHero } from "../../cast/spells/concrates/heal/HealHero.ts";
+import { HealCard } from "../../cast/spells/concrates/heal/HealCard.ts";
+import { Skillable } from "../abstract/Skillable.ts";
+import { DealAllEnemyMinions } from "../../cast/spells/concrates/damage/DealAllEnemyMinions.ts";
+import { DealAll } from "../../cast/spells/concrates/damage/DealAll.ts";
+import { DealAllEnemy } from "../../cast/spells/concrates/damage/DealAllEnemy.ts";
+import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEnemy.ts";
+import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard.ts";
+import { HealRandomCard } from "../../cast/spells/concrates/heal/HealRandomCard.ts";
+import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor.ts";
+import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand.ts";
 
 function createSkill(skillData: {
   type: string;
