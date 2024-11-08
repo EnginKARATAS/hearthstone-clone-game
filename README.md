@@ -3,6 +3,41 @@ https://hearthstone-clone-game.vercel.app/
 * UI Finished
 * state management in progress
 
+# Card types
+
+
+//***health skills***
+//1. gives 1 health to a random card
+  { type: “HealRandomCard”, amount: 1 },
+/gives 1 health to the 2nd hero
+  { type: “HealHero”, amount: 1 },
+//3. gives 1 health to a random card
+  { type: “HealCard”, amount: 1 },
+//4. gives 1 health to all cards
+  { type: “HealAllCards”, amount: 1 },
+
+//******damage skills***
+//5. deals 1 damage to a random enemy
+  { type: “DealRandomEnemy”, amount: 1 },
+//6. deals 1 damage to all opponent's minions
+  { type: “DealAllEnemyMinions”, amount: 1 },
+//7. deals 1 damage to everyone in the game
+  { type: “DealAll”, amount: 1 },
+//8. deals 1 damage to all enemies
+  { type: “DealAllEnemy”, amount: 1 },
+  
+//******give back skills***
+//9. destroys a card, returns it to your hand with an amount/amount attack/health buff 
+  { type: “ReturnToHandAndGiveHealth”, amount: 1 },
+
+//******card drawing skills***
+//10. card draws
+  { type: “DrawCard”},
+
+//******empowerment skills***
+//11. empowers a random card by 1
+  { type: “EmpowerRandomCard”, amount: 1 },
+
 # Cards
 
 ![11-07-2024 (02-52-33)](https://github.com/user-attachments/assets/3e42b5c9-7a7f-449f-b24f-4d807b9b9cd3)
