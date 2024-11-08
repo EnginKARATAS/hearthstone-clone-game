@@ -14,7 +14,7 @@ export const profilePack = {
     cardAttack: 0,
     image: "",
     isSelected: false,
-    cardPack: "engin-pack",
+    cardPack: "jaina-pack",
     cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
     deg: 0,
     move: 0,
