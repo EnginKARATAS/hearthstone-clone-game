@@ -1,12 +1,10 @@
-import { HealHero } from "../skillManagement/cast/heal/concrates/HealHero";
-import { HealCard } from "../skillManagement/cast/heal/concrates/HealCard";
 import { Card } from "../types/Card.js";
 export const characterPack: { [key: string]: Card[] } = {
   "engin-pack": [
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -29,7 +27,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -52,7 +50,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -75,7 +73,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -97,7 +95,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -120,7 +118,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -143,7 +141,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -166,7 +164,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -188,7 +186,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -211,7 +209,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -234,7 +232,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -257,7 +255,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -280,7 +278,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -303,7 +301,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -328,7 +326,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -351,7 +349,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -373,7 +371,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -395,7 +393,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -418,7 +416,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -441,7 +439,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -463,7 +461,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -486,7 +484,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -508,7 +506,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -531,7 +529,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -554,7 +552,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -577,7 +575,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -600,7 +598,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -623,7 +621,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -645,7 +643,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "enemy",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -670,7 +668,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -693,7 +691,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -716,7 +714,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -739,7 +737,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -762,7 +760,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -785,7 +783,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -808,7 +806,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -831,7 +829,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -854,7 +852,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -876,7 +874,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -898,7 +896,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -921,7 +919,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -943,7 +941,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -966,7 +964,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
@@ -989,7 +987,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardOwner: "player",
       profile: null,
-      cardSkills: [{ type: "HealHero" }],
+      cardSkills: [],
       borderColor: null,
       isSelected: false,
       isPlayedLastTurn: false,
