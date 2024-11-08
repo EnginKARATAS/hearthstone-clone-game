@@ -22,7 +22,7 @@ export default function BoardCard({ position, boardCard }) {
       card.cardHealth <= 0 && dispatch(removeBoardCard(card));
     });
   }, [boardCards]);
-  
+
   const dispatch = useDispatch();
   const onMouseOver = (card) => {
     setTimeout(() => {
@@ -56,7 +56,7 @@ export default function BoardCard({ position, boardCard }) {
         marginRight: position.offset,
         border: boardCard?.borderColor
           ? `3px solid ${boardCard?.borderColor}`
-          : "none",
+          : `0px solid ${boardCard?.borderColor}`,
         borderRadius: "46%",
       }}
     >
