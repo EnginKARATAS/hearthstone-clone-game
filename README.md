@@ -102,6 +102,8 @@ https://hearthstone-clone-game.vercel.app/
 
 ## In game screenshots
 
+![image](https://github.com/user-attachments/assets/73df14f9-16c7-4cfe-bec4-9e62941af1f1)
+
 ![image](https://github.com/user-attachments/assets/2a158bfe-7112-4d35-a63a-3f4fd6c1d631)
 
 ![image](https://github.com/user-attachments/assets/25586fb0-f2b9-4bc8-85cc-26876d3c9b84)
