@@ -1,7 +1,6 @@
-import { InitialState } from "../../../../../types/Card";
-import { Card } from "../../../../../types/Card";
-import { Castable } from "../../../abstract/Castable";
-import CastableCard from "../../abstracts/CastableCard";
+import { Card, InitialState } from "../../../../../types/Card.ts";
+import { Castable } from "../../../abstract/Castable.ts";
+import CastableCard from "../../abstracts/CastableCard.ts";
 
 export class HealRandomCard extends CastableCard implements Castable {
   constructor(amount: number) {
