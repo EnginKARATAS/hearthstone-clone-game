@@ -10,7 +10,7 @@ import {
 } from "./cardService.ts";
 import { resetGame } from "../game/gameSlice.js";
 import { Card, InitialState } from "../../../types/Card.js";
-import { SkillManager } from "../../../skillManagement/skillManager/concrate/SkillManager.js";
+import { SkillManager } from "../../../skillManagement/skillManager/concrate/SkillManager.ts";
 const skillManager = new SkillManager();
 const initialState: InitialState = {
   hand: {
