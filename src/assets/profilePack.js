@@ -1,5 +1,5 @@
 export const profilePack = {
-  "engin-pack": {
+  "jaina-pack": {
     cardHealth: 30,
     armor: 0,
     profile: "player",
@@ -20,8 +20,29 @@ export const profilePack = {
     move: 0,
     boardPairId: null,
   },
+  "engin-pack": {
+    cardHealth: 20,
+    armor: 20,
+    profile: "player",
+    cardId: Math.random(),
+    borderColor: "",
+    cardOwner: "player",
+    cardName: "",
+    cardDescription: "",
+    cardType: "",
+    cardCost: 4,
+    cardImageName: "",
+    cardAttack: 0,
+    image: "",
+    isSelected: false,
+    cardPack: "engin-pack",
+    cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
+    deg: 0,
+    move: 0,
+    boardPairId: null,
+  },
   "yavuz-pack": {
-    cardHealth: 30,
+    cardHealth: 40,
     profile: "player",
     armor: 0,
     cardId: Math.random(),
@@ -42,7 +63,7 @@ export const profilePack = {
     boardPairId: null,
   },
   "mustafa-pack": {
-    cardHealth: 30,
+    cardHealth: 40,
     profile: "player",
     armor: 0,
     cardId: Math.random(),
