@@ -4,9 +4,25 @@ import {
   hoverSingleCard,
   closeSingleCard,
   clickBoardCard,
+  removeBoardCard,
 } from "../../hand/handSlice";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-export default function BoardCard({position, boardCard }) {
+export default function BoardCard({ position, boardCard }) {
+  const boardCards = useSelector((state) => state.hand.board);
+  useEffect(() => {
+    const playerBoardCards = boardCards.player;
+    const enemyBoardCards = boardCards.enemy;
+    console.log(playerBoardCards, enemyBoardCards);
+    playerBoardCards.forEach((card) => {
+      card.cardHealth <= 0 && dispatch(removeBoardCard(card));
+    });
+    enemyBoardCards.forEach((card) => {
+      card.cardHealth <= 0 && dispatch(removeBoardCard(card));
+    });
+  }, [boardCards]);
+  
   const dispatch = useDispatch();
   const onMouseOver = (card) => {
     setTimeout(() => {
@@ -21,7 +37,8 @@ export default function BoardCard({position, boardCard }) {
   };
 
   const onClickBoardCard = (card) => {
-    if (card.isPlayedLastTurn || card.cardOwner !== "player") {//do not chech last turn if not player (is enemy)
+    if (card.isPlayedLastTurn || card.cardOwner !== "player") {
+      //do not chech last turn if not player (is enemy)
       dispatch(closeSingleCard());
       dispatch(clickBoardCard({ clickedCard: card, actionMaker: "player" }));
     }
