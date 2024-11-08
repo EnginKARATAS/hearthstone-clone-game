@@ -3,7 +3,6 @@ import { Castable } from "../../cast/abstract/Castable.ts";
 import { HealAllCards } from "../../cast/spells/concrates/heal/HealAllCards.ts";
 import { HealHero } from "../../cast/spells/concrates/heal/HealHero.ts";
 import { HealCard } from "../../cast/spells/concrates/heal/HealCard.ts";
-import { HealRandomCard } from "../../cast/spells/concrates/heal/HealRandomCard.ts";
 import { Skillable } from "../abstract/Skillable.ts";
 import { DealAllEnemyMinions } from "../../cast/spells/concrates/damage/DealAllEnemyMinions.ts";
 import { DealAll } from "../../cast/spells/concrates/damage/DealAll.ts";
@@ -25,8 +24,7 @@ function createSkill(skillData: {
       return new HealHero(skillData.amount!);
     case "HealAllCards":
       return new HealAllCards(skillData.amount!);
-    case "HealRandomCard":
-      return new HealRandomCard(skillData.amount!);
+ 
     case "DealRandomEnemy":
       return new DealRandomEnemy(skillData.amount!);
     case "DealAllEnemyMinions":
