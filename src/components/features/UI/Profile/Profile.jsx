@@ -30,7 +30,7 @@ export default function Profile({ img, position, player }) {
           style={{
             border: profile.borderColor
               ? `3px solid ${profile.borderColor}`
-              : `0px solid ${profile.borderColor}`
+              : `0px solid ${profile.borderColor}`,
             borderRadius: "50%",
           }}
         />
