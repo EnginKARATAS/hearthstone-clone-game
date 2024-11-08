@@ -69,6 +69,22 @@ https://hearthstone-clone-game.vercel.app/
     <td>EmpowerRandomCard</td>
     <td>Empowers a random card by 1</td>
   </tr>
+
+  <tr>
+    <th colspan="2">Armor Skills</th>
+  </tr>
+  <tr>
+    <td>GainArmor</td>
+    <td>Gives armor to your hero</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Special Skills</th>
+  </tr>
+  <tr>
+    <td>GainHealthAmountOfCardsInYourHand</td>
+    <td>Gains health equal to the number of cards in your hand</td>
+  </tr>
 </table>
 
 # Cards
