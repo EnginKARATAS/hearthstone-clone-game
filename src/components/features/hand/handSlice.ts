@@ -260,6 +260,10 @@ export const handSlice = createSlice({
   name: "hand",
   initialState,
   reducers: {
+    removeBoardCard: (state: InitialState, action: { payload: Card }) => {
+      const cardIndex = state.board[action.payload.cardOwner as "player" | "enemy"].findIndex((card) => card.cardId === action.payload.cardId);
+      state.board[action.payload.cardOwner as "player" | "enemy"].splice(cardIndex, 1);
+    },
     makeLastCardsPlayable: (state: InitialState, action: { payload: "player" | "enemy" }) => {
       state.board[action.payload].forEach((card) => {
         card.isPlayedLastTurn = true;
@@ -414,7 +418,6 @@ export const handSlice = createSlice({
       action: { payload: Card; player: "player" | "enemy" }
     ) => {
       if (state.board.player.length < 7) {
-        skillManager.castSkills(state, action.payload);
         state.board.player.push(action.payload);
         const cardIndex = state.hand.player.findIndex(
           (card) => card.cardId === action.payload.cardId
@@ -422,6 +425,8 @@ export const handSlice = createSlice({
         state.hand.player.splice(cardIndex, 1);
         updatePlayerCardPositions(state, state.hand.player.length);
         refreshBoardCardPlayer(state, state.board.player.length);
+        skillManager.castSkills(state, action.payload, "player");
+
       }
     },
     playCardToBoard: (
@@ -567,6 +572,7 @@ export const {
   clickedProfile,
   setCardBase,
   setProfile,
-  makeLastCardsPlayable
+  makeLastCardsPlayable,
+  removeBoardCard
 } = handSlice.actions;
 export default handSlice.reducer;
