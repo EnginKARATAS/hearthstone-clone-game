@@ -9,7 +9,10 @@ import { DealAll } from "../../cast/spells/concrates/damage/DealAll";
 import { DealAllEnemy } from "../../cast/spells/concrates/damage/DealAllEnemy";
 import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEnemy";
 import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard";
-import { HealRandomCard } from "../../cast/spells/concrates/heal/healRandomCard";
+import { HealRandomCard } from "../../cast/spells/concrates/heal/HealRandomCard";
+import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor";
+import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand";
+
 function createSkill(skillData: {
   type: string;
   amount?: number;
@@ -32,9 +35,12 @@ function createSkill(skillData: {
       return new DealAllEnemy(skillData.amount!);
     case "DealAll":
       return new DealAll(skillData.amount!);
-
     case "EmpowerRandomCard":
       return new EmpowerRandomCard(skillData.amount!);
+      case "GainArmor":
+        return new GainArmor(skillData.amount!);  
+    case "GainHealthAmountOfCardsInYourHand":
+      return new GainHealthAmountOfCardsInYourHand();
     default:
       return null;
   }
