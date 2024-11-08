@@ -8,8 +8,8 @@ import { DealAllEnemyMinions } from "../../cast/spells/concrates/damage/DealAllE
 import { DealAll } from "../../cast/spells/concrates/damage/DealAll";
 import { DealAllEnemy } from "../../cast/spells/concrates/damage/DealAllEnemy";
 import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEnemy";
-import { HealRandomCard } from "../../cast/spells/concrates/heal/healRandomCard";
 import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard";
+import { HealRandomCard } from "../../cast/spells/concrates/heal/healRandomCard";
 function createSkill(skillData: {
   type: string;
   amount?: number;
