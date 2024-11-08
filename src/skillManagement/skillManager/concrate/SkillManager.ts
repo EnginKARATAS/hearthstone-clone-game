@@ -11,6 +11,7 @@ import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEn
 import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard.ts";
 import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor.ts";
 import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand.ts";
+import { HealCardRandom } from "../../cast/spells/concrates/heal/HealCardRandom.ts";
 
 function createSkill(skillData: {
   type: string;
@@ -24,7 +25,8 @@ function createSkill(skillData: {
       return new HealHero(skillData.amount!);
     case "HealAllCards":
       return new HealAllCards(skillData.amount!);
- 
+    case "HealCardRandom":
+      return new HealCardRandom(skillData.amount!);
     case "DealRandomEnemy":
       return new DealRandomEnemy(skillData.amount!);
     case "DealAllEnemyMinions":
