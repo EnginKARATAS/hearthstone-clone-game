@@ -4,7 +4,7 @@ export default function MiniCharacterCards({ lastSelectedCharacterPack }) {
   return (
     <div className="mini-character-cards">
       <div className=" flex flex-row-reverse flex-wrap">
-        {characterPack[lastSelectedCharacterPack]?.map((character) => (
+        {characterPack[lastSelectedCharacterPack]?.slice(0,15).map((character) => (
           <div key={character.cardId}>
             <img
             className="gridding"
