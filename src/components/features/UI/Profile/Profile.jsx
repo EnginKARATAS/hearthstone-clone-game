@@ -20,15 +20,16 @@ export default function Profile({ img, position, player }) {
         bottom: position.bottom,
       }}
     >
-      <div className="image-container transition-all duration-300 ease-in-out hover:-translate-y-2 ">
+      <div className="image-container ">
         <img
-          className="profile-image"
+          className="profile-image transition-all duration-300 ease-in-out hover:-translate-y-2"
           src={"/cards/card-images/" + img.pack + "/" + img.pack + ".png"}
           alt=""
           style={{
             border: profile.borderColor
               ? `3px solid ${profile.borderColor}`
               : `0px solid ${profile.borderColor}`,
+            borderRadius: "50%",
           }}
         />
       </div>

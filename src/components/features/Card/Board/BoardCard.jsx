@@ -55,7 +55,7 @@ export default function BoardCard({ position, boardCard }) {
         left: position.left,
         marginRight: position.offset,
         border: boardCard?.borderColor
-          ? `3px solid ${boardCard?.borderColor}`
+          ? `4px dashed ${boardCard?.borderColor}`
           : `0px solid ${boardCard?.borderColor}`,
         borderRadius: "46%",
       }}
