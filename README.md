@@ -5,38 +5,71 @@ https://hearthstone-clone-game.vercel.app/
 
 # Card types
 
+<table>
+  <tr>
+    <th colspan="2">Health Skills</th>
+  </tr>
+  <tr>
+    <td>HealRandomCard</td>
+    <td>Gives 1 health to a random card</td>
+  </tr>
+  <tr>
+    <td>HealHero</td>
+    <td>Gives 1 health to the hero</td>
+  </tr>
+  <tr>
+    <td>HealCard</td>
+    <td>Gives 1 health to a random card</td>
+  </tr>
+  <tr>
+    <td>HealAllCards</td>
+    <td>Gives 1 health to all cards</td>
+  </tr>
 
-//***health skills***
-//1. gives 1 health to a random card
-  { type: “HealRandomCard”, amount: 1 },
-/gives 1 health to the 2nd hero
-  { type: “HealHero”, amount: 1 },
-//3. gives 1 health to a random card
-  { type: “HealCard”, amount: 1 },
-//4. gives 1 health to all cards
-  { type: “HealAllCards”, amount: 1 },
+  <tr>
+    <th colspan="2">Damage Skills</th>
+  </tr>
+  <tr>
+    <td>DealRandomEnemy</td>
+    <td>Deals 1 damage to a random enemy</td>
+  </tr>
+  <tr>
+    <td>DealAllEnemyMinions</td>
+    <td>Deals 1 damage to all opponent's minions</td>
+  </tr>
+  <tr>
+    <td>DealAll</td>
+    <td>Deals 1 damage to everyone in the game</td>
+  </tr>
+  <tr>
+    <td>DealAllEnemy</td>
+    <td>Deals 1 damage to all enemies</td>
+  </tr>
 
-//******damage skills***
-//5. deals 1 damage to a random enemy
-  { type: “DealRandomEnemy”, amount: 1 },
-//6. deals 1 damage to all opponent's minions
-  { type: “DealAllEnemyMinions”, amount: 1 },
-//7. deals 1 damage to everyone in the game
-  { type: “DealAll”, amount: 1 },
-//8. deals 1 damage to all enemies
-  { type: “DealAllEnemy”, amount: 1 },
-  
-//******give back skills***
-//9. destroys a card, returns it to your hand with an amount/amount attack/health buff 
-  { type: “ReturnToHandAndGiveHealth”, amount: 1 },
+  <tr>
+    <th colspan="2">Give Back Skills</th>
+  </tr>
+  <tr>
+    <td>ReturnToHandAndGiveHealth</td>
+    <td>Destroys a card, returns it to your hand with an amount/amount attack/health buff</td>
+  </tr>
 
-//******card drawing skills***
-//10. card draws
-  { type: “DrawCard”},
+  <tr>
+    <th colspan="2">Card Drawing Skills</th>
+  </tr>
+  <tr>
+    <td>DrawCard</td>
+    <td>Draw a card</td>
+  </tr>
 
-//******empowerment skills***
-//11. empowers a random card by 1
-  { type: “EmpowerRandomCard”, amount: 1 },
+  <tr>
+    <th colspan="2">Empowerment Skills</th>
+  </tr>
+  <tr>
+    <td>EmpowerRandomCard</td>
+    <td>Empowers a random card by 1</td>
+  </tr>
+</table>
 
 # Cards
 
