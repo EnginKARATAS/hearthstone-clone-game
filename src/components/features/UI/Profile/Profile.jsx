@@ -1,10 +1,8 @@
-import { clickBoardCard } from "../../hand/handSlice";
 import "./Profile.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clickedProfile } from "../../hand/handSlice";
 export default function Profile({ img, position, player }) {
   const profile = useSelector((state) => state.hand.profile[player]);
-  const stats = player === "player" ? profile.player : profile.enemy;
   const dispatch = useDispatch();
   return (
     <div
@@ -31,7 +29,6 @@ export default function Profile({ img, position, player }) {
             border: profile.borderColor
               ? `3px solid ${profile.borderColor}`
               : `0px solid ${profile.borderColor}`,
-            borderRadius: "50%",
           }}
         />
       </div>

@@ -1,16 +1,15 @@
 .profile {
   height: 112px;
-  width: 95px;
+  width: 96px;
 }
 .image-container {
   height: 111px;
-  overflow: hidden;
 }
 
 
 .armor-bar-text {
   font-size: 23px;
-  margin-bottom: 0.2px;
+  margin-bottom: 4.2px;
   margin-left: 9px;
 }
 
