@@ -1,7 +1,5 @@
 # hearthstone clone app
 https://hearthstone-clone-game.vercel.app/
-* UI Finished
-* state management in progress
 
 # Card types
 
