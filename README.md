@@ -91,6 +91,8 @@ https://hearthstone-clone-game.vercel.app/
 
 ## Select character screen screenshots
 
+![image](https://github.com/user-attachments/assets/dc33e333-a694-42cd-a2a6-75d5040f4869)
+
 ![image](https://github.com/user-attachments/assets/317c70b8-60a7-4f5b-8618-1d3e29f94d2f)
 
 ![image](https://github.com/user-attachments/assets/0c26d4a8-7e07-4c95-a888-4ea3051636f4)
@@ -101,6 +103,8 @@ https://hearthstone-clone-game.vercel.app/
 ### Here is the screenshoot from hearthstone clone(Newest First⬆️)
 
 ## In game screenshots
+
+![image](https://github.com/user-attachments/assets/73df14f9-16c7-4cfe-bec4-9e62941af1f1)
 
 ![image](https://github.com/user-attachments/assets/2a158bfe-7112-4d35-a63a-3f4fd6c1d631)
 
