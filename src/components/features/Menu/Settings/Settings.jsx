@@ -17,7 +17,6 @@ export default function Settings() {
   return (
     <div
       className="bg-outer-settings settings"
- 
     >
       <div className="settings-language absolute z-20 flex flex-col items-center justify-center">
         <h1 className="text-white text-xl px-4 py-2 rounded-lg w-fit text-center">

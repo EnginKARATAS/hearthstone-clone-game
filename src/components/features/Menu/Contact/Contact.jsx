@@ -10,7 +10,6 @@ export default function Contact() {
         onClick={() => dispatch(setGameState("menu"))}
         className="contact absolute z-20"
       >
-        <h1>Contact</h1>
       </div>
     </div>
   );
