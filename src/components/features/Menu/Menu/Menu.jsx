@@ -25,11 +25,11 @@ export default function Menu() {
         const imagesToPreload = [
           '/armor-bar.png',
           '/health-bar.png',
-          '/menu/menu/settings/bg-outer.png',
-          '/menu/menu/settings/contact.png',
-          '/menu/menu/settings/credits.png',
-          '/menu/menu/settings/menu.png',
-          '/menu/menu/settings/settings.png',
+          '/menu/menu/bg-outer.png',
+          '/menu/menu/contact.png',
+          '/menu/menu/credits.png',
+          '/menu/menu/menu.png',
+          '/menu/menu/settings.png',
           '/menu/loading/hearthstone.png',
           '/bg-dark.png',
           '/hearthstone-board-2.png'
