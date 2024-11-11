@@ -15,7 +15,7 @@ export default function ContactScreen() {
 
   const goMainMenu = () => {
     dispatch(resetGame());
-    dispatch(setGameState("menu"));
+    dispatch(setGameState("characterSelection"));
   };
   return (
     <div className="loading-screen fixed flex justify-center items-center flex-col">
