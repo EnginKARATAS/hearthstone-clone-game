@@ -9,5 +9,6 @@ export default {
   endTurnDisplayTime: isDebugging ? 0 : 700,
   debugReducedTimeShort: isDebugging ? 0 : 1000,
   debugReducedTimeLoading: isDebugging ? 0 : 7000,
+  loadingTime: isDebugging ? 0 : 1000,
 
 };

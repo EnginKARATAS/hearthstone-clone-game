@@ -3,7 +3,7 @@ import { Card } from "../../../../../types/Card";
 import { Castable } from "../../../abstract/Castable";
 import CastableCard from "../../abstracts/CastableCard";
 
-export class GainArmor extends CastableCard implements Castable {
+export class GiveArmor extends CastableCard implements Castable {
   constructor(amount: number) {
     super(amount);
   }

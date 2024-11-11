@@ -6,14 +6,14 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import YouSure from "./YouSure";
 
-export default function Pause() {
+export default function Pause({ dispatchGameState }) {
   const dispatch = useDispatch();
   const gameState = useSelector((state) => state.game.gameState);
   const [showConfirm, setShowConfirm] = useState(null);
 
   const goMainMenu = () => {
     dispatch(resetGame());
-    dispatch(setGameState("menu"));
+    dispatchGameState("menu");
   };
 
   const handleConcede = () => {

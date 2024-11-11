@@ -8,6 +8,7 @@ export default function GameCard({ position, card, player, deg }) {
   const dispatch = useDispatch();
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
   const inGameMana = useSelector((state) => state.counter.inGameMana);
+  const boardCards = useSelector((state) => state.hand.board[player]);
 
   const [zIndex, setZIndex] = useState(0);
 
@@ -27,7 +28,7 @@ export default function GameCard({ position, card, player, deg }) {
 
   const onClick = async () => {
     const res = await dispatch(isCardPlayable(card));
-    if (res && isClientTurn === true && inGameMana[card.cardOwner] >= card.cardCost) {
+    if (res && isClientTurn === true && inGameMana[card.cardOwner] >= card.cardCost && boardCards.length < 7) {
       dispatch(addCardToBoard(card, player));
     }
   };

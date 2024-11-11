@@ -9,7 +9,7 @@ import { DealAll } from "../../cast/spells/concrates/damage/DealAll.ts";
 import { DealAllEnemy } from "../../cast/spells/concrates/damage/DealAllEnemy.ts";
 import { DealRandomEnemy } from "../../cast/spells/concrates/damage/DealRandomEnemy.ts";
 import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRandomCard.ts";
-import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor.ts";
+import { GainArmor, GiveArmor } from "../../cast/spells/concrates/armor/GiveArmor.ts";
 import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand.ts";
 import { HealCardRandom } from "../../cast/spells/concrates/heal/HealCardRandom.ts";
 import { DrawCard } from "../../cast/spells/concrates/draw/DrawCard.ts";
@@ -37,8 +37,8 @@ function createSkill(skillData: {
       return new DealAll(skillData.amount!);
     case "EmpowerRandomCard":
       return new EmpowerRandomCard(skillData.amount!);
-    case "GainArmor":
-      return new GainArmor(skillData.amount!);
+    case "GiveArmor":
+      return new GiveArmor(skillData.amount!);
     case "GainHealthAmountOfCardsInYourHand":
       return new GainHealthAmountOfCardsInYourHand();
     case "DrawCard":

@@ -81,7 +81,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardId: Math.random(),
       cardPack: "jaina-pack",
       image: "flame_revenant",
-      cardDescription: "When play this, give random minion 1/1 attack/health.",
+      cardDescription: "When play this, give random minion 1/1.",
       cardType: "minion",
       cardImageName: "flame_revenant",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -90,7 +90,7 @@ export const characterPack: { [key: string]: Card[] } = {
       boardPairId: null,
     },
     {
-      cardName: "Spontaneous Combustion",
+      cardName: "Spontaneous",
       cardSkills: [{ type: "DealRandomEnemy", amount: 4 }],
       cardCost: 2,
       cardAttack: 0,
@@ -245,7 +245,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Shield Master",
-      cardSkills: [{ type: "GainArmor", amount: 4 }],
+      cardSkills: [{ type: "GiveArmor", amount: 4 }],
       cardCost: 4,
       cardAttack: 4,
       cardHealth: 5,
@@ -411,7 +411,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardId: Math.random(),
       cardPack: "jaina-pack",
       image: "flame_revenant",
-      cardDescription: "When play this, give random minion 1/1 attack/health.",
+      cardDescription: "When play this, give random minion 1/1.",
       cardType: "minion",
       cardImageName: "flame_revenant",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -575,7 +575,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Shield Master",
-      cardSkills: [{ type: "GainArmor", amount: 4 }],
+      cardSkills: [{ type: "GiveArmor", amount: 4 }],
       cardCost: 4,
       cardAttack: 4,
       cardHealth: 5,
@@ -1016,7 +1016,7 @@ export const characterPack: { [key: string]: Card[] } = {
       image: "hacker",
       cardImageName: "hacker",
       cardDescription:
-        "Kullanıcının antivirüsü çekirdek çitlerken, içeri sızar. Rasgele bir dost kartı yok eder ve 3/3 attack/health güçlendirerek ele geri verir.",
+        "Düşman antivirüsü çekirdek çitlerken içeri sızar. Rasgele bir dost kartı yok eder ve 3/3 güçlendirerek ele geri verir.",
       cardOwner: "enemy",
       profile: null,
       borderColor: null,
@@ -1144,7 +1144,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Arkadaşlar Çetesi",
-      cardSkills: [{ type: "GainArmor", amount: 5 }],
+      cardSkills: [{ type: "GiveArmor", amount: 5 }],
       cardCost: 5,
       cardAttack: 1,
       cardHealth: 10,
@@ -1190,7 +1190,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Lavacun Time",
-      cardSkills: [{ type: "GainArmor", amount: 6 }],
+      cardSkills: [{ type: "GiveArmor", amount: 6 }],
       cardCost: 5,
       cardAttack: 3,
       cardHealth: 2,
@@ -1280,7 +1280,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Kim-Jong Yavuz",
-      cardSkills: [{ type: "DealRandomEnemy", amount: 3 }, { type: "GainArmor", amount: 2 }],
+      cardSkills: [{ type: "DealRandomEnemy", amount: 3 }, { type: "GiveArmor", amount: 2 }],
       cardCost: 5,
       cardAttack: 4,
       cardHealth: 4,
@@ -1662,7 +1662,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "puzzle_turtle",
       cardDescription:
-        "Bulmacanın büyüsüyle bir kartı yok eder, eline 3/3 attack/health güçlendirerek ele geri verir. ",
+        "Bulmacanın büyüsüyle bir kartı yok eder, eline 3/3 güçlendirerek ele geri verir. ",
       cardType: "minion",
       cardImageName: "puzzle_turtle",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
