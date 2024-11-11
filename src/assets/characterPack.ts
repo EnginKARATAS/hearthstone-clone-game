@@ -1009,14 +1009,15 @@ export const characterPack: { [key: string]: Card[] } = {
   "yavuz-pack": [
     {
       cardName: "Pisko Çakaya",
-      cardSkills: [],
+      cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 3 }],
+
       cardCost: 4,
       cardAttack: 6,
       cardHealth: 2,
       image: "hacker",
       cardImageName: "hacker",
       cardDescription:
-        "Kullanıcının antivirüsü çekirdek çitlerken, içeri sızar.",
+        "Kullanıcının antivirüsü çekirdek çitlerken, içeri sızar. Rasgele bir dost kartı yok eder ve 3/3 attack/health güçlendirerek ele geri verir.",
       cardOwner: "enemy",
       profile: null,
       borderColor: null,
@@ -1409,7 +1410,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "climbing_turtle",
       cardDescription:
-        "Hayatta her engeli aşmaya çalışan Tosbik, sineklik tellerini bile kendine yol yapmayı başarıyor. İnce ama sağlam bir yolculuk; her yükseklik, yeni bir zafer.",
+        "",
       cardType: "minion",
       cardImageName: "climbing_turtle",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1432,7 +1433,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "better_call_saul_jimmy",
       cardDescription:
-        "Biraz çarpık ama adaletin kendine has yolundan hiç vazgeçmeyen Jimmy, her an yeni bir planla karşınıza çıkabilir. Her durumda kendine ait özel çözümleri vardır.",
+        "",
       cardType: "minion",
       cardImageName: "better_call_saul_jimmy",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1455,7 +1456,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "punisher",
       cardDescription:
-        "Savaşa adanmış ruhuyla ve dikkatsizliğiyle oyundaki herkesi cezalandırarak -1 hasar verir. Gücünün kaynağı yalnızca intikam değil; onun için savaş her şeydir. Rakibin savunmasını yıpratır, masayı boş bırakmaz.",
+        "Savaşa adanmış ruhuyla ve dikkatsizliğiyle oyundaki herkesi cezalandırarak 1 hasar verir.",
       cardType: "minion",
       cardImageName: "punisher",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1478,7 +1479,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "standing_cat",
       cardDescription:
-        "Her an bir sır saklayan bu kedicik, iki ayağının üzerinde durarak dikkatleri üzerine çekiyor. Merak uyandıran, kararlı bir duruşla dünyayı keşfetmeye hazır.",
+        "Bu kedicik bir sır saklıyor. Sanırım biraz daha gizemli kalacak.",
       cardType: "minion",
       cardImageName: "standing_cat",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1501,7 +1502,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "big_scream_cat",
       cardDescription:
-        "Turuncu kapşonuyla bir hayli iddialı görünen bu kedicik, çamaşır sepetinde sesini duyurmakta kararlı! Şehir sokaklarından esinlenmiş bir çığlık, dikkatleri üzerine çeker.",
+        "",
       cardType: "minion",
       cardImageName: "big_scream_cat",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1524,7 +1525,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "photo_selfie",
       cardDescription:
-        "Her anın güzelliğini yakalamak için mücadelesini sürdüren bir göz. Her karede yeni bir hikaye bulmak, hayata bir anı bırakmak için çabalayan bir avcı.",
+        "",
       cardType: "spell",
       cardImageName: "photo_selfie",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1547,7 +1548,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "fishing",
       cardDescription:
-        "Denizden tuttuğu sihirli itemlar sayesinde hero'ya +1 can verir. Denizle bütünleşmiş bu karakter, suların saklı gücünü kahramana hediye eder, her akıntı bir umudu canlandırır.",
+        "Denizle bütünleşmiş bu karakter, suların saklı gücünü kahramana hediye eder, 5 can kazandırır.",
       cardType: "minion",
       cardImageName: "fishing",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1557,7 +1558,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Kafes Kralı Maviş",
-      cardSkills: [{ type: "DealRandomEnemy", amount: 1 }],
+      cardSkills: [{ type: "DealRandomEnemy", amount: 4 }],
       cardCost: 1,
       cardAttack: 1,
       cardHealth: 3,
@@ -1570,7 +1571,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "caged_bird",
       cardDescription:
-        "Hızlı bir saldırı ile rastgele bir düşmana +1 hasar verir. Maviş’in koruyucu ruhu, her düşmana meydan okur. Küçük ama güçlü; her kuşun bir kral olabileceğini gösterir.",
+        "Küçük ama güçlü; her kuşun bir kral olabileceğini gösterir. Hızlı bir saldırı ile rastgele bir düşmana 4 hasar verir",
       cardType: "minion",
       cardImageName: "caged_bird",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1593,7 +1594,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "aqua_selfie",
       cardDescription:
-        "Su gibi akışkan hareketlerle düşmanları çemberine alır. Derinliklerin içine süzülen, akvaryum tünelinde kaybolmuş bir hayalperest.",
+        "",
       cardType: "minion",
       cardImageName: "aqua_selfie",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1603,7 +1604,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Sadık Dost",
-      cardSkills: [{ type: "HealRandomCard", amount: 1 }],
+      cardSkills: [{ type: "HealAllCards", amount: 1 }],
       cardCost: 3,
       cardAttack: 2,
       cardHealth: 3,
@@ -1616,7 +1617,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "dog_view",
       cardDescription:
-        "Sadakati sayesinde her tur sonunda rastgele bir karta +1 can kazandırır. Manzarada bulduğu huzur, yanındaki dostları da besler. Sadık dost, her cana değer katar.",
+        "Manzarada bulduğu huzur, yanındaki dostları da besler. Sadık dost, her cana değer katar. Masadaki tüm dostların canını 1 arttırır.",
       cardType: "minion",
       cardImageName: "dog_view",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1639,7 +1640,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "thief",
       cardDescription:
-        "Tüm engellere rağmen elindeki telefonuyla kaosu yönetmeye çalışan bir oyuncu. Yenilgiyi kabullenmiş ama pes etmeyen bir ruh hali.",
+        "",
       cardType: "spell",
       cardImageName: "thief",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1649,7 +1650,7 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Bulmaca Ustası",
-      cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 1 }],
+      cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 3 }],
       cardCost: 1,
       cardAttack: 1,
       cardHealth: 3,
@@ -1662,7 +1663,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "puzzle_turtle",
       cardDescription:
-        "Bulmacanın büyüsüyle bir kartı yok eder, eline amount/amount attack/health güçlendirerek geri verir. Zeka dolu hamleleriyle her çözümde yeni bir güç bulan Tosbik, karmaşık bulmacaların ustasıdır.",
+        "Bulmacanın büyüsüyle bir kartı yok eder, eline 3/3 attack/health güçlendirerek ele geri verir. ",
       cardType: "minion",
       cardImageName: "puzzle_turtle",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1685,7 +1686,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "biker_selfie",
       cardDescription:
-        "Yolun rüzgarını arkasına alarak süratle yolculuğa çıkan bir özgür ruh. Her yol, onun için yeni bir keşif; hız, onun kimliği.",
+        "Yolun rüzgarını arkasına alarak süratle yolculuğa çıkan bir özgür ruh.",
       cardType: "minion",
       cardImageName: "biker_selfie",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
