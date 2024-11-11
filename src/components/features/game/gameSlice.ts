@@ -7,12 +7,14 @@ export const gameSlice = createSlice({
     gameOver: false,
     gameState: "menu",
     resourcesLoaded: false,
+    loadingProgress: 0,
   },
   reducers: {
     resetGame: (state) => {
       state.gameOver = false;
       state.gameState = "menu";
       state.resourcesLoaded = false;
+      state.loadingProgress = 0;
     },
     setGameOver: (state, action) => {
       isGameOver();
@@ -22,6 +24,9 @@ export const gameSlice = createSlice({
     },
     setResourcesLoaded: (state, action) => {
       state.resourcesLoaded = action.payload;
+    },
+    setLoadingProgress: (state, action) => {
+      state.loadingProgress = action.payload;
     },
   },
 });
@@ -43,6 +48,12 @@ export const isGameOver = () => async (
   }
 };
 
-export const { setGameOver, setGameState, resetGame, setResourcesLoaded } = gameSlice.actions;
+export const { 
+  setGameOver, 
+  setGameState, 
+  resetGame, 
+  setResourcesLoaded, 
+  setLoadingProgress 
+} = gameSlice.actions;
 
 export default gameSlice.reducer;

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import "./Menu.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setGameState, setResourcesLoaded } from "../../game/gameSlice";
+import { setGameState, setResourcesLoaded, setLoadingProgress } from "../../game/gameSlice";
 import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
@@ -32,15 +32,27 @@ export default function Menu() {
           '/menu/menu/settings.png',
           '/menu/loading/hearthstone.png',
           '/bg-dark.png',
-          '/hearthstone-board-2.png'
-          
-         ];
+          '/hearthstone-board-2.png',
+          '/menu/menu/selection/green-pennant.png',
+          '/menu/menu/selection/red-pennant.png',
+          '/menu/menu/selection/mini-bg.png',
+          '/menu/menu/settings/en.png',
+          '/menu/menu/settings/tr.png',
+        ];
+
+        let loadedImages = 0;
+        const totalImages = imagesToPreload.length;
 
         const imagePromises = imagesToPreload.map(src => {
           return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = src;
-            img.onload = resolve;
+            img.onload = () => {
+              loadedImages++;
+              const progress = (loadedImages / totalImages) * 100;
+              dispatch(setLoadingProgress(progress));
+              resolve();
+            };
             img.onerror = reject;
           });
         });
