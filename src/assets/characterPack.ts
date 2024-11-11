@@ -688,8 +688,8 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Diktatör",
       cardSkills: [{ type: "EmpowerRandomCard", amount: 3 }],
-      cardCost: 1,
-      cardAttack: 4,
+      cardCost: 2,
+      cardAttack: 3,
       cardHealth: 2,
       image: "dictator",
       cardImageName: "dictator",
@@ -802,8 +802,8 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Avci",
       cardSkills: [],
-      cardCost: 1,
-      cardAttack: 5,
+      cardCost: 3,
+      cardAttack: 4,
       cardHealth: 2,
       image: "avci",
       cardImageName: "avci",
@@ -1010,9 +1010,8 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Pisko Çakaya",
       cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 3 }],
-
       cardCost: 4,
-      cardAttack: 6,
+      cardAttack: 4,
       cardHealth: 2,
       image: "hacker",
       cardImageName: "hacker",
@@ -1169,9 +1168,9 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Kaspersky Yavuz",
       cardSkills: [{ type: "DealRandomEnemy", amount: 3 }],
-      cardCost: 3,
-      cardAttack: 6,
-      cardHealth: 1,
+      cardCost: 4,
+      cardAttack: 4,
+      cardHealth: 2,
       image: "hacker",
       cardImageName: "hacker",
       cardDescription:
@@ -1283,7 +1282,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardName: "Kim-Jong Yavuz",
       cardSkills: [{ type: "DealRandomEnemy", amount: 3 }, { type: "GainArmor", amount: 2 }],
       cardCost: 5,
-      cardAttack: 6,
+      cardAttack: 4,
       cardHealth: 4,
       image: "rocket",
       cardImageName: "rocket",
@@ -1558,8 +1557,8 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Kafes Kralı Maviş",
-      cardSkills: [{ type: "DealRandomEnemy", amount: 4 }],
-      cardCost: 1,
+      cardSkills: [{ type: "DealRandomEnemy", amount: 3 }],
+      cardCost: 2,
       cardAttack: 1,
       cardHealth: 3,
       cardOwner: "player",
