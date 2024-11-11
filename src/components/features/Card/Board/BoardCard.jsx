@@ -14,7 +14,6 @@ export default function BoardCard({ position, boardCard }) {
   useEffect(() => {
     const playerBoardCards = boardCards.player;
     const enemyBoardCards = boardCards.enemy;
-    console.log(playerBoardCards, enemyBoardCards);
     playerBoardCards.forEach((card) => {
       card.cardHealth <= 0 && dispatch(removeBoardCard(card));
     });

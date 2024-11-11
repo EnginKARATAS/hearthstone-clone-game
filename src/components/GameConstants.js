@@ -10,5 +10,6 @@ export default {
   debugReducedTimeShort: isDebugging ? 0 : 1000,
   debugReducedTimeLoading: isDebugging ? 0 : 7000,
   loadingTime: isDebugging ? 0 : 1000,
+  turnDelay: isDebugging ? 0 : 100,
 
 };

@@ -17,7 +17,6 @@ function createSkill(skillData: {
   type: string;
   amount?: number;
 }): Castable | null {
-  console.log(skillData);
   switch (skillData.type) {
     case "HealCard":
       return new HealCard(skillData.amount!);

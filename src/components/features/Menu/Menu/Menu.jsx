@@ -66,7 +66,6 @@ export default function Menu() {
         await Promise.all(imagePromises);
         dispatch(setResourcesLoaded(true));
       } catch (error) {
-        console.error("Failed to load resources:", error);
         dispatch(setResourcesLoaded(true));
       }
     };
@@ -77,7 +76,6 @@ export default function Menu() {
   }, [dispatch, resourcesLoaded]);
 
   const dispatchGameState = (state) => {
-    console.log(state);
     if (state === "characterSelection" || state === "playing" || state === "menu") {
       dispatch(setGameState("loading"));
       setTimeout(() => {

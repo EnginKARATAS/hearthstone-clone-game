@@ -19,7 +19,7 @@ import {
 } from "../../hand/handSlice";
 import { useEffect } from "react";
 import { useState } from "react";
-
+import GameConstants from "../../../GameConstants";
 export default function EndTurnButton() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const dispatch = useDispatch();
@@ -42,8 +42,6 @@ export default function EndTurnButton() {
   dispatch(syncCardBaseLenght());
   const onEndTurnButtonClick = async () => {
     if (isClientTurn === true) {
-      await delay(1);
-
       dispatchActions([
         advanceScenarioMove(),
         makeLastCardsPlayable("enemy"),
@@ -64,7 +62,7 @@ export default function EndTurnButton() {
   useEffect(() => {
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
-        dispatchActions([
+         dispatchActions([
           increment({ player: "enemy" }),
           resetInGameMana({ player: "enemy" }),
           drawCard({ isEnemy: true }),
@@ -87,7 +85,7 @@ export default function EndTurnButton() {
             drawCard({ isEnemy: false }),
           ]);
         });
-      }, 500);
+      }, GameConstants.turnDelay);
 
       return () => clearTimeout(timer);
     }

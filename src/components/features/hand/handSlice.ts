@@ -281,7 +281,6 @@ export const handSlice = createSlice({
       action: { payload: { characters: { p1Name: string; p2Name: string } } }
     ) => {
       setFirstCardBase(action.payload.characters);
-      console.log(action.payload.characters)
       setProfileBase(action.payload.characters);
     },
     clickedProfile: (
@@ -335,7 +334,7 @@ export const handSlice = createSlice({
     ) => {
       const actionMaker = action.payload.actionMaker;
       const cardOwner =
-        action.payload.clickedCard.cardOwner === "player" ? "player" : "enemy";
+        action.payload.clickedCard?.cardOwner === "player" ? "player" : "enemy";
       const clickedCard = state.board[cardOwner].find(
         (card) => card.cardId === action.payload.clickedCard.cardId
       );
@@ -452,7 +451,6 @@ export const handSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(resetGame, (state) => { 
-      console.log("object")
       resetCardBase();
       state.hand = {
         player: [],
