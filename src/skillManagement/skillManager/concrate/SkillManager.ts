@@ -12,7 +12,7 @@ import { EmpowerRandomCard } from "../../cast/spells/concrates/mixed/EmpowerRand
 import { GainArmor } from "../../cast/spells/concrates/armor/GainArmor.ts";
 import { GainHealthAmountOfCardsInYourHand } from "../../cast/spells/concrates/heal/GainHealthAmountOfCardsInYourHand.ts";
 import { HealCardRandom } from "../../cast/spells/concrates/heal/HealCardRandom.ts";
-
+import { DrawCard } from "../../cast/spells/concrates/draw/DrawCard.ts";
 function createSkill(skillData: {
   type: string;
   amount?: number;
@@ -41,6 +41,8 @@ function createSkill(skillData: {
       return new GainArmor(skillData.amount!);
     case "GainHealthAmountOfCardsInYourHand":
       return new GainHealthAmountOfCardsInYourHand();
+    case "DrawCard":
+      return new DrawCard();
     default:
       return null;
   }
