@@ -10,6 +10,6 @@ export class DealRandomEnemy extends CastableCard implements Castable {
   cast(state: InitialState, card: Card, actionMaker: "player" | "enemy"): void {
     const enemyCards = state.board.enemy;
     const randomEnemyCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
-    randomEnemyCard!.cardHealth -= this.amount;
+    randomEnemyCard && (randomEnemyCard.cardHealth -= this.amount);
   }
 }

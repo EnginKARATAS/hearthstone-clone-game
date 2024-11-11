@@ -438,9 +438,11 @@ export const handSlice = createSlice({
         state.hand.enemy.length > 0 &&
         state.board.enemy.length < 7
       ) {
-        const randomCard = Math.floor(Math.random() * state.hand.enemy.length);
-        state.board.enemy.push(state.hand.enemy[randomCard]);
-        state.hand.enemy.splice(randomCard, 1);
+        const randomCardIndex = Math.floor(Math.random() * state.hand.enemy.length);
+        state.board.enemy.push(state.hand.enemy[randomCardIndex]);
+        state.hand.enemy.splice(randomCardIndex, 1);
+        const lastPushIndex = state.board.enemy.length - 1;
+        skillManager.castSkills(state, state.board.enemy[lastPushIndex], "enemy");
         updateEnemyCardPositions(state, state.hand.enemy.length);
       }
       refreshBoardCardEnemy(state, state.board.enemy.length);
