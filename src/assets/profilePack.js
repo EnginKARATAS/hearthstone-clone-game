@@ -62,6 +62,27 @@ export const profilePack = {
     move: 0,
     boardPairId: null,
   },
+  "ahmet-pack": {
+    cardHealth: 30,
+    profile: "player",
+    armor: 0,
+    cardId: Math.random(),
+    borderColor: "",
+    cardOwner: "enemy",
+    cardName: "",
+    cardDescription: "",
+    cardType: "",
+    cardCost: 2,
+    cardImageName: "",
+    cardAttack: 0,
+    image: "",
+    isSelected: false,
+    cardPack: "ahmet-pack",
+    cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
+    deg: 0,
+    move: 0,
+    boardPairId: null,
+  },
   "mustafa-pack": {
     cardHealth: 40,
     profile: "player",
@@ -83,6 +104,7 @@ export const profilePack = {
     move: 0,
     boardPairId: null,
   },
+  
 };
 
 export default profilePack;
