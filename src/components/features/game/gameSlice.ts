@@ -1,27 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { AppDispatch, RootState } from "../../store";
 
-
 export const gameSlice = createSlice({
   name: "game",
   initialState: {
     gameOver: false,
     gameState: "menu",
+    resourcesLoaded: false,
   },
   reducers: {
     resetGame: (state) => {
       state.gameOver = false;
       state.gameState = "menu";
+      state.resourcesLoaded = false;
     },
     setGameOver: (state, action) => {
       isGameOver();
     },
     setGameState: (state, action) => {
-      // below code does not triggering extra reducers
-      //if (action.payload === "menu") {
-        //gameSlice.caseReducers.resetGame(state);
-      //}
       state.gameState = action.payload;
+    },
+    setResourcesLoaded: (state, action) => {
+      state.resourcesLoaded = action.payload;
     },
   },
 });
@@ -43,6 +43,6 @@ export const isGameOver = () => async (
   }
 };
 
-export const { setGameOver, setGameState, resetGame } = gameSlice.actions;
+export const { setGameOver, setGameState, resetGame, setResourcesLoaded } = gameSlice.actions;
 
 export default gameSlice.reducer;

@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import "./Menu.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setGameState } from "../../game/gameSlice.ts";
+import { setGameState, setResourcesLoaded } from "../../game/gameSlice";
 import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
@@ -11,17 +12,61 @@ import LoadingScreen from "../../UI/GameManagement/LoadingScreen.jsx";
 import EndGameScreen from "../../UI/GameManagement/EndGameScreen.jsx";
 import ContactScreen from "../../UI/GameManagement/ContactScreen.jsx";
 import Credits from "../Credits/Credits.jsx";
+
 export default function Menu() {
   const { t } = useTranslation();
   const gameState = useSelector((state) => state.game.gameState);
+  const resourcesLoaded = useSelector((state) => state.game.resourcesLoaded);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const preloadResources = async () => {
+      try {
+        const imagesToPreload = [
+          '/armor-bar.png',
+          '/health-bar.png',
+          '/menu/menu/settings/bg-outer.png',
+          '/menu/menu/settings/contact.png',
+          '/menu/menu/settings/credits.png',
+          '/menu/menu/settings/menu.png',
+          '/menu/menu/settings/settings.png',
+          '/menu/loading/hearthstone.png',
+          '/bg-dark.png',
+          '/hearthstone-board-2.png'
+          
+         ];
+
+        const imagePromises = imagesToPreload.map(src => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        });
+
+        await Promise.all(imagePromises);
+        dispatch(setResourcesLoaded(true));
+      } catch (error) {
+        console.error('Failed to load resources:', error);
+        dispatch(setResourcesLoaded(true));
+      }
+    };
+
+    if (!resourcesLoaded) {
+      preloadResources();
+    }
+  }, [dispatch, resourcesLoaded]);
+
   const dispatchGameState = (state) => {
     dispatch(setGameState(state));
   };
 
-  if (gameState === "loading") {
+  if (!resourcesLoaded) {
     return <LoadingScreen />;
-  } else if (gameState === "gameOver") {
+  }
+
+  if (gameState === "gameOver") {
     return <EndGameScreen />;
   } else if (gameState === "contactScreen") {
     return <ContactScreen />;
@@ -69,6 +114,7 @@ export default function Menu() {
       </div>
     );
   }
+
   return (
     gameState === "menu" && (
       <div className="bg-outer absolute z-20">
