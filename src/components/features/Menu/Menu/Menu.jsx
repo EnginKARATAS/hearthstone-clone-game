@@ -77,21 +77,25 @@ export default function Menu() {
             onClick={() => dispatchGameState("characterSelection")}
             className="px-4 py-2 text-white menu-item"
           >
+            {t("start")}
           </p>
           <p
             className="px-4 py-2 text-white menu-item"
             onClick={() => dispatchGameState("settings")}
           >
+            {t("settings")}
           </p>
           <p
             className="px-4 py-2 text-white menu-item"
             onClick={() => dispatchGameState("contact")}
           >
+            {t("contact")}
           </p>
           <p
             onClick={() => dispatchGameState("credits")}
             className="px-4 py-2 text-white menu-item pt-3"
           >
+            {t("credits")}
           </p>
         </div>
       </div>

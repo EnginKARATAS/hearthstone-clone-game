@@ -8,6 +8,7 @@ i18n.use(initReactI18next).init({
         welcome: "Welcome to the game",
         credits: "About",
         start: "Start Game",
+        settings: "Settings",
         contact: "Contact",
         selectCharacter: "Select Character",
         selectLanguage: "Select Language",
