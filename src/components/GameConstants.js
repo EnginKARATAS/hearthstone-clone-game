@@ -11,5 +11,6 @@ export default {
   debugReducedTimeLoading: isDebugging ? 0 : 7000,
   loadingTime: isDebugging ? 0 : 1000,
   turnDelay: isDebugging ? 0 : 100,
-
+  endGameScreenDelay1: isDebugging ? 0 : 1000,
+  endGameScreenDelay2: isDebugging ? 0 : 7000,
 };

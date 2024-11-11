@@ -9,17 +9,16 @@ export default function EndGameScreen() {
         {t("waitFor7SecondsToGoToSecretLevel")}
       </span>
       <p className="loading text-xl  w-[500px] text-center">
-        {t("theGameHasComeToAnEnd")}. {t("thankYouFor")}
+        {t("theGameHasComeToAnEnd")}. 
         <br />
-        {t("sendingMeTheCardPackages")}.
+      
       </p>
       <ul className=" mt-5">
-        <li className="bg-white p-2 mt-1">{t("yavuzCeliker")}</li>
-        <li className="bg-white p-2 mt-1">{t("mustafaOzkan")}</li>
-        <li className="bg-white p-2 mt-1">{t("xxx")}</li>
-        <li className="bg-white p-2 mt-1">{t("yyy")}</li>
-        <li className="bg-white p-2 mt-1">{t("ttt")}</li>
-        <li className="bg-white p-2 mt-1">{t("zzz")}</li>
+        <li className="bg-white p-2 mt-1">Yavuz Celiker</li>
+        <li className="bg-white p-2 mt-1">Mustafa Ozkan</li>
+        <li className="bg-white p-2 mt-1">Ahmet Salih Balandi</li>
+        <li className="bg-white p-2 mt-1">Azad Karataş</li>
+        <li className="bg-white p-2 mt-1">Hasan Eskin</li>
       </ul>
     </div>
   );

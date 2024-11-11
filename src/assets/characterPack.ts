@@ -717,7 +717,7 @@ export const characterPack: { [key: string]: Card[] } = {
       image: "guitar",
       cardImageName: "guitar",
       cardDescription:
-        "Seslerler çıkarıp düşmanı rahatsiz ediyorsun..'Ağğymm gonaswink from the şendıliir'",
+        "Seslerler çıkarıp düşmanı rahatsiz ediyorsun.'Ağğymm gonaswink from the şendılii'",
       cardOwner: "player",
       profile: null,
       borderColor: null,
@@ -1016,7 +1016,7 @@ export const characterPack: { [key: string]: Card[] } = {
       image: "hacker",
       cardImageName: "hacker",
       cardDescription:
-        "Düşman antivirüsü çekirdek çitlerken içeri sızar. Rasgele bir dost kartı yok eder ve 3/3 güçlendirerek ele geri verir.",
+        "Düşman antivirüsü çekirdek çitlerken içeri sızar. Bir dost kartı yok eder ve 3/3 güçlendirerek ele geri verir.",
       cardOwner: "enemy",
       profile: null,
       borderColor: null,
@@ -1280,14 +1280,14 @@ export const characterPack: { [key: string]: Card[] } = {
     },
     {
       cardName: "Kim-Jong Yavuz",
-      cardSkills: [{ type: "DealRandomEnemy", amount: 3 }, { type: "GiveArmor", amount: 2 }],
+      cardSkills: [{ type: "DealRandomEnemy", amount: 3 }],
       cardCost: 5,
       cardAttack: 4,
       cardHealth: 4,
       image: "rocket",
       cardImageName: "rocket",
       cardDescription:
-        "Kuzey Kore lideri Kim Jong Un'un gizli kardeşi, füze atarak rasgele bir düşmana 3 can azaltır ve 2 zırh kazanır.",
+        "Kuzey Kore lideri Kim Jong Un'un gizli kardeşi, düşmana 3 can azaltır.",
       cardOwner: "enemy",
       profile: null,
       borderColor: null,
@@ -1363,7 +1363,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "moon",
       cardDescription:
-        "Gökyüzünün derinliklerinde ışıldayan Gece Parıltısı, masadaki kartları güçlendirerek dengeleri değiştirebilir. Ay ışığının sihriyle, rakiplerini şaşırtırken rastgele bir kartı güçlendirir.",
+        "Ay ışığının sihriyle, rakiplerini şaşırtırken rastgele bir kartı 2 güçlendirir.",
       cardType: "spell",
       cardImageName: "moon",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1386,7 +1386,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "astronaut_zeki_muren",
       cardDescription:
-        "Uzayın derinliklerinden gelen bu kart, tüm dost birimlere +1 can kazandırır.",
+        "Uzayın derinliklerinden gelen bu kart, tüm dost birimlere 1 can kazandırır.",
       cardType: "minion",
       cardImageName: "astronaut_zeki_muren",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1570,7 +1570,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "caged_bird",
       cardDescription:
-        "Küçük ama güçlü; her kuşun bir kral olabileceğini gösterir. Hızlı bir saldırı ile rastgele bir düşmana 4 hasar verir",
+        "Hızlı bir saldırı ile rastgele bir düşmana 4 hasar verir",
       cardType: "minion",
       cardImageName: "caged_bird",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
@@ -1616,7 +1616,7 @@ export const characterPack: { [key: string]: Card[] } = {
       cardPack: "mustafa-pack",
       image: "dog_view",
       cardDescription:
-        "Manzarada bulduğu huzur, yanındaki dostları da besler. Sadık dost, her cana değer katar. Masadaki tüm dostların canını 1 arttırır.",
+        "Sadık dost, her cana değer katar. Masadaki tüm dostların canını 1 arttırır.",
       cardType: "minion",
       cardImageName: "dog_view",
       cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },

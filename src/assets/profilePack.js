@@ -1,6 +1,6 @@
 export const profilePack = {
   "jaina-pack": {
-    cardHealth: 30,
+    cardHealth: 0,
     armor: 0,
     profile: "player",
     cardId: Math.random(),

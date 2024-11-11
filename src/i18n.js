@@ -32,7 +32,7 @@ i18n.use(initReactI18next).init({
         playAgain: "Play Again",
         waitFor7SecondsToGoToSecretLevel:
           "Wait for 7 seconds to go to secret level",
-        theGameHasComeToAnEnd: "The game has come to an end.",
+        theGameHasComeToAnEnd: "The game has come to an end. Thank you for my friends for their contributions with sending their character packages.",
         thankYouFor: "In case of sufficient demand for the game, it was developed in a way that could become a unique game with various modes by separating from the 'Hearthstone' identity.",
         sendingMeTheCardPackages: "The game currently does not heavily utilize backend services. However, the game's outcome can be greatly improved by using socket architecture or backend services. The game's development process will continue if there are positive comments.",
         developmentTechnologies: "Technologies used during game development: SOLID, React, Redux, Tailwind CSS, Vite, TypeScript, I18N internationalization",
