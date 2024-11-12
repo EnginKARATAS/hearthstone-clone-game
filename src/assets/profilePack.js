@@ -104,6 +104,27 @@ export const profilePack = {
     move: 0,
     boardPairId: null,
   },
+  "azad-pack": {
+    cardHealth: 30,
+    profile: "player",
+    armor: 0,
+    cardId: Math.random(),
+    borderColor: "",
+    cardOwner: "enemy",
+    cardName: "",
+    cardDescription: "",
+    cardType: "",
+    cardCost: 2,
+    cardImageName: "",
+    cardAttack: 0,
+    image: "",
+    isSelected: false,
+    cardPack: "azad-pack",
+    cardPosition: { x: 0, y: 0, top: 0, size: 150, offset: 0 },
+    deg: 0,
+    move: 0,
+    boardPairId: null,
+  },
   
 };
 
