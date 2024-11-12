@@ -9,8 +9,7 @@ html{
 body {
   background-image: url("/bg-dark.png");
   background-color: rgb(0, 217, 224);
-  height: 930px;
-  width: 1850px;
+ 
   margin: 0 auto;
   overflow-y: hidden;
   overflow-x: hidden;
