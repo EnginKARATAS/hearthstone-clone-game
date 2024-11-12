@@ -22,6 +22,18 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 - Dynamic card rendering
 - Responsive design for all screens
 
+## Development
+
+### Setup
+1. Clone repository
+2. Install dependencies
+   ``` npm i ```
+4. For every build time you must run tailwind and vite
+   #### 4.3 For Vite
+   ``` npm run dev ```
+   #### 4.2 For Tailwind
+   ``` npx tailwindcss -i ./src/App.css -o ./src/output.css --watch ```
+
 ### Card Ability System
 
 <table>
@@ -99,19 +111,6 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
     <td>Gains health equal to the number of cards in your hand</td>
   </tr>
 </table>
-
-
-## Development
-
-### Setup
-1. Clone repository
-2. Install dependencies
-   ``` npm i ```
-4. For every build time you must run tailwind and vite
-   #### 4.3 For R
-   ``` npm run dev ```
-   #### 4.2 For Tailwind
-   ``` npx tailwindcss -i ./src/App.css -o ./src/output.css --watch ```
 
 ### Tech Stack
 - Frontend: React, Redux, Tailwind CSS, Vite, TypeScript
