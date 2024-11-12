@@ -3,13 +3,13 @@
     background-image: url("/menu/menu/bg-outer.png");
     background-repeat: no-repeat;
     background-position: center;
-    width: 1422px;
-    height: 831px;
+    height: 857px;
+    width: 1424px;
 }
 
 .settings{
-    width: 1422px;
-    height: 850px;
+    height: 857px;
+    width: 1424px;
     background-image: url("/menu/menu/settings.png");
     background-repeat: no-repeat;
     background-position: center;  

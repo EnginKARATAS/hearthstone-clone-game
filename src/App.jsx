@@ -18,21 +18,22 @@ function App() {
         width: window.innerWidth,
       });
     };
-    
-    window.addEventListener('resize', handleResize);
-    
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (windowDimensions.width <= windowDimensions.height) return <RotateScreen />;
+  if (windowDimensions.width <= windowDimensions.height)
+    return <RotateScreen />;
 
   return (
     <div className="screen-container">
       <div className="bg-container">
         <div className="menu absolute">
           <Menu />
+          <FishOrnament />
         </div>
-        <FishOrnament />
       </div>
     </div>
   );
