@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { cardTranslations } from "./i18n/cardTranslations";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -61,6 +62,8 @@ i18n.use(initReactI18next).init({
             "Technologies used during game development: SOLID, React, Redux, Tailwind CSS, Vite, TypeScript, I18N internationalization",
           developer: "This game was developed by Engin Karataş.",
         },
+        githubLink: "Click and Go to Open Source Github Codes",
+        cards: cardTranslations.en.cards
       },
     },
     tr: {
@@ -103,12 +106,6 @@ i18n.use(initReactI18next).init({
         developmentTechnologies:
           "Oyunun geliştirilmesi sırasında kullanılan teknolojiler: SOLID, React, Redux, Tailwind CSS, Vite, TypeScript, I18N internationalization",
         developer: "Bu oyun Engin Karataş tarafından geliştirildi.",
-        yavuzCeliker: "Yavuz Çeliker",
-        mustafaOzkan: "Mustafa Özkan",
-        xxx: "XXX",
-        yyy: "YYY",
-        ttt: "TTT",
-        zzz: "ZZZ",
         playWithComputer: "Bilgisayara Karşı",
         adventureMode: "Macera Modu",
         adventureModeText: "Macera Modu (Yakında)",
@@ -126,6 +123,8 @@ i18n.use(initReactI18next).init({
             "Oyunun geliştirilmesi sırasında kullanılan teknolojiler: SOLID, React, Redux, Tailwind CSS, Vite, TypeScript, I18N internationalization",
           developer: "Bu oyun Engin Karataş tarafından geliştirildi.",
         },
+        githubLink: "Açık Kaynak Github Kodlarına Git",
+        cards: cardTranslations.tr.cards
       },
     },
   },
