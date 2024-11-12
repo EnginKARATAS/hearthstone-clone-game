@@ -13,12 +13,20 @@ export default function ManaBox({ position, player }) {
       }}
     >
       <div className="mana-counter flex justify-center items-center absolute">
-        <p className="mana-text text-sky-400 px-4 py-1">
-          {inGameMana[player]}/{mana[player]}
-        </p>
+        {mana[player] < 10 && (
+          <p className="mana-text text-sky-400 px-4 py-1">
+            {inGameMana[player]}/{mana[player]}
+          </p>
+        )}
+        {mana[player] == 10 && (
+          <p className="mana-text text-sky-400 py-3 mt-[-6px] ml-[3px]"
+          >
+            {inGameMana[player]}/{mana[player]}
+          </p>
+        )}
       </div>
       {player !== "enemy" && (
-        <div className="mana-cyrstals flex flex-row gap-1 absolute">
+        <div className="mana-cyrstals flex flex-row gap-1 absolute ">
           {inGameMana[player] >= 0 &&
           
             Array.from({ length: mana[player] - inGameMana[player] }).map(
