@@ -49,8 +49,13 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 
 ### Setup
 1. Clone repository
-2. Install dependencies (npm/yarn)
-3. Run development server
+2. Install dependencies
+   { npm i }
+4. For every build time you must run tailwind and vite
+   #### 4.3 For R
+   {npm run dev}
+   #### 4.2 For Tailwind
+   {npx tailwindcss -i ./src/App.css -o ./src/output.css --watch}
 
 ### Tech Stack
 - Frontend: React, Redux, Tailwind CSS, Vite, TypeScript
@@ -58,13 +63,20 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 - Custom game logic systems
 
 ## Contributing
-Contributions welcome! Please fork and submit pull requests.
+Open sourced and contributions welcome! Please fork and submit pull requests.
 
 ## License
 MIT License
 
 ## Acknowledgments
-Thanks to the community for their support and contributions.
+Thanks to the people for their support and contributions.
+      <ul className=" mt-5">
+        <li className="bg-white p-2 mt-1">Yavuz Celiker</li>
+        <li className="bg-white p-2 mt-1">Mustafa Ozkan</li>
+        <li className="bg-white p-2 mt-1">Ahmet Salih Balandi</li>
+        <li className="bg-white p-2 mt-1">Azad Karataş</li>
+        <li className="bg-white p-2 mt-1">Hasan Eskin</li>
+      </ul>
 # Card types
 
 ## Game Overview
