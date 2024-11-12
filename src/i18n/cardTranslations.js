@@ -1,7 +1,7 @@
 export const cardTranslations = {
   en: {
     cards: {
-      // Jaina Pack
+      
       "lamp_lighter": {
         name: "Lamp Lighter",
         description: "When play this card, deal 1 damage to random enemy."
@@ -63,7 +63,7 @@ export const cardTranslations = {
         description: "When play this, give 2 armor to your hero."
       },
       
-      // Engin Pack
+      
       "dictator": {
         name: "Dictator",
         description: "In an alternate reality, you chose the dark side and the wrong path. Empowers a card by 3."
@@ -121,7 +121,7 @@ export const cardTranslations = {
         description: "The last meal you had with your friends in the city, gains 3 armor."
       },
       
-      // Yavuz Pack
+      
       "deadline": {
         name: "Deadline",
         description: "Reduces all enemies' health by 2."
@@ -148,7 +148,7 @@ export const cardTranslations = {
       },
       "hacker": {
         name: "Pisko Çakaya",
-        description: "Sneaks in while the enemy antivirus is cracking kernels. Destroys a friendly card and returns it to hand with +3/+3."
+        description: "Destroys a friendly card and returns it to hand with +3/+3."
       },
       "cay": {
         name: "Tea Time",
@@ -224,7 +224,7 @@ export const cardTranslations = {
       },
       "atli": {
         name: "Horseman",
-        description: "A horseman is coming from ahead. He'll fight for you. He's a bit crazy, deals high damage but can die quickly due to no armor."
+        description: "A reckless horseman who deals high damage but has low health."
       },
       "muhabbet": {
         name: "Chatterbox",
@@ -232,7 +232,7 @@ export const cardTranslations = {
       },
       "contruction": {
         name: "Construction Worker",
-        description: "He's agile but supposedly just trying to make a living. Don't be fooled by his innocence, he makes at least 100k per month."
+        description: "He's agile but makes at least 100k per month."
       },
       "okur": {
         name: "Masked Reader",
@@ -244,7 +244,7 @@ export const cardTranslations = {
       },
       "student": {
         name: "Thinking Student",
-        description: "Don't get too close. His head is full of future anxiety. He's so troubled that even his gaze can consume people like cigarettes."
+        description: "Don't get too close. His head is full of future anxiety. His troubled gaze consumes like cigarettes."
       },
       "quokka": {
         name: "Cute Shorttail",
@@ -280,7 +280,7 @@ export const cardTranslations = {
       },
       "elektronik-buyucu": {
         name: "Electronic Wizard",
-        description: "Infiltrates enemy systems by manipulating electronic devices, damages an enemy card. Deals 1 damage to a random enemy."
+        description: "Manipulates electronics to damage enemy systems. Deals 1 damage to a random enemy."
       },
       "kotu-tarafin-muhendisi": {
         name: "Code Warrior",
@@ -288,11 +288,11 @@ export const cardTranslations = {
       },
       "dune-felsefesi": {
         name: "Dune Philosophy",
-        description: "Analyzes the future and takes precautions against enemy's next move, neutralizing an opponent card. Deals 1 damage to all enemies."
+        description: "Predicts enemy moves and neutralizes a card. Deals 1 damage to all enemies."
       },
       "satranc-ustasi": {
         name: "Chess Master",
-        description: "Takes one step further on the chessboard, weakens enemy minions' power and displaces them. Deals 1 damage to all enemy minions."
+        description: "Weakens and displaces enemy minions. Deals 1 damage to all enemy minions."
       },
       "piyano-melodisi": {
         name: "Piano Melody",
@@ -308,11 +308,11 @@ export const cardTranslations = {
       },
       "dune-colu": {
         name: "Dune Desert",
-        description: "Finds ancient technology lost in the desert and causes destruction of all enemy structures. Deals 1 damage to everyone in game."
+        description: "Finds lost desert tech and destroys enemy structures. Deals 1 damage to everyone in game."
       },
       "kotu-tarafin-muhendisi-2": {
         name: "Dark Side Engineer",
-        description: "Infiltrates enemy hardware, returns a card and gives it health. Destroys a card and returns it to hand with +1/+1."
+        description: "Destroys a card and returns it to hand with +1/+1."
       },
       "ileri-teknoloji": {
         name: "Advanced Technology",
@@ -328,7 +328,7 @@ export const cardTranslations = {
       },
       "kuantum-hizlandirici": {
         name: "Quantum Accelerator",
-        description: "Makes a powerful attack by increasing a selected card's speed through quantum mechanics. Gives 1 health to a random card."
+        description: "Increases a card's speed using quantum mechanics. Gives 1 health to a random card."
       },
       "dusunce-gucu": {
         name: "Power of Thought",
@@ -338,12 +338,12 @@ export const cardTranslations = {
         name: "Short Circuit",
         description: "Infiltrates enemy electronic circuits causing short circuit. Deals 1 damage to all enemies."
       }
-      // ... add more cards
+      
     }
   },
   tr: {
     cards: {
-      // Jaina Pack
+      
       "lamp_lighter": {
         name: "Fener Yakıcı",
         description: "Bu kart oynandığında, rastgele bir düşmana 1 hasar verir."
@@ -405,10 +405,10 @@ export const cardTranslations = {
         description: "Bu kart oynandığında, kahramanına 2 zırh verir."
       },
       
-      // Engin Pack
+      
       "dictator": {
         name: "Diktatör",
-        description: "Alternatif bir gerçeklikte karanlık tarafı ve yanlış olan tarafı seçtin. Bir kartı 3 güçlendirir."
+        description: "Alternatif bir gerçeklikte karanlık yanlış olan tarafı seçtin. Bir kartı 3 güçlendirir."
       },
       "guitar": {
         name: "Gitarist",
@@ -416,7 +416,7 @@ export const cardTranslations = {
       },
       "soldier": {
         name: "Ödenmiş Bedel",
-        description: "Bu kartı oynadıktan sonra iş bulma ihtimaliniz %50 artar ve rasgele bir düşmana 1 hasar verir."
+        description: "Bu kartı oynadıktan sonra iş bulma ihtimaliniz %50 artar. Rasgele bir düşmana 1 hasar verir."
       },
       "worrior": {
         name: "Savaşçı",
@@ -463,11 +463,11 @@ export const cardTranslations = {
         description: "Dostlarınızla yediğiniz şehirdeki son yemek, 3 zırh kazandırır."
       },
       
-      // Yavuz Pack
+      
       "deadline": {
         name: "Deadline",
         description: "Tüm düşmanların canını 2 azaltır."
-      },
+      },  
       "tavan_kedi": {
         name: "Tavan Kedisi",
         description: "İşte geliyor özel hareCAT şarkısı eşliğinde, rasgele bir dostun canını 2 arttırır."
@@ -478,7 +478,7 @@ export const cardTranslations = {
       },
       "radyasyon": {
         name: "Radyasyoncu",
-        description: "Ukrayna Chernobyl bölgesinden iş teklifi gelir fakat gitmez, 1 kart çeker ve onlara gönderir."
+        description: "Ukrayna Chernobyl bölgesinden iş teklifi gelir fakat gitmez. 1 kart çeker."
       },
       "missing": {
         name: "Missing Man",
@@ -490,7 +490,7 @@ export const cardTranslations = {
       },
       "hacker": {
         name: "Pisko Çakaya",
-        description: "Düşman antivirüsü çekirdek çitlerken içeri sızar. Bir dost kartı yok eder ve 3/3 güçlendirerek ele geri verir."
+        description: "Düşman antivirüsü çekirdek çitlerken içeri sızıp bir kartı yok eder ve 3/3 güçlendirerek ele geri verir."
       },
       "cay": {
         name: "Çay Zamanı",
@@ -566,7 +566,7 @@ export const cardTranslations = {
       },
       "atli": {
         name: "Atlı",
-        description: "İleriden bir atlı geliyor. Senin için savaşacakmış. Biraz delidir, yüksek hasar verir ama zırhı olmadığından hemen geberebilir."
+        description: "İleriden bir atlı geliyor. Biraz delidir, yüksek hasar verir ama zırhı olmadığından ölür."
       },
       "muhabbet": {
         name: "Muhabbet hastası",
@@ -574,7 +574,7 @@ export const cardTranslations = {
       },
       "contruction": {
         name: "İnşaatçı",
-        description: "Çeviktir ama güya ekmek parası peşindedir. Bir de ayda en az 100k alır, bakma masumiyetine."
+        description: "Çeviktir ama güya ekmek parası peşindedir. Bir de ayda en az 100k alır(!)"
       },
       "okur": {
         name: "Maskeli Okur",
@@ -586,7 +586,7 @@ export const cardTranslations = {
       },
       "student": {
         name: "Düşünen Öğrenci",
-        description: "Fazla yaklaşma. Gelecek kaygısından kafası dolu. O kadar dertli ki bakışı bile insanı sigara gibi tüketebilir."
+        description: "Fazla yaklaşma. Gelecek kaygısından kafası dolu."
       },
       "quokka": {
         name: "Sevimli Kısakuyruk",
@@ -614,7 +614,7 @@ export const cardTranslations = {
       },
       "header": {
         name: "Header pin",
-        description: "Yok artık! Benim ne işim var burada. Atağa bak! Ben bu kadar güçlü müydüm? Öhöm, tüm düşmanlara 1 hasarımı veririm."
+        description: "Yok artık! Benim ne işim var burada. Öhöm, tüm düşmanlara 1 hasarımı veririm."
       },
       "duo": {
         name: "Duolingo",
@@ -622,7 +622,7 @@ export const cardTranslations = {
       },
       "elektronik-buyucu": {
         name: "Elektronik Büyücü",
-        description: "Elektronik cihazlarla manipülasyon yaparak düşmanın sistemlerine sızar, bir düşman kartına zarar verir. Rasgele bir düşmana 1 hasar verir."
+        description: "Elektronik cihazlarla manipülasyon yaparak düşmanın sistemlerine sızar. Rasgele bir düşmana 1 hasar verir."
       },
       "kotu-tarafin-muhendisi": {
         name: "Kod Savaşçısı",
@@ -630,11 +630,11 @@ export const cardTranslations = {
       },
       "dune-felsefesi": {
         name: "Dune Felsefesi",
-        description: "Geleceği analiz eder ve düşmanın bir sonraki hamlesine karşı önlem alır, bir rakip kartını etkisiz hale getirir. Tüm düşmanlara 1 hasar verir."
+        description: "Geleceği analiz eder ve tüm düşmanlara 1 hasar verir."
       },
       "satranc-ustasi": {
         name: "Satranç Ustası",
-        description: "Satranç tahtasında bir adım daha ileri gider, rakibin minyonlarının gücünü zayıflatır ve onları yerinden eder. Rakibin tüm minyonlarına 1 hasar verir."
+        description: "Satranç tahtasında bir adım daha ileri gider. Rakibin tüm minyonlarına 1 hasar verir."
       },
       "piyano-melodisi": {
         name: "Piyano Melodisi",
@@ -642,7 +642,7 @@ export const cardTranslations = {
       },
       "master-sirri": {
         name: "Yüksek Lisans Sırrı",
-        description: "Derin bilgiyle kartların zayıf noktalarını keşfeder ve onları güçlendirir. Rasgele bir kartı 1 güçlendirir."
+        description: "Derin bilgiyle kartların zayıf noktalarını keşfeder ve rasgele bir kartı 1 güçlendirir."
       },
       "bilgisayar-imparatoru": {
         name: "Bilgisayar İmparatoru",
@@ -650,11 +650,11 @@ export const cardTranslations = {
       },
       "dune-colu": {
         name: "Dune Çölü",
-        description: "Çölde kaybolmuş eski bir teknoloji bulur ve rakiplerin tüm yapılarının yok olmasına neden olur. Oyundaki herkese 1 hasar verir."
+        description: "Çölde kaybolmuş eski bir teknoloji bulur ve oyundaki herkese 1 hasar verir."
       },
       "kotu-tarafin-muhendisi-2": {
         name: "Kötü Tarafın Mühendisi",
-        description: "Rakip donanımına sızar, bir kartı geri gönderir ve ona sağlık kazandırır. Bir kartı yok eder, eline 1/1 güçlendirerek geri verir."
+        description: "Rakip donanımına sızar, bir kartı yok eder, eline 1/1 güçlendirerek geri verir."
       },
       "ileri-teknoloji": {
         name: "İleri Teknoloji",
@@ -662,25 +662,25 @@ export const cardTranslations = {
       },
       "lotr-messenger": {
         name: "Yüzüklerin Efendisi'nin Elçisi",
-        description: "Yüzüklerin gücünü kullanarak rakibin kahramanını etkisiz hale getirir. Rasgele bir düşmana 1 hasar verir."
+        description: "Yüzüklerin gücünü kullanarak rakibi etkisiz hale getirir. Rasgele bir düşmana 1 hasar verir."
       },
       "analog-yikici": {
         name: "Analog Yıkıcı",
-        description: "Dijital düzene karşı analog güç kullanır, rakibin bir kartının gücünü zayıflatır. Tüm düşmanlara 1 hasar verir."
+        description: "Rakibin bir kartının gücünü zayıflatır. Tüm düşmanlara 1 hasar verir."
       },
       "kuantum-hizlandirici": {
         name: "Quantum Hızlanıcı",
-        description: "Kuantum mekaniği sayesinde seçilen bir kartın hızını artırarak büyük bir saldırı yapar. Rasgele bir karta 1 sağlık verir."
+        description: "Kuantum mekaniği sayesinde seçilen bir kartın hızını artırarak karta 1 sağlık verir."
       },
       "dusunce-gucu": {
         name: "Düşünce Gücü",
-        description: "Zihinsel engellerle rakibin en güçlü kartını etkisiz hale getirir. Rasgele bir düşmana 1 hasar verir."
+        description: "Zihinsel engellerle rakibin kartını etkisiz hale getirir. Rasgele bir düşmana 1 hasar verir."
       },
       "short-circuit": {
         name: "Kısa Devre",
         description: "Düşman elektronik devrelerine sızarak kısa devre yaptırır. Tüm düşmanlara 1 hasar verir."
       }
-      // ... add more cards
+      
     }
   }
 }; 

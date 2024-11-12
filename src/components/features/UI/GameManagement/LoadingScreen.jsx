@@ -1,7 +1,8 @@
-import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import "../../../features/UI/GameManagement/LoadingScreen.css";
 
 export default function LoadingScreen() {
+  const { t } = useTranslation();
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
@@ -10,7 +11,7 @@ export default function LoadingScreen() {
         alt="heartstone"
         className="w-64 h-auto mb-8 animate-pulse" 
       />
-      <h1 className="text-5xl font-bold mb-4">Loading...</h1>
+      <h1 className="text-5xl font-bold mb-4">{t('loading')}...</h1>
 
       <div className="w-96 h-2 bg-gray-700 rounded-full overflow-hidden mb-8">
         <div 
@@ -19,7 +20,7 @@ export default function LoadingScreen() {
       </div>
 
       <h2 className="text-2xl font-bold mb-8 text-blue-400">
-        Clone app made with love
+        {t('cloneAppMadeWithLove')}
       </h2>
 
       <div className="flex items-center justify-center mb-8">
@@ -38,13 +39,11 @@ export default function LoadingScreen() {
             className="fill-blue-500"
           />
         </svg>
-        <span className="sr-only">Loading...</span>
+        <span className="sr-only">{t('loading')}...</span>
       </div>
 
       <p className="max-w-3xl text-center text-gray-400 text-sm px-4">
-        This game is a fan-made project inspired by the popular card game
-        Hearthstone, developed by Blizzard Entertainment. It is not affiliated
-        with, endorsed by, or sponsored by Blizzard Entertainment
+        {t('thisGameIsFanMade')}
       </p>
     </div>
   );
