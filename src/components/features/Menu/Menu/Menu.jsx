@@ -76,7 +76,11 @@ export default function Menu() {
   }, [dispatch, resourcesLoaded]);
 
   const dispatchGameState = (state) => {
-    if (state === "characterSelection" || state === "playing" || state === "menu") {
+    if (
+      state === "characterSelection" ||
+      state === "playing" ||
+      state === "menu"
+    ) {
       dispatch(setGameState("loading"));
       setTimeout(() => {
         dispatch(setGameState(state));
@@ -96,9 +100,7 @@ export default function Menu() {
     return <ContactScreen />;
   } else if (gameState === "loading") {
     return <LoadingScreen />;
-  }
-
-  if (gameState === "settings") {
+  } else if (gameState === "settings") {
     return (
       <div>
         <div className="bg-outer absolute z-20 bg">
