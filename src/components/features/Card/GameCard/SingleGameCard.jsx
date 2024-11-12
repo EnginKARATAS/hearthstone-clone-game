@@ -3,8 +3,10 @@ import { useSelector } from "react-redux";
 import { closeSingleCard } from "../../hand/handSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function SingleGameCard({ position }) {
+  const { t } = useTranslation();
   const singleCard = useSelector((state) => state.hand.singleCard);
   const dispatch = useDispatch();
   return (
@@ -39,14 +41,14 @@ export default function SingleGameCard({ position }) {
             fill="none"
             stroke="none"
           />
-          <text >
-            <textPath href="#sPath" startOffset="50%" textAnchor="middle" className="card-name-text" >
-              {singleCard?.cardName}
+          <text>
+            <textPath href="#sPath" startOffset="50%" textAnchor="middle" className="card-name-text">
+              {t(`cards.${singleCard?.cardImageName}.name`)}
             </textPath>
           </text>
         </svg>
         <span className="absolute single-card-description">
-          {singleCard?.cardDescription}
+          {t(`cards.${singleCard?.cardImageName}.description`)}
         </span>
         <span className="absolute single-card-attack">
           {singleCard?.cardAttack}

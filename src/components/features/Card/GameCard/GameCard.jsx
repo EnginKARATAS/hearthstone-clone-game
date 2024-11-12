@@ -4,7 +4,10 @@ import { hoverSingleCard, addCardToBoard } from "../../hand/handSlice.ts";
 import { useState } from "react";
 import { decrement, isCardPlayable } from "../../counter/counterSlice";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+
 export default function GameCard({ position, card, player, deg }) {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
   const inGameMana = useSelector((state) => state.counter.inGameMana);
@@ -70,12 +73,12 @@ export default function GameCard({ position, card, player, deg }) {
             />
             <text>
               <textPath href="#wavyPath" startOffset="50%" textAnchor="middle">
-                {card.cardName}
+                {t(`cards.${card.cardImageName}.name`)}
               </textPath>
             </text>
           </svg>
           <span className="absolute card-description">
-            {card.cardDescription}
+            {t(`cards.${card.cardImageName}.description`)}
           </span>
           <span className="absolute card-attack">{card.cardAttack}</span>
           <span className="absolute card-health">{card.cardHealth}</span>

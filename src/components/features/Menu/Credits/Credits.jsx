@@ -14,20 +14,36 @@ export default function Credits() {
         className="credits absolute z-20"
       >
         <div className=" w-full h-full bg-black opacity-50">
-          <h1 className="h-text absolute text-white text-2xl">{t('credits')}</h1>
+          <h1 className="h-text absolute text-white text-2xl">
+            {t("credits")}
+          </h1>
           <p className="p-text absolute text-white text-justify">
-            {t('thisGameIsFanMade')}
+            {t("thisGameIsFanMade")}
             <br />
             <br />
-            {t('thankYouFor')}
+            {t("thankYouFor")}
             <br />
             <br />
-            {t('sendingMeTheCardPackages')}
+            {t("sendingMeTheCardPackages")}
             <br />
             <br />
-            {t('developmentTechnologies')}
+            {t("developmentTechnologies")}
             <br /> <br />
-            {t('developer')}
+            {t("developer")}
+            <br />
+            <div className="code-url">
+              <a
+                href="https://github.com/EnginKARATAS/hearthstone-clone-game"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500"
+                style={{
+                  fontSize: "2rem",
+                }}
+              >
+                {t("githubLink")}
+              </a>
+            </div>
           </p>
         </div>
       </div>
