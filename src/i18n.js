@@ -24,6 +24,8 @@ i18n.use(initReactI18next).init({
             "Jaina Proudmoore is a fictional character who appears in the Warcraft series of video games by Blizzard Entertainment. Within the games, she is the most powerful sorceress alive. She is currently Lord Admiral, ruler of the Kul Tiras kingdom. Jaina was formerly the leader of the Kirin Tor, a faction of mages ruling over the city of Dalaran.",
           "ahmet-pack":
             "If this character was a music playlist, it would be on shuffle. He travels intercontinental every day. He's also pretty good at understanding robot language. Don't be too surprised if he suddenly bursts into laughter. His cards are decent in their own way. I think you should give it a try. Maybe thanks to these cards, you'll get your own latest model starship rocket. Why shouldn't you have one when everyone else does?",
+          "azad-pack":
+            "A master of technology who combines the power of electronic engineering with strategy. While the 'Electronic Wizard' pierces through enemy defenses, the 'Code Warrior' and 'Chess Master' surround the entire board with tactical intelligence. Since 2010, he has commanded circuits and code, transforming technology into engineering projects. In the name of Transistor Power!",
         },
         player1: "Your Character",
         player2: "Your Enemy",
@@ -88,6 +90,8 @@ i18n.use(initReactI18next).init({
             "Jaina Proudmoore, Blizzard Entertainment'ın Warcraft serisi video oyunlarında yer alan kurgusal bir karakterdir. Oyunlarda, yaşayan en güçlü büyücüdür. Şu anda Kul Tiras krallığının hükümdarı Lord Admiral'dir. Jaina eskiden Dalaran şehrini yöneten bir büyücü grubu olan Kirin Tor'un lideriydi.",
           "ahmet-pack":
             "Bu karakter eğer bir müzik listesi olsaydı karışık olurdu. Her gün kıtalararası seyahat yapar. Yazılım dünyasında robotların dilinden anlamakta da fena değildir. Bir de durduk yere kahkaha atarsa fazla şaşırma. Kartları da kendi çapında iyidir. Bence bi dene. Belki bu kartlar sayesinde senin de son model starship roketin olur. Herkesin varken senin niye olmasın?",
+          "azad-pack":
+            "Elektronik mühendisliğinin gücünü stratejiyle birleştiren, tam bir teknoloji ustası. 'Elektronik Büyücü' düşmanın savunmasını delip geçerken, 'Kod Savaşçısı' ve 'Satranç Ustası'yla tüm masayı taktiksel zekâsıyla kuşatır. 2010’dan bu yana devrelere ve kodlara hükmediyor, mühendislik projeleriyle teknolojiyi kendi oyun alanına dönüştürüyor. Transistörlerin Gücü Adına!",
         },
         player1: "Karakterin",
         player2: "Düşmanın",
@@ -128,7 +132,8 @@ i18n.use(initReactI18next).init({
         githubLink: "Açık Kaynak Github Kodlarına Git",
         cards: cardTranslations.tr.cards,
         loading: "Yükleniyor",
-        cloneAppMadeWithLove: "Sevgiyle yapılan benzersiz hearthstone web klon oyunu",
+        cloneAppMadeWithLove:
+          "Sevgiyle yapılan benzersiz hearthstone web klon oyunu",
       },
     },
   },
