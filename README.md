@@ -106,12 +106,12 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 ### Setup
 1. Clone repository
 2. Install dependencies
-   { npm i }
+   ``` npm i ```
 4. For every build time you must run tailwind and vite
    #### 4.3 For R
-   { npm run dev }
+   ``` npm run dev ```
    #### 4.2 For Tailwind
-   { npx tailwindcss -i ./src/App.css -o ./src/output.css --watch }
+   ``` npx tailwindcss -i ./src/App.css -o ./src/output.css --watch ```
 
 ### Tech Stack
 - Frontend: React, Redux, Tailwind CSS, Vite, TypeScript
