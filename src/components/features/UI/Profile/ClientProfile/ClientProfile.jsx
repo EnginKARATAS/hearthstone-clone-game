@@ -16,10 +16,10 @@ export default function ClientProfile({ player, position }) {
       <Profile
         className="enemy-profile"
         img={{ pack: profile.cardPack }}
-        position={{ left: 2, bottom: 225 }}
+        position={{ left: 10, bottom: 227 }}
         player="player"
-      />
-      <ManaBox position={{ top: -149, left: 246 }} player="player" />
+      />    
+      <ManaBox position={{ top: -151, left: 253 }} player="player" />
       <Hand
         position={{ bottom: -15, left: -580 }}
         player={player}

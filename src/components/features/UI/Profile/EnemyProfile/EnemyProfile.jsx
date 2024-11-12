@@ -13,10 +13,10 @@ export default function EnemyProfile() {
     <div className="absolute enemy-profile">
       <Profile
         img={{ pack: profile.cardPack, photo: "hero-yavuz" }}
-        position={{ top: 146, left: 5 }}
+        position={{ top: 146, left: 12 }}
         player="enemy"
       />
-      <ManaBox position={{ top: 108, left: 218 }} player="enemy" />
+      {/* <ManaBox position={{ top: 108, left: 218 }} player="enemy" /> */}
       <Hand player="enemy" position={{ top: 12, left: -541 }}></Hand>
       <RemainingCards player="enemy" position={{ top: 184, right: -551 }} />
       <Board
