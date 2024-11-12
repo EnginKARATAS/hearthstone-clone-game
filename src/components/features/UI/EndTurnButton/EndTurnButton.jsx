@@ -70,7 +70,7 @@ export default function EndTurnButton() {
 
         isEnemyLowOnCards();
         await delay(cardCache.length * 2000).then(async () => {
-          if (enemyHandCard.length > 1)
+          if (enemyHandCard.length >= 1)
             dispatch(playCardToBoard({ isEnemy: true }));
           enemyDecide();
           isEnemyLowOnCards(enemyCardBaseCount, playerCardBaseCount);

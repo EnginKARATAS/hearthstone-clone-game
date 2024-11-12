@@ -63,7 +63,9 @@ i18n.use(initReactI18next).init({
           developer: "This game was developed by Engin Karataş.",
         },
         githubLink: "Click and Go to Open Source Github Codes",
-        cards: cardTranslations.en.cards
+        cards: cardTranslations.en.cards,
+        loading: "Loading",
+        cloneAppMadeWithLove: "Clone app made with love",
       },
     },
     tr: {
@@ -124,7 +126,9 @@ i18n.use(initReactI18next).init({
           developer: "Bu oyun Engin Karataş tarafından geliştirildi.",
         },
         githubLink: "Açık Kaynak Github Kodlarına Git",
-        cards: cardTranslations.tr.cards
+        cards: cardTranslations.tr.cards,
+        loading: "Yükleniyor",
+        cloneAppMadeWithLove: "Sevgiyle yapılan benzersiz hearthstone web klon oyunu",
       },
     },
   },

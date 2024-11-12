@@ -143,7 +143,7 @@ export const cardTranslations = {
         description: "Does everything possible to hide himself."
       },
       "superyavuz": {
-        name: "Super Yavuz",
+        name: "Bızdıkman",
         description: "-It's a bird!, -no a plane, no it's BIZDIKMAN"
       },
       "hacker": {
@@ -485,7 +485,7 @@ export const cardTranslations = {
         description: "Kendini gizlemek için elinden geleni yapar."
       },
       "superyavuz": {
-        name: "Süper Yavuz",
+        name: "Bızdıkmen Yavuz",
         description: "-O bir kuş!, -hayır bir uçak, hayır o BIZDIKMEN"
       },
       "hacker": {
