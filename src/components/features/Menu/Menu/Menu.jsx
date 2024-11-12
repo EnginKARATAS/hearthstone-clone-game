@@ -10,13 +10,12 @@ import Settings from "../Settings/Settings.jsx";
 import Contact from "../Contact/Contact.jsx";
 import CharacterSelectionScreen from "../CharacterSelectionScreen/CharacterSelectionScreen.jsx";
 import { useTranslation } from "react-i18next";
-import Pause from "../Pause/Pause.jsx";
 import GameBoard from "../../../GameBoard.jsx";
 import LoadingScreen from "../../UI/GameManagement/LoadingScreen.jsx";
 import EndGameScreen from "../../UI/GameManagement/EndGameScreen.jsx";
 import ContactScreen from "../../UI/GameManagement/ContactScreen.jsx";
 import Credits from "../Credits/Credits.jsx";
-import LoadingScreenWithProgress from "../../UI/GameManagement/LoadingScreen.jsx";
+import LoadingScreenWithProgress from "../../UI/GameManagement/LoadingScreenWithProgress.jsx";
 import GameConstants from "../../../GameConstants.js";
 
 export default function Menu() {
@@ -66,6 +65,7 @@ export default function Menu() {
         await Promise.all(imagePromises);
         dispatch(setResourcesLoaded(true));
       } catch (error) {
+        console.log(error);
         dispatch(setResourcesLoaded(true));
       }
     };
