@@ -29,7 +29,9 @@ function App() {
   return (
     <div className="screen-container">
       <div className="bg-container">
-        <Menu />
+        <div className="menu absolute">
+          <Menu />
+        </div>
         <FishOrnament />
       </div>
     </div>

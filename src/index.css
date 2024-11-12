@@ -21,7 +21,6 @@ body {
   position: relative;
   box-shadow: rgba(0, 0, 20, 0.75) 3px 3px 44px 38px,
     rgba(0, 10, 50, 0.75) 3px 3px 39px 41px, rgba(0, 0, 0, 1) 0px 0px 0px 1px;
-  background-image: url(/hearthstone-board-2.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 849px;

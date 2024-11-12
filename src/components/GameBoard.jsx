@@ -8,10 +8,12 @@ import { useSelector } from "react-redux";
 import GameConstants from "./GameConstants";
 import { setGameState } from "./features/game/gameSlice.ts";
 import { useDispatch } from "react-redux";
+import Pause from "./features/Menu/Pause/Pause.jsx";
 
-export default function GameBoard() {
+export default function GameBoard({dispatchGameState}) {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const dispatch = useDispatch();
+  const gameState = useSelector((state) => state.game.gameState);
   const clientHealth = useSelector(
     (state) => state.hand.profile.player.cardHealth
   );
@@ -31,8 +33,15 @@ export default function GameBoard() {
     })();
   }, [clientHealth, enemyHealth]);
 
+  if(gameState === "pause"){
+    return (
+      <div className="bg-outer absolute z-20 bg">
+        <Pause dispatchGameState={dispatchGameState} />
+      </div>
+    );
+  }
   return (
-    <div className="">
+    <div className="game-board">
       <EnemyProfile player="enemy" />
       <YourTurn />
       <EndTurnButton />

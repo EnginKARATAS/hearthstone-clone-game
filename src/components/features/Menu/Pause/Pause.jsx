@@ -21,7 +21,7 @@ export default function Pause({ dispatchGameState }) {
   };
 
   if (gameState === "pause") return (
-    <div className="absolute">
+    <div className=" ">
       <div className="pause flex flex-col items-center justify-center absolute gap-4">
         <h2 className="pause-title">Pause</h2>
         <button

@@ -4,5 +4,12 @@
     background: #473d63;
     padding: 6px;
     z-index: 15;
+}
 
+.game-board{
+    background-image: url("/hearthstone-board-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 849px;
+    width: 1421px;
 }

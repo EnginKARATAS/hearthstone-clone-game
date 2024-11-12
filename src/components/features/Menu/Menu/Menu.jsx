@@ -136,9 +136,6 @@ export default function Menu() {
     return (
       <div>
         <GameBoard className="board" />
-        <div className="bg-outer absolute z-20 bg">
-          <Pause dispatchGameState={dispatchGameState} />
-        </div>
       </div>
     );
   }

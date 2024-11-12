@@ -30,6 +30,25 @@ p, span, h1, h2, h3, h4, h5, h6, li {
     aspect-ratio: 16 / 9; 
 }
 
+.centered-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.absolute-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-aspect-ratio: 16/9) {
     .bg-container {

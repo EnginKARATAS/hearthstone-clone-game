@@ -1000,8 +1000,62 @@ p, span, h1, h2, h3, h4, h5, h6, li {
   font-size: 12px;
 }
 
+.screen-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16 / 9;
+}
+
+.centered-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.absolute-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .bg-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .bg-container {
+    height: 100%;
+    width: auto;
+  }
+}
+
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
