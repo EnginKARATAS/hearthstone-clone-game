@@ -24,26 +24,82 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 
 ### Card Ability System
 
-#### Health Management
-- `HealRandomCard`: Heal random card (+1 HP)
-- `HealHero`: Heal hero (+1 HP)
-- `HealCard`: Heal specific card (+1 HP)
-- `HealAllCards`: Heal all cards (+1 HP)
+<table>
+  <tr>
+    <th colspan="2">Health Skills</th>
+  </tr>
+  <tr>
+    <td>HealRandomCard</td>
+    <td>Gives 1 health to a random card</td>
+  </tr>
+  <tr>
+    <td>HealHero</td>
+    <td>Gives 1 health to the hero</td>
+  </tr>
+  <tr>
+    <td>HealCard</td>
+    <td>Gives 1 health to a random card</td>
+  </tr>
+  <tr>
+    <td>HealAllCards</td>
+    <td>Gives 1 health to all cards</td>
+  </tr>
+  <tr>
+    <th colspan="2">Damage Skills</th>
+  </tr>
+  <tr>
+    <td>DealRandomEnemy</td>
+    <td>Deals 1 damage to a random enemy</td>
+  </tr>
+  <tr>
+    <td>DealAllEnemyMinions</td>
+    <td>Deals 1 damage to all opponent's minions</td>
+  </tr>
+  <tr>
+    <td>DealAll</td>
+    <td>Deals 1 damage to everyone in the game</td>
+  </tr>
+  <tr>
+    <td>DealAllEnemy</td>
+    <td>Deals 1 damage to all enemies</td>
+  </tr>
+  <tr>
+    <th colspan="2">Give Back Skills</th>
+  </tr>
+  <tr>
+    <td>ReturnToHandAndGiveHealth</td>
+    <td>Destroys a card, returns it to your hand with an amount/amount attack/health buff</td>
+  </tr>
+  <tr>
+    <th colspan="2">Card Drawing Skills</th>
+  </tr>
+  <tr>
+    <td>DrawCard</td>
+    <td>Draw a card</td>
+  </tr>
+  <tr>
+    <th colspan="2">Empowerment Skills</th>
+  </tr>
+  <tr>
+    <td>EmpowerRandomCard</td>
+    <td>Empowers a random card by 1</td>
+  </tr>
+  <tr>
+    <th colspan="2">Armor Skills</th>
+  </tr>
+  <tr>
+    <td>GainArmor</td>
+    <td>Gives armor to your hero</td>
+  </tr>
+  <tr>
+    <th colspan="2">Special Skills</th>
+  </tr>
+  <tr>
+    <td>GainHealthAmountOfCardsInYourHand</td>
+    <td>Gains health equal to the number of cards in your hand</td>
+  </tr>
+</table>
 
-#### Combat
-- `DealRandomEnemy`: Deal 1 damage to random enemy
-- `DealAllEnemyMinions`: AoE damage to enemy minions
-- `DealAll`: Global damage to all characters
-- `DealAllEnemy`: Damage all enemy characters
-
-#### Card Effects
-- `ReturnToHandAndGiveHealth`: Return card to hand with health buff
-- `DrawCard`: Draw from deck
-- `EmpowerRandomCard`: Buff random card stats
-
-#### Resource Effects
-- `GainArmor`: Add armor to hero
-- `GainHealthAmountOfCardsInYourHand`: Heal based on hand size
 
 ## Development
 
@@ -53,9 +109,9 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
    { npm i }
 4. For every build time you must run tailwind and vite
    #### 4.3 For R
-   {npm run dev}
+   { npm run dev }
    #### 4.2 For Tailwind
-   {npx tailwindcss -i ./src/App.css -o ./src/output.css --watch}
+   { npx tailwindcss -i ./src/App.css -o ./src/output.css --watch }
 
 ### Tech Stack
 - Frontend: React, Redux, Tailwind CSS, Vite, TypeScript
