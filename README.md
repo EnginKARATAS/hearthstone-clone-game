@@ -1,95 +1,80 @@
-# hearthstone clone app
+# Hearthstone Clone App
 https://hearthstone-clone-game.vercel.app/
 
+## Overview
+A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring turn-based gameplay with character selection, resource management, and card combat mechanics.
+
+## Game Features
+
+### Character Selection
+- Multiple hero characters available
+- Unique abilities per character
+- Custom starting decks
+
+### Core Gameplay
+- Turn-based combat system
+- Mana crystal resource management 
+- Card drawing and deck management
+- Strategic combat interactions
+
+## Styling
+- Animation
+- Dynamic card rendering
+- Responsive design for all screens
+
+### Card Ability System
+
+#### Health Management
+- `HealRandomCard`: Heal random card (+1 HP)
+- `HealHero`: Heal hero (+1 HP)
+- `HealCard`: Heal specific card (+1 HP)
+- `HealAllCards`: Heal all cards (+1 HP)
+
+#### Combat
+- `DealRandomEnemy`: Deal 1 damage to random enemy
+- `DealAllEnemyMinions`: AoE damage to enemy minions
+- `DealAll`: Global damage to all characters
+- `DealAllEnemy`: Damage all enemy characters
+
+#### Card Effects
+- `ReturnToHandAndGiveHealth`: Return card to hand with health buff
+- `DrawCard`: Draw from deck
+- `EmpowerRandomCard`: Buff random card stats
+
+#### Resource Effects
+- `GainArmor`: Add armor to hero
+- `GainHealthAmountOfCardsInYourHand`: Heal based on hand size
+
+## Development
+
+### Setup
+1. Clone repository
+2. Install dependencies (npm/yarn)
+3. Run development server
+
+### Tech Stack
+- Frontend: React, Redux, Tailwind CSS, Vite, TypeScript
+- i18next for localization
+- Custom game logic systems
+
+## Contributing
+Contributions welcome! Please fork and submit pull requests.
+
+## License
+MIT License
+
+## Acknowledgments
+Thanks to the community for their support and contributions.
 # Card types
 
-<table>
-  <tr>
-    <th colspan="2">Health Skills</th>
-  </tr>
-  <tr>
-    <td>HealRandomCard</td>
-    <td>Gives 1 health to a random card</td>
-  </tr>
-  <tr>
-    <td>HealHero</td>
-    <td>Gives 1 health to the hero</td>
-  </tr>
-  <tr>
-    <td>HealCard</td>
-    <td>Gives 1 health to a random card</td>
-  </tr>
-  <tr>
-    <td>HealAllCards</td>
-    <td>Gives 1 health to all cards</td>
-  </tr>
+## Game Overview
+![blizzardafslorerhearthstone_736361b](https://github.com/user-attachments/assets/05b067f4-22dc-4381-9e59-ac747c73e256)
 
-  <tr>
-    <th colspan="2">Damage Skills</th>
-  </tr>
-  <tr>
-    <td>DealRandomEnemy</td>
-    <td>Deals 1 damage to a random enemy</td>
-  </tr>
-  <tr>
-    <td>DealAllEnemyMinions</td>
-    <td>Deals 1 damage to all opponent's minions</td>
-  </tr>
-  <tr>
-    <td>DealAll</td>
-    <td>Deals 1 damage to everyone in the game</td>
-  </tr>
-  <tr>
-    <td>DealAllEnemy</td>
-    <td>Deals 1 damage to all enemies</td>
-  </tr>
-
-  <tr>
-    <th colspan="2">Give Back Skills</th>
-  </tr>
-  <tr>
-    <td>ReturnToHandAndGiveHealth</td>
-    <td>Destroys a card, returns it to your hand with an amount/amount attack/health buff</td>
-  </tr>
-
-  <tr>
-    <th colspan="2">Card Drawing Skills</th>
-  </tr>
-  <tr>
-    <td>DrawCard</td>
-    <td>Draw a card</td>
-  </tr>
-
-  <tr>
-    <th colspan="2">Empowerment Skills</th>
-  </tr>
-  <tr>
-    <td>EmpowerRandomCard</td>
-    <td>Empowers a random card by 1</td>
-  </tr>
-
-  <tr>
-    <th colspan="2">Armor Skills</th>
-  </tr>
-  <tr>
-    <td>GainArmor</td>
-    <td>Gives armor to your hero</td>
-  </tr>
-
-  <tr>
-    <th colspan="2">Special Skills</th>
-  </tr>
-  <tr>
-    <td>GainHealthAmountOfCardsInYourHand</td>
-    <td>Gains health equal to the number of cards in your hand</td>
-  </tr>
-</table>
-
-# Cards
+# Card Gallery
 
 ![11-07-2024 (02-52-33)](https://github.com/user-attachments/assets/3e42b5c9-7a7f-449f-b24f-4d807b9b9cd3)
 
-## Select character screen screenshots
+## Character Selection Showcase
 
 ![image](https://github.com/user-attachments/assets/dc33e333-a694-42cd-a2a6-75d5040f4869)
 
@@ -99,10 +84,10 @@ https://hearthstone-clone-game.vercel.app/
 
 ![image](https://github.com/user-attachments/assets/7be864db-250a-4b6f-8b8a-2fcf4f1f69ba)
 
-## View Insights
-### Here is the screenshoot from hearthstone clone(Newest First⬆️)
+## Visual Progress
+### Latest Screenshots from Hearthstone Clone (Most Recent First ⬆️)
 
-## In game screenshots
+## Gameplay Screenshots
 
 ![image](https://github.com/user-attachments/assets/73df14f9-16c7-4cfe-bec4-9e62941af1f1)
 
@@ -126,5 +111,3 @@ https://hearthstone-clone-game.vercel.app/
 
 ![image](https://github.com/user-attachments/assets/2df4917d-38f9-4d7b-a06f-49d550b1c917)
 
-## How It Works?
-![blizzardafslorerhearthstone_736361b](https://github.com/user-attachments/assets/05b067f4-22dc-4381-9e59-ac747c73e256)
