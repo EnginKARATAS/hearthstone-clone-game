@@ -13,7 +13,6 @@ export default function YourTurn() {
   useEffect(() => {
     if (isClientTurn === true && gameState === "playing") {
       (async () => {
-        dispatch(drawCard({ isEnemy: false }));
         dispatch(syncCardBaseLenght());
         setOpenPopup(true);
         await delay(GameConstants.endTurnDisplayTime);
