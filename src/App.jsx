@@ -4,8 +4,10 @@ import RotateScreen from "./components/features/Menu/RotateScreen/RotateScreen";
 import { useEffect, useState } from "react";
 import Menu from "./components/features/Menu/Menu/Menu";
 import FishOrnament from "./components/features/UI/FishOrnament";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
   const [windowDimensions, setWindowDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -31,6 +33,7 @@ function App() {
     <div className="screen-container">
       <div className="bg-container">
         <div className="menu absolute">
+          <p className="bg-yellow-300 absolute top-0 right-0 w-[300px] opacity-40">{t("test")}</p>
           <Menu />
           <FishOrnament />
         </div>
