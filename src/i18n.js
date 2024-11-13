@@ -6,7 +6,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        test: "This is a test version of the game, some well known bugs may occur. please do not hasitate to ask for the fixes. if you love this game, it will be developed further.",
+        test: "May occur bugs knowingly not fixed. Please share your feedback for improvements. Best regards",
         welcome: "Welcome to the game",
         credits: "About",
         start: "Start Game",
@@ -73,7 +73,7 @@ i18n.use(initReactI18next).init({
     },
     tr: {
       translation: {
-        test: "Bu demo versiyonudur, bazı hatalar bilinsede geliştirilmemiştir. lütfen geliştirilmesi için görüşlerinizi bildiriniz. sevgilerle.",
+        test: "Bazı hatalar bilinsede geliştirilmemiştir. lütfen geliştirilmesi için görüşlerinizi bildiriniz. sevgilerle.",
         welcome: "Oyuna hoş geldiniz",
         credits: "Hakkında",
         start: "Oyunu Başlat",
