@@ -14,6 +14,7 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 - Custom starting decks
 
 ### Core Gameplay
+- Against computer mode, a game BOT
 - Turn-based combat system
 - Mana crystal resource management 
 - Card drawing and deck management
