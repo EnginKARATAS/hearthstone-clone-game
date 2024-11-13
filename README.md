@@ -140,6 +140,15 @@ Thanks to the people for their support and contributions.
 ## Game Overview
 ![blizzardafslorerhearthstone_736361b](https://github.com/user-attachments/assets/05b067f4-22dc-4381-9e59-ac747c73e256)
 
+## Card Pairing Algorithm
+
+![image](https://github.com/user-attachments/assets/116f38e5-149e-42ed-8dd1-3264a70479d5)
+
+## End turn card destiny algorithm 
+
+![image](https://github.com/user-attachments/assets/2ae47007-41e1-42bc-8fda-ad91f854957f)
+
+
 # Card Gallery
 
 ![11-07-2024 (02-52-33)](https://github.com/user-attachments/assets/3e42b5c9-7a7f-449f-b24f-4d807b9b9cd3)
