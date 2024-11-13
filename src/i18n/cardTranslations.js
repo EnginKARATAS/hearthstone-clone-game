@@ -377,7 +377,7 @@ export const cardTranslations = {
         description: ""
       },
       "unchained_gladiator": {
-        name: "Zincirlerinden Kurtulmuş Gladyatör",
+        name: "Kurtulmuş Gladyatör",
         description: ""
       },
       "raid_leader": {
