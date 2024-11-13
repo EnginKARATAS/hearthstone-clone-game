@@ -140,6 +140,10 @@ Thanks to the people for their support and contributions.
 ## Game Overview
 ![blizzardafslorerhearthstone_736361b](https://github.com/user-attachments/assets/05b067f4-22dc-4381-9e59-ac747c73e256)
 
+## Card Process Stream
+
+![image](https://github.com/user-attachments/assets/64b745da-e3b6-401f-a399-346d52fbcb20)
+
 ## Card Pairing Algorithm
 
 ![image](https://github.com/user-attachments/assets/116f38e5-149e-42ed-8dd1-3264a70479d5)
