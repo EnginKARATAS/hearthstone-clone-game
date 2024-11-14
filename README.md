@@ -20,8 +20,11 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 - Card drawing and deck management
 - Strategic combat interactions
 
-## Styling
-- Animation
+## Features
+- 100+ multilingual card design
+- 11+ card cast skill type(can add more types like minion type, card type(taunt, divine shield, stealth etc)
+- EN/TR language options 
+- Awesome animations
 - Dynamic card rendering
 - Responsive design for all screens
 
@@ -37,7 +40,7 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
    #### 4.2 For Tailwind
    ``` npx tailwindcss -i ./src/App.css -o ./src/output.css --watch ```
 
-### Card Ability System
+### Card Cast Skill Types
 
 <table>
   <tr>
