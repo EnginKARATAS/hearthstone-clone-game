@@ -65,7 +65,7 @@
   padding: 15px;
 }
 
-.select-enemy-cards {
+.mini-cards-section {
   border-radius: 11%;
   background-size: 766px;
   background-image: url(/menu/menu/selection/minibg.png);
@@ -152,4 +152,21 @@
   color: #000;
   font-style: italic;
   font-size: 1.4rem;
+}
+
+@media (max-height: 768px) {
+ 
+  .p1-character-container {
+    left: 27%;   
+}
+  .p2-character-container {
+    right: 27%;   
+}
+.mini-cards-section{
+  top: -50px;
+}
+.player-name-container{
+  visibility: hidden;
+}
+
 }
