@@ -137,7 +137,7 @@ export default function Menu() {
   } else if (gameState === "playing" || gameState === "pause") {
     return (
       <div>
-        <GameBoard className="board" />
+        <GameBoard className="board " />
       </div>
     );
   }
@@ -145,7 +145,7 @@ export default function Menu() {
   return (
     gameState === "menu" && (
       <div className="bg-outer absolute z-20">
-        <div className="menu flex items-center justify-center text-center flex flex-col space-y-4 gap-3">
+        <div className="menu flex  flex-col items-center justify-center text-center   space-y-4 gap-3">
           <p
             onClick={() => dispatchGameState("characterSelection")}
             className="px-4 py-2 text-white menu-item"
