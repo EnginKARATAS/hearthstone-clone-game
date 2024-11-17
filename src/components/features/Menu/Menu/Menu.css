@@ -1,3 +1,5 @@
+
+
 .menu{
     cursor: auto;
     height: 857px;
@@ -11,11 +13,31 @@
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FF540F" stroke-width="3.25" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;;
     color: #544024;
     font-size: 2rem;
+
 }
 
 .bg-outer{
     background-image: url("/menu/menu/bg-outer.png");
     background-repeat: no-repeat;
+ 
+}
+
+@media (max-height: 768px) {
+    .menu {
+
+        background-size: 600px;
+    }
+    .menu-item{
+        cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FF540F" stroke-width="3.25" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;;
+        color: #544024;
+        font-size: 1.2rem;
+        width: 300px;
+        height: 18px;
+        margin-top: -15px;
+    }
+    .select-character{
+        margin-top: 270px;
+    }
  
 }
 
