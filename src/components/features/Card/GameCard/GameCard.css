@@ -83,3 +83,18 @@ svg > text > textPath{
   width: 150px;
   min-width: 150px;
 }
+
+@media (max-height: 768px) {
+  .game-card-frame {
+    width: 60px;
+    min-width: 80px;
+  }
+  
+  .card-image {
+    width: 53px;
+    top: 9px;
+    border-radius: 77%;
+    left: 16px;
+    z-index: -1;
+  }
+}

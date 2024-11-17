@@ -42,3 +42,13 @@
   bottom: -7px;
   right: -3px;
 }
+
+@media (max-height: 768px) {
+ .image-container{
+  width: 59px;
+ }
+ .profile{
+  left: -69px;
+  bottom: 533px;
+ }
+}

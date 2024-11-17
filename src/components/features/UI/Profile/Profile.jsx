@@ -17,7 +17,7 @@ export default function Profile({ img, position, player }) {
       style={{
         top: position.top,
         left: position.left,
-        bottom: position.bottom,
+        bottom: position.bottom?(position.bottom):0,
       }}
     >
       <div className="image-container ">
