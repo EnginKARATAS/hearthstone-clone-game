@@ -41,7 +41,6 @@ svg > text > textPath{
   font-size: 10px;
 }
 .card-name-svg text {
-  font-size: 11px;
   fill: white;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
@@ -50,7 +49,6 @@ svg > text > textPath{
 }
 
 .card-description {
-  font-size: 9px;
   font-family: none;
 
   text-align: center;
@@ -85,6 +83,9 @@ svg > text > textPath{
 }
 
 @media (max-height: 768px) {
+  svg > text > textPath{
+    font-size: .7rem;
+  }
   .game-card-frame {
     width: 60px;
     min-width: 80px;
@@ -96,5 +97,55 @@ svg > text > textPath{
     border-radius: 77%;
     left: 16px;
     z-index: -1;
+  }
+
+
+  .card-cost{
+    top: 1px;
+    left: 6px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px black;
+    font-size: 2rem;
+  }
+  .card-name-svg{
+    top: 53px;
+    left: -10px;
+  }
+  .card-name-svg text {
+    fill: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    top: 105px;
+    left: 44px;
+  }
+  
+  .card-description {
+    font-size: 0.5rem;
+    font-family: none;
+    text-align: center;
+    width: 46px;
+    font-weight: 500;
+    top: 76px;
+    line-height: 0.6rem;
+    left: 17px;
+  }
+  
+  .card-attack {
+    bottom: 0px;
+    left: 7px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px black;
+    font-size: 2rem;
+  }
+  
+  .card-health {
+    bottom:-2px;
+    left: 63px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px black;
+    font-size: 2rem;
   }
 }

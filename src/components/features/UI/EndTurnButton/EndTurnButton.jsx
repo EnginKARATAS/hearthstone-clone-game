@@ -62,7 +62,7 @@ export default function EndTurnButton() {
   useEffect(() => {
     if (isClientTurn === false) {
       const timer = setTimeout(async () => {
-         dispatchActions([
+        dispatchActions([
           increment({ player: "enemy" }),
           resetInGameMana({ player: "enemy" }),
           drawCard({ isEnemy: true }),
@@ -149,6 +149,8 @@ export default function EndTurnButton() {
           backgroundImage: isClientTurn
             ? "url('/menu/turn/end-turn.png')"
             : "url('/menu/turn/enemy-turn.png')",
+          backgroundSize: window.innerHeight > 768 ? 113 : 60,
+          backgroundRepeat: "no-repeat",
           transition: "all 0.3s ease-in-out",
         }}
         className="end-turn-button m-3"

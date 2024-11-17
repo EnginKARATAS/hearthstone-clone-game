@@ -1108,6 +1108,12 @@ p, span, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+@media (max-height: 768px) {
+  * {
+    font-size: 9px;
+  }
+}
+
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

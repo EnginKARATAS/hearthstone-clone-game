@@ -3,7 +3,9 @@ import "./Hand.css";
 import { useSelector } from "react-redux";
 
 export default function Hand({ player, position }) {
-  const handCards = useSelector((state) => state.hand.hand[player === "player" ? "player" : "enemy"]);;
+  const handCards = useSelector(
+    (state) => state.hand.hand[player === "player" ? "player" : "enemy"]
+  );
 
   return (
     <div
@@ -28,9 +30,9 @@ export default function Hand({ player, position }) {
               position={{
                 x: card.cardPosition.x,
                 y: player === "player" ? 0 : -97,
-                size: 150,
+                size: window.innerHeight > 768 ? 150 : 100,
                 offset: -card.cardPosition.offset,
-                top: card.cardPosition.top
+                top: window.innerHeight > 768 ? card.cardPosition.top : -18,
               }}
               key={card.cardId}
             />

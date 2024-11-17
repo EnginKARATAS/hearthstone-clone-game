@@ -1,7 +1,7 @@
 export const profilePack = {
   "jaina-pack": {
     cardHealth: 40,
-    armor:0,
+    armor:1,
     profile: "player",
     cardId: Math.random(),
     borderColor: "",
@@ -44,7 +44,7 @@ export const profilePack = {
   "yavuz-pack": {
     cardHealth: 40,
     profile: "player",
-    armor:0,
+    armor:1,
     cardId: Math.random(),
     borderColor: "",
     cardOwner: "enemy",
@@ -86,7 +86,7 @@ export const profilePack = {
   "mustafa-pack": {
     cardHealth: 40,
     profile: "player",
-    armor:0,
+    armor:1,
     cardId: Math.random(),
     borderColor: "",
     cardOwner: "enemy",

@@ -1,10 +1,21 @@
 .end-turn-button {
-  clip-path: polygon(49% 3%, 82% 9%, 98% 19%, 98.5% 84%, 80% 94%, 51% 100%, 24% 92%, 2.4% 79%, 2% 20%, 28% 6%);
+  clip-path: polygon(
+    49% 3%,
+    82% 9%,
+    98% 19%,
+    98.5% 84%,
+    80% 94%,
+    51% 100%,
+    24% 92%,
+    2.4% 79%,
+    2% 20%,
+    28% 6%
+  );
   position: absolute;
   width: 114px;
   height: 63px;
-  top: 344px;
-  right: 242px;
+  top: 343px;
+  right: 238px;
   transform: rotate(2deg);
   transition: background-color 0.3s;
   background-size: cover;
@@ -14,4 +25,13 @@
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+@media (max-height: 768px) {
+  .end-turn-button {
+    width: 114px;
+    height: 63px;
+    top: 152px;
+    right: 806px;
+ 
+  }
 }
