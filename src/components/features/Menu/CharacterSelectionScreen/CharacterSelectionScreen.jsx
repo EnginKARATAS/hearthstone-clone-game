@@ -19,6 +19,9 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   const [selectGameMode, setSelectGameMode] = useState(true);
   const [clickAdventureMode, setClickAdventureMode] = useState(false);
 
+  const closeMiniCardsSection = ()=>{
+    setLastSelectedCharacterPack(null)
+  }
   const handleCharacterPackChange = (characterPack) => {
     const [char1, char2] = characters;
     
@@ -184,7 +187,8 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         )}
 
         {lastSelectedCharacterPack && (
-          <div className="select-enemy-cards text-sm mt-[280px] w-[800px] text-center absolute p-cards flex items-center justify-center">
+          <div className="mini-cards-section text-sm mt-[280px] w-[800px] text-center absolute p-cards flex items-center justify-center"
+          onClick={()=>{closeMiniCardsSection()}}>
             <img
               className="absolute mini-character-image-left"
               src={`/cards/card-images/${lastSelectedCharacterPack}/${lastSelectedCharacterPack}.png`}
