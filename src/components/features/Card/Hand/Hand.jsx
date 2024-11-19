@@ -33,7 +33,7 @@ export default function Hand({ player, position }) {
               deg={card.deg}
               position={{
                 x: card.cardPosition.x,
-                y: player === "player" ? 0 : -97,
+                y: player === "player" ? -15 : -97,
                 size: window.innerHeight > 768 ? 150 : 100,
                 offset: -card.cardPosition.offset,
                 top: window.innerHeight > 768 ? card.cardPosition.top : -18,

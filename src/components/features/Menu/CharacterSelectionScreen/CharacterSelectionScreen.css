@@ -21,7 +21,7 @@
   border-radius: 10%;
   color: white;
   right: 647px;
-  top: 330px;
+  top: 341px;
 }
 .select-game-mode-button {
   font-weight: 700;
@@ -156,7 +156,7 @@
 
 @media (max-height: 768px) {
   .select-character{
-    top: 105px;
+    top: 25px;
   }
   .p1-character-container {
     left: 27%;   
@@ -165,10 +165,13 @@
     right: 27%;   
 }
 .mini-cards-section{
-  top: -50px;
+  top: -750px;
 }
 .player-name-container{
   visibility: hidden;
+}
+.start-game-button{
+  top: 425px;
 }
 
 }

@@ -121,11 +121,11 @@ svg > text > textPath{
   }
   
   .card-description {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-family: none;
     text-align: center;
     width: 46px;
-    font-weight: 500;
+    font-weight: bold;
     top: 76px;
     line-height: 0.6rem;
     left: 17px;
