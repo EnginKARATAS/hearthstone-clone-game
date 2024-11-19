@@ -69,12 +69,12 @@ export default function EndTurnButton() {
         ]);
 
         isEnemyLowOnCards();
-        await delay(cardCache.length * 2000).then(async () => {
+        await delay(GameConstants.controlDelayWithDebug(cardCache.length * 2000)).then(async () => {
           if (enemyHandCard.length >= 1)
             dispatch(playCardToBoard({ isEnemy: true }));
           enemyDecide();
           isEnemyLowOnCards(enemyCardBaseCount, playerCardBaseCount);
-          await delay(enemyBoardCard.length * 2000);
+          await delay(GameConstants.controlDelayWithDebug(enemyBoardCard.length * 2000));
           dispatch(advanceScenarioMove());
           setTurnCount(turnCount + 1);
           dispatchActions([

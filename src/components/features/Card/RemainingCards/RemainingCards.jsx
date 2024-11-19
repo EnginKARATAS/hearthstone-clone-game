@@ -8,7 +8,7 @@ export default function RemainingCards({ position, player }) {
   );
 
   return (
-    <div className="remaining-cards absolute" style={position}>
+    <div className="remaining-cards absolute transition-all duration-300 ease-in-out" style={position}>
       <svg
         className="absolute remaining-bar-text remaining-bar-name-svg"
         width="180"

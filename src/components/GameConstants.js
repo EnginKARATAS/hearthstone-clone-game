@@ -1,5 +1,6 @@
-const isDebugging = false;
+export const isDebugging = false;
 export default {
+  controlDelayWithDebug: (enemyBoardCardTimeout) => (isDebugging ? 0 : enemyBoardCardTimeout),
   enemyTurnTime: isDebugging ? 0 : 6000,
   enemyHandToBoardTime: isDebugging ? 0 : 1000,
   enemyCloseTurnTime: isDebugging ? 0 : 2000,

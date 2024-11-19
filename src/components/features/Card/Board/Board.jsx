@@ -16,15 +16,15 @@ export default function Board({ player, position }) {
             left:
               window.innerHeight > 768
                 ? 55 - playerBoardCards.length * 50
-                : -40 - playerBoardCards.length * 50,
+                : -57 - playerBoardCards.length * 23,
           }}
         >
           {playerBoardCards.map((boardCard, i) => {
             return (
               <BoardCard
                 position={{
-                  left: i * 100,
-                  offset: 555,
+                  left: window.innerHeight > 768?i * 100: i*50,
+                  offset: 11,
                 }}
                 boardCard={boardCard}
                 key={boardCard.cardId}
@@ -41,7 +41,7 @@ export default function Board({ player, position }) {
             left:
               window.innerHeight > 768
                 ? 55 - enemyBoardCards.length * 50
-                : -305 - enemyBoardCards.length * 50,
+                : -305 - enemyBoardCards.length * 23,
           }}
         >
           {enemyBoardCards.map((enemyBoardCard, i) => {
@@ -49,7 +49,7 @@ export default function Board({ player, position }) {
               <BoardCard
                 player="enemy"
                 position={{
-                  left: 100 * i,
+                  left: window.innerHeight > 768?i * 100: i*50,
                   offset: 555,
                 }}
                 boardCard={enemyBoardCard}

@@ -52,7 +52,7 @@
   }
   .health-bar {
     width: 22px;
-    z-index: 0;
+    z-index: 1;
     bottom: 41px;
     right: 37px;
   }
@@ -63,7 +63,7 @@
   }
   .armor-bar {
     width: 23px;
-    z-index: 1;
+    z-index: 0;
     top: 28px;
     right: 37px;
   }

@@ -1,22 +1,27 @@
 .settings-icon {
-    bottom: 0;
-    right: 0;
-    background: #473d63;
-    padding: 6px;
-    z-index: 15;
+  bottom: 0;
+  right: 0;
+  background: #473d63;
+  padding: 6px;
+  z-index: 15;
 }
 
-.game-board{
-    background-image: url("/hearthstone-board-2.png");
-    background-repeat: no-repeat;
-    height: 858px;
-    width: 1434px;
+.game-board {
+  background-image: url("/hearthstone-board-2.png");
+  background-repeat: no-repeat;
+  height: 858px;
+  width: 1434px;
 }
 @media (max-height: 768px) {
-    .game-board{
-        position: absolute;
-        background-size: 715px;
-        left: 371px;
-        top: 218px;
-    }
+  .game-board {
+    position: absolute;
+    background-size: 715px;
+    left: 371px;
+    top: 218px;
+  }
+  .settings-icon {
+    bottom: 444px;
+    right: 718px;
+    width: 50px;
+  }
 }

@@ -5,3 +5,12 @@
     bottom: 252px;
     left: 300px;
 }
+@media (max-height: 768px){
+    .your-turn{
+        z-index: 100;
+        position: absolute;
+        width: 738px;
+        top: 50px;
+        left: 000px;
+    }
+}

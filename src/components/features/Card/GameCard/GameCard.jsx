@@ -45,7 +45,7 @@ export default function GameCard({ position, card, player, deg }) {
           onMouseLeave={() => onMouseLeave(card)}
           onClick={() => onClick(card)}
           style={{
-            left: position.x,
+            left:window.innerHeight > 768? position.x:position.x*0.5+100,
             top: position.y - 30 * zIndex + position.top,
             width: position.size,
             marginLeft: position.offset,
@@ -91,7 +91,7 @@ export default function GameCard({ position, card, player, deg }) {
             width: position.size,
             marginLeft: position.offset,
             zIndex: zIndex,
-            top: -110
+            top: window.innerHeight > 768? -110: -71
           }}
         >
           <img

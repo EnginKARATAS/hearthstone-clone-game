@@ -11,19 +11,22 @@ export default function ClientProfile({ player, position }) {
   const profile = useSelector((state) => state.hand.profile.player);
   return (
     <div
-      className="absolute client-profile"
+      className="absolute client-profile "
       style={{
         bottom: window.innerHeight < 768 ? 415 : -44,
         left: window.innerHeight < 768 ? 388 : 631,
       }}
     >
       <Board player="player" position={{ top: -497, left: 150 }} />
-      <RemainingCards player="player" position={{ top: -545, right: -558 }} />
+      <RemainingCards player="player" position={{
+                   top: window.innerHeight > 768 ? -545 :-345,
+                   right: window.innerHeight > 768 ? -550 : -219,
+         }} />
       <Profile
         className="enemy-profile"
         img={{ pack: profile.cardPack }}
         position={{
-          left: window.innerHeight > 768 ? 10 : -69,
+          left: window.innerHeight > 768 ? 5 : -69,
           bottom: window.innerHeight > 768 ? 227 : 50,
         }}
         player="player"
@@ -36,7 +39,7 @@ export default function ClientProfile({ player, position }) {
         player="player"
       />
       <Hand
-        position={{ bottom: -15, left: -580 }}
+        position={{ bottom: -15, left: window.innerHeight > 768 ? -558 : -666 }}
         player={player}
         className="hand"
       />
