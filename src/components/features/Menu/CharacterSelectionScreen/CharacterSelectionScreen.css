@@ -155,7 +155,9 @@
 }
 
 @media (max-height: 768px) {
- 
+  .select-character{
+    top: 105px;
+  }
   .p1-character-container {
     left: 27%;   
 }

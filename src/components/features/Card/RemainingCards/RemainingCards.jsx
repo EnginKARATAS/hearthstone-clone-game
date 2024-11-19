@@ -26,7 +26,7 @@ export default function RemainingCards({ position, player }) {
             href="#sPath"
             startOffset="50%"
             textAnchor="middle"
-            className="card-name-text"
+            className="remaining-text"
           >
             Kalan Kartlar
           </textPath>
