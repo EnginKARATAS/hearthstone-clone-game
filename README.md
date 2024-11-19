@@ -5,7 +5,6 @@ https://hearthstone-clone-game.vercel.app/
 A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring turn-based gameplay with character selection, resource management, and card combat mechanics.
 ![image](https://github.com/user-attachments/assets/d808f5fa-9d36-427c-8b73-a0458aef7477)
 
-
 ## Game Features
 
 ### Character Selection
@@ -180,6 +179,8 @@ Thanks to the people for their support and contributions.
 ### Latest Screenshots from Hearthstone Clone (Most Recent First ⬆️)
 
 ## Gameplay Screenshots
+
+![image](https://github.com/user-attachments/assets/a60c573d-30d0-4d5e-a362-284bdb1cbb91)
 
 ![image](https://github.com/user-attachments/assets/73df14f9-16c7-4cfe-bec4-9e62941af1f1)
 
