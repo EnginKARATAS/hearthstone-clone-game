@@ -680,7 +680,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Gitarist",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 2,
       cardAttack: 3,
       cardHealth: 2,
       image: "guitar",
@@ -702,7 +702,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Ödenmiş Bedel",
       cardSkills: [{ type: "DealRandomEnemy", amount: 1 }],
-      cardCost: 1,
+      cardCost: 4,
       cardAttack: 1,
       cardHealth: 1,
       image: "soldier",
@@ -724,9 +724,9 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Savaşçı",
       cardSkills: [{ type: "GiveArmor", amount: 3 }],
-      cardCost: 1,
-      cardAttack: 2,
-      cardHealth: 9,
+      cardCost: 5,
+      cardAttack: 5,
+      cardHealth:4,
       image: "worrior",
       cardImageName: "worrior",
       cardDescription: "Savaşçı kartı oynandıktan sonra 3 zırh kazandırır.",
@@ -745,7 +745,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Askeri Harekat",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 2,
       cardAttack: 4,
       cardHealth: 3,
       image: "asker",
@@ -789,7 +789,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Cat",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 2,
       cardAttack: 1,
       cardHealth: 9,
       image: "cat",
@@ -876,7 +876,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Kyk",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 2,
       cardAttack: 3,
       cardHealth: 1,
       image: "kyk",
@@ -898,7 +898,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Madenci",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 2,
       cardAttack: 3,
       cardHealth: 4,
       image: "madenci",
@@ -920,7 +920,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Rohan Atlısı",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 3,
       cardAttack: 5,
       cardHealth: 6,
       image: "parlamak",
@@ -942,7 +942,7 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Son Akşam Yemegi",
       cardSkills: [],
-      cardCost: 1,
+      cardCost: 3,
       cardAttack: 5,
       cardHealth: 3,
       image: "sonaksamyemegi",
@@ -1315,9 +1315,9 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "DayDreamer",
       cardSkills: [{ type: "HealCard", amount: 2 }],
-      cardCost: 5,
-      cardAttack: 1,
-      cardHealth: 10,
+      cardCost: 4,
+      cardAttack: 7,
+      cardHealth: 6,
       image: "sleeper",
       cardImageName: "sleeper",
       cardDescription:
@@ -1640,8 +1640,8 @@ export const characterPack: { [key: string]: Card[] } = {
       cardName: "DayDreamer",
       cardSkills: [{ type: "HealCard", amount: 2 }],
       cardCost: 5,
-      cardAttack: 1,
-      cardHealth: 10,
+      cardAttack: 4,
+      cardHealth: 6,
       image: "sleeper",
       cardImageName: "sleeper",
       cardDescription:
@@ -3067,9 +3067,9 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Sevimli Kısakuyruk",
       cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 1 }],
-      cardCost: 1,
-      cardAttack: 1,
-      cardHealth: 10,
+      cardCost: 5,
+      cardAttack: 3,
+      cardHealth: 7,
       image: "quokka",
       cardImageName: "quokka",
       cardDescription: "Baksana şunun tatlılığına, kim saldırır buna.",
@@ -3217,9 +3217,9 @@ export const characterPack: { [key: string]: Card[] } = {
     {
       cardName: "Duolingo",
       cardSkills: [{ type: "ReturnToHandAndGiveHealth", amount: 1 }],
-      cardCost: 1,
-      cardAttack: 1,
-      cardHealth: 10,
+      cardCost: 3,
+      cardAttack: 4,
+      cardHealth: 5,
       image: "duo",
       cardImageName: "duo",
       cardDescription:
