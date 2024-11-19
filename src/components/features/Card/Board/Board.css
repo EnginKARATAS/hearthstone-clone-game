@@ -4,3 +4,10 @@
   width: 703px;
   min-height: 117px;
 }
+
+@media (max-height: 768px) {
+  
+  .board-cards {
+    min-height: 58px;
+  }
+}
