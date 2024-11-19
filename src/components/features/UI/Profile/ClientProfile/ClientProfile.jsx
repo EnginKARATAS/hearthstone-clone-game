@@ -39,7 +39,7 @@ export default function ClientProfile({ player, position }) {
         player="player"
       />
       <Hand
-        position={{ bottom: -15, left: window.innerHeight > 768 ? -558 : -666 }}
+        position={{ bottom: window.innerHeight > 768 ?-15:10, left: window.innerHeight > 768 ? -558 : -666 }}
         player={player}
         className="hand"
       />

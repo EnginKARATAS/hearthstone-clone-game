@@ -63,7 +63,7 @@
   }
   .armor-bar {
     width: 23px;
-    z-index: 0;
+    z-index: 1;
     top: 28px;
     right: 37px;
   }

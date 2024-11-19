@@ -13,8 +13,8 @@ export default function Hand({ player, position }) {
       style={{
         clipPath:
           player === "player"
-            ? "polygon(0px -32%, 203% -114%, 203% 72%, 4% 73%)"
-            : "polygon(0px 18%, 170% 18%, 340% 18%, 128% 99%)",
+            ? (window.innerHeight > 768 ?"polygon(0px -32%, 203% -114%, 203% 72%, 4% 73%)":"")
+            : (window.innerHeight > 768 ?"polygon(0px 18%, 170% 18%, 340% 18%, 128% 99%)":""),
         left: position?.left,
         bottom: player === "player" ? position?.bottom : "",
         top: player === "enemy" ? position?.top : "",

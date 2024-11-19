@@ -23,7 +23,7 @@ export default function EnemyProfile() {
       <Hand
         player="enemy"
         position={{
-          top: window.innerHeight > 768 ? 12 : 24,
+          top: window.innerHeight > 768 ? 12 : 50,
           left: window.innerHeight > 768 ? -558 : -804,
         }}
       ></Hand>
