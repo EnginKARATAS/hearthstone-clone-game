@@ -25,7 +25,7 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 - EN/TR language options 
 - Awesome animations
 - Dynamic card rendering
-- Responsive design for all screens
+- Responsive design for all screens (mobile, tablet, pc screens)
 
 ## Development
 
