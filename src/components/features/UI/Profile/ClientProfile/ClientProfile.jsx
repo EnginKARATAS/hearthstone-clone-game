@@ -33,8 +33,8 @@ export default function ClientProfile({ player, position }) {
       />
       <ManaBox
         position={{
-          top: window.innerHeight > 768 ? -151 : -66,
-          left: window.innerHeight > 768 ? 253 : 52,
+          top: window.innerHeight > 768 ? -150 : -66,
+          left: window.innerHeight > 768 ? 247 : 52,
         }}
         player="player"
       />
