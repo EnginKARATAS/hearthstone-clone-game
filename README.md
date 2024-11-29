@@ -7,7 +7,7 @@ A fan-made card game inspired by Blizzard Entertainment's Hearthstone, featuring
 
 ## Game Features
 
-### Character Selection 
+### Character Selection  
 - Multiple hero characters available
 - Unique abilities per character
 - Custom starting decks
