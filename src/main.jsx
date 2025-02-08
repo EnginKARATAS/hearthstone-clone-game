@@ -5,11 +5,18 @@ import './index.css'
 import { store } from './app/store'
 import { Provider } from 'react-redux'
 import './i18n'
+import { isDebugging } from './constants/GameConstants'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  isDebugging ? (
+    <StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </StrictMode>
+  ) : (
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>
+  )
 )
