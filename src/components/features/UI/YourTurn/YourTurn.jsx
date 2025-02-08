@@ -1,7 +1,7 @@
 import "./YourTurn.css";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import GameConstants from "../../../GameConstants";
+import GameConstants from "../../../../constants/GameConstants";
 import { drawCard, syncCardBaseLenght } from "../../hand/handSlice";
 export default function YourTurn() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

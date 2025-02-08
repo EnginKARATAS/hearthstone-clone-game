@@ -16,7 +16,7 @@ import EndGameScreen from "../../UI/GameManagement/EndGameScreen.jsx";
 import ContactScreen from "../../UI/GameManagement/ContactScreen.jsx";
 import Credits from "../Credits/Credits.jsx";
 import LoadingScreenWithProgress from "../../UI/GameManagement/LoadingScreenWithProgress.jsx";
-import GameConstants from "../../../GameConstants.js";
+import GameConstants from "../../../../constants/GameConstants.js";
 
 export default function Menu() {
   const { t } = useTranslation();

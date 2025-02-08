@@ -5,7 +5,7 @@ import ClientProfile from "./features/UI/Profile/ClientProfile/ClientProfile";
 import EnemyProfile from "./features/UI/Profile/EnemyProfile/EnemyProfile";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import GameConstants from "./GameConstants";
+import GameConstants from "../constants/GameConstants.js";
 import { setGameState } from "./features/game/gameSlice.ts";
 import { useDispatch } from "react-redux";
 import Pause from "./features/Menu/Pause/Pause.jsx";

@@ -19,7 +19,7 @@ import {
 } from "../../hand/handSlice";
 import { useEffect, useCallback } from "react";
 import { useState } from "react";
-import GameConstants from "../../../GameConstants";
+import GameConstants from "../../../../constants/GameConstants";
 import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
 
 export default function EndTurnButton() {

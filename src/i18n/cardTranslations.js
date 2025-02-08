@@ -340,7 +340,7 @@ export const cardTranslations = {
       },
       "atil_kedi": {
         name: "Jump Cat",
-        description: "Jumps from the roof to the ground."
+        description: "Jumps from the roof to the ground. Deals 3 damage to a random enemy."
       }
     }
   },
@@ -439,7 +439,7 @@ export const cardTranslations = {
       },
       "atil_kedi": {
         name: "Atıl Kedi",
-        description: "Çevik ve sessiz bir avcı. Kediye dönüşmüş, artık kendinde değil gibi görünüyor."
+        description: "Çevik bir avcı. Kediye dönüşmüş, artık kendinde değil gibi görünüyor. Deals 3 damage to a random enemy."
       },
       "dead": {
         name: "Kolay Meslek",
