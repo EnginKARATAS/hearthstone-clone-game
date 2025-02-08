@@ -50,13 +50,17 @@ svg > text > textPath{
 
 .card-description {
   font-family: none;
-
   text-align: center;
   width: 88px;
   font-weight: 500;
   line-height: 10px;
   top: 141px;
   left: 33px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-attack {
@@ -121,6 +125,11 @@ svg > text > textPath{
   }
   
   .card-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 0.6rem;
     font-family: none;
     text-align: center;
