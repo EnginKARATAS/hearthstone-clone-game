@@ -337,8 +337,11 @@ export const cardTranslations = {
       "short-circuit": {
         name: "Short Circuit",
         description: "Infiltrates enemy electronic circuits causing short circuit. Deals 1 damage to all enemies."
+      },
+      "atil_kedi": {
+        name: "Jump Cat",
+        description: "Jumps from the roof to the ground."
       }
-      
     }
   },
   tr: {
@@ -432,6 +435,10 @@ export const cardTranslations = {
       },
       "cat": {
         name: "Kedi",
+        description: "Çevik ve sessiz bir avcı. Kediye dönüşmüş, artık kendinde değil gibi görünüyor."
+      },
+      "atil_kedi": {
+        name: "Atıl Kedi",
         description: "Çevik ve sessiz bir avcı. Kediye dönüşmüş, artık kendinde değil gibi görünüyor."
       },
       "dead": {
