@@ -5,6 +5,7 @@ import { useState } from "react";
 import { decrement, isCardPlayable } from "../../counter/counterSlice";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
 
 export default function GameCard({ position, card, player, deg }) {
   const { t } = useTranslation();
@@ -45,7 +46,7 @@ export default function GameCard({ position, card, player, deg }) {
           onMouseLeave={() => onMouseLeave(card)}
           onClick={() => onClick(card)}
           style={{
-            left:window.innerHeight > 768? position.x:position.x*0.5+300,
+            left:WINDOW_HEIGHT > 768? position.x:position.x*0.5+300,
             top: position.y - 30 * zIndex + position.top,
             width: position.size,
             marginLeft: position.offset,
@@ -91,7 +92,7 @@ export default function GameCard({ position, card, player, deg }) {
             width: position.size,
             marginLeft: position.offset,
             zIndex: zIndex,
-            top: window.innerHeight > 768? -110: -71
+            top: WINDOW_HEIGHT > 768? -110: -71
           }}
         >
           <img

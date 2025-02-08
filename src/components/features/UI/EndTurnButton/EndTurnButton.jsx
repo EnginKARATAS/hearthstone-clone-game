@@ -20,6 +20,8 @@ import {
 import { useEffect } from "react";
 import { useState } from "react";
 import GameConstants from "../../../GameConstants";
+import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
+
 export default function EndTurnButton() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const dispatch = useDispatch();
@@ -149,7 +151,7 @@ export default function EndTurnButton() {
           backgroundImage: isClientTurn
             ? "url('/menu/turn/end-turn.png')"
             : "url('/menu/turn/enemy-turn.png')",
-          backgroundSize: window.innerHeight > 768 ? 113 : 60,
+          backgroundSize: WINDOW_HEIGHT > 768 ? 113 : 60,
           backgroundRepeat: "no-repeat",
           transition: "all 0.3s ease-in-out",
         }}

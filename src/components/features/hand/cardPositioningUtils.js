@@ -1,6 +1,8 @@
+import { WINDOW_HEIGHT } from "../../../constants/dimensions";
+
 export const pos = (cardsLenght, i) => {
   const startPoint = 444;
-  if (window.innerHeight > 768) {
+  if (WINDOW_HEIGHT > 768) {
     if (cardsLenght == 10) {
       return startPoint + i * 33 - (16 * i * cardsLenght * 0.7 + i * 55); //swipe left - swipe card between cards
     }

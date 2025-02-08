@@ -65,7 +65,7 @@ export default function Menu() {
         await Promise.all(imagePromises);
         dispatch(setResourcesLoaded(true));
       } catch (error) {
-        console.log(error);
+        //console.log(error);
         dispatch(setResourcesLoaded(true));
       }
     };

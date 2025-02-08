@@ -5,19 +5,20 @@ import { useEffect, useState } from "react";
 import Menu from "./components/features/Menu/Menu/Menu";
 import FishOrnament from "./components/features/UI/FishOrnament";
 import { useTranslation } from "react-i18next";
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from "./constants/dimensions";
 
 function App() {
   const { t } = useTranslation();
   const [windowDimensions, setWindowDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: WINDOW_HEIGHT,
+    width: WINDOW_WIDTH,
   });
 
   useEffect(() => {
     const handleResize = () => {
       setWindowDimensions({
-        height: window.innerHeight,
-        width: window.innerWidth,
+        height: WINDOW_HEIGHT,
+        width: WINDOW_WIDTH,
       });
     };
 

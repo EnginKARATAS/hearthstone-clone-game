@@ -5,6 +5,7 @@ import Hand from "../../../Card/Hand/Hand";
 import Board from "../../../Card/Board/Board";
 import { useSelector, useDispatch } from "react-redux";
 import RemainingCards from "../../../Card/RemainingCards/RemainingCards";
+import { WINDOW_HEIGHT } from "../../../../../constants/dimensions";
 
 export default function EnemyProfile() {
   const enemyBoardCards = useSelector((state) => state.hand.board.enemy);
@@ -14,8 +15,8 @@ export default function EnemyProfile() {
       <Profile
         img={{ pack: profile.cardPack, photo: "hero-yavuz" }}
         position={{
-          top: window.innerHeight > 768 ? 145 : 100,
-          left: window.innerHeight > 768 ? 7 : -310,
+          top: WINDOW_HEIGHT > 768 ? 145 : 100,
+          left: WINDOW_HEIGHT > 768 ? 7 : -310,
         }}
         player="enemy"
       />
@@ -23,15 +24,15 @@ export default function EnemyProfile() {
       <Hand
         player="enemy"
         position={{
-          top: window.innerHeight > 768 ? 12 : 50,
-          left: window.innerHeight > 768 ? -558 : -804,
+          top: WINDOW_HEIGHT > 768 ? 12 : 50,
+          left: WINDOW_HEIGHT > 768 ? -558 : -804,
         }}
       ></Hand>
       <RemainingCards
         player="enemy"
         position={{
-          top: window.innerHeight > 768 ? 184 : 41,
-          right: window.innerHeight > 768 ? -547 : 26,
+          top: WINDOW_HEIGHT > 768 ? 184 : 41,
+          right: WINDOW_HEIGHT > 768 ? -547 : 26,
         }}
       />
       <Board

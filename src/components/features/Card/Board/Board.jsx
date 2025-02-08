@@ -1,6 +1,7 @@
 import "./Board.css";
 import { useSelector } from "react-redux";
 import BoardCard from "./BoardCard";
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from "../../../../constants/dimensions";
 
 export default function Board({ player, position }) {
   const playerBoardCards = useSelector((state) => state.hand.board.player);
@@ -12,9 +13,9 @@ export default function Board({ player, position }) {
         <div
           className="board-cards absolute flex player-board"
           style={{
-            top: window.innerHeight > 768 ? -495 : -246,
+            top: WINDOW_HEIGHT > 768 ? -495 : -246,
             left:
-              window.innerHeight > 768
+              WINDOW_HEIGHT > 768
                 ? 55 - playerBoardCards.length * 50
                 : -57 - playerBoardCards.length * 23,
           }}
@@ -23,7 +24,7 @@ export default function Board({ player, position }) {
             return (
               <BoardCard
                 position={{
-                  left: window.innerHeight > 768?i * 100: i*50,
+                  left: WINDOW_HEIGHT > 768?i * 100: i*50,
                   offset: 11,
                 }}
                 boardCard={boardCard}
@@ -37,9 +38,9 @@ export default function Board({ player, position }) {
         <div
           className="board-cards absolute flex enemy-board"
           style={{
-            top: window.innerHeight > 768 ? 310 : 180,
+            top: WINDOW_HEIGHT > 768 ? 310 : 180,
             left:
-              window.innerHeight > 768
+              WINDOW_HEIGHT > 768
                 ? 55 - enemyBoardCards.length * 50
                 : -305 - enemyBoardCards.length * 23,
           }}
@@ -49,7 +50,7 @@ export default function Board({ player, position }) {
               <BoardCard
                 player="enemy"
                 position={{
-                  left: window.innerHeight > 768?i * 100: i*50,
+                  left: WINDOW_HEIGHT > 768?i * 100: i*50,
                   offset: 555,
                 }}
                 boardCard={enemyBoardCard}
