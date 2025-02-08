@@ -139,11 +139,15 @@ i18n.use(initReactI18next).init({
       },
     },
   },
-  lng: "en",
-  fallbackLng: "en",
+  lng: localStorage.getItem('language') || 'en',
+  fallbackLng: 'en',
   interpolation: {
     escapeValue: false,
   },
+});
+
+i18n.on('languageChanged', (lng) => {
+  localStorage.setItem('language', lng);
 });
 
 export default i18n;
