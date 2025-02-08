@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
 import GameCard from "../GameCard/GameCard";
 import "./Hand.css";
@@ -7,6 +8,31 @@ export default function Hand({ player, position }) {
   const handCards = useSelector(
     (state) => state.hand.hand[player === "player" ? "player" : "enemy"]
   );
+
+  const renderedHandCards = useMemo(() => {
+    return (
+      handCards &&
+        handCards.map((card) => {
+          return (
+              <GameCard
+                player={player}
+                card={card}
+                deg={card.deg}
+                position={{
+                  x: card.cardPosition.x,
+                  y: player === "player" ? -15 : -97,
+                  size: WINDOW_HEIGHT > 768 ? 150 : 100,
+                  offset: -card.cardPosition.offset,
+                  top: WINDOW_HEIGHT > 768 ? card.cardPosition.top : -18,
+                }}
+                key={card.cardId}
+              />
+        );
+      })
+    );
+  }, [handCards, player]);
+
+
 
   return (
     <div
@@ -25,24 +51,7 @@ export default function Hand({ player, position }) {
         top: player === "enemy" ? position?.top : "",
       }}
     >
-      {handCards &&
-        handCards.map((card, i) => {
-          return (
-            <GameCard
-              player={player}
-              card={card}
-              deg={card.deg}
-              position={{
-                x: card.cardPosition.x,
-                y: player === "player" ? -15 : -97,
-                size: WINDOW_HEIGHT > 768 ? 150 : 100,
-                offset: -card.cardPosition.offset,
-                top: WINDOW_HEIGHT > 768 ? card.cardPosition.top : -18,
-              }}
-              key={card.cardId}
-            />
-          );
-        })}
+      {renderedHandCards}
     </div>
   );
 }
