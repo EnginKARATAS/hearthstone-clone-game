@@ -41,7 +41,10 @@ export default function EndTurnButton() {
   const cardCache = useSelector((state) => state.hand.cardCache);
   const enemyHandCard = useSelector((state) => state.hand.hand.enemy);
 
-  dispatch(syncCardBaseLenght());
+  useEffect(() => {
+    dispatch(syncCardBaseLenght());
+  }, [dispatch]);
+
   const onEndTurnButtonClick = async () => {
     if (isClientTurn === true) {
       dispatchActions([
@@ -97,7 +100,7 @@ export default function EndTurnButton() {
   ).sort(() => Math.random() - 0.5);
   const enemyDecide = async () => {
     if (playerBoardCard.length < 1) {
-      for (let i = 0; i < enemyBoardCard.length + 1; i++) {
+      for (let i = 0; i < enemyBoardCard.length; i++) {
         await delay(200);
         dispatch(
           clickBoardCard({
@@ -109,6 +112,7 @@ export default function EndTurnButton() {
         dispatch(clickedProfile("player"));
         await delay(200);
       }
+      return;
     }
 
     const pairCount = enemyBoardCard.length - cannotPairedCardCount;
@@ -118,13 +122,14 @@ export default function EndTurnButton() {
     const shuffleSequenceEnemy = Array.from(
       Array(enemyBoardCard.length).keys()
     ).sort(() => Math.random() - 0.5);
-    for (let i = 0; i <= enemyBoardCard.length; i++) {
-      if (enemyBoardCard[shuffleSequenceEnemy[i]].isPlayedLastTurn) {
-        //if last turn is played, than play
+
+    for (let i = 0; i < enemyBoardCard.length; i++) {
+      const enemyCard = enemyBoardCard[shuffleSequenceEnemy[i]];
+      if (enemyCard && enemyCard.isPlayedLastTurn) {
         await delay(500);
         dispatch(
           clickBoardCard({
-            clickedCard: enemyBoardCard[shuffleSequenceEnemy[i]],
+            clickedCard: enemyCard,
             actionMaker: "enemy",
           })
         );
