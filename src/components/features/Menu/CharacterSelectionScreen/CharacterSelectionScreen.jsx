@@ -2,7 +2,7 @@ import "./CharacterSelectionScreen.css";
 import CharactersInComponent from "./CharactersInComponent/CharactersInComponent";
 import { characterPack } from "../../../../assets/characterPack";
 import MiniCharacterCards from "./MiniCharacterCards/MiniCharacterCards";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import GameBoard from "../../../GameBoard";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,7 +22,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   const closeMiniCardsSection = ()=>{
     setLastSelectedCharacterPack(null)
   }
-  const handleCharacterPackChange = (characterPack) => {
+  const handleCharacterPackChange = useCallback((characterPack) => {
     const [char1, char2] = characters;
     
     const newCharacters = 
@@ -33,7 +33,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
       ) : [char1, characterPack];
     
     setCharacters(newCharacters);
-  };
+  }, [characters]);
 
   const startGame = () => {
     const [char1, char2] = characters;

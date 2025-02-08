@@ -1,4 +1,4 @@
-import "./BoardCard.css";
+import "./BoardCard.css"; 
 import { useDispatch } from "react-redux";
 import {
   hoverSingleCard,
@@ -6,42 +6,48 @@ import {
   clickBoardCard,
   removeBoardCard,
 } from "../../hand/handSlice";
-import { useEffect } from "react";
+import { useEffect, useMemo, useCallback } from "react";
 import { useSelector } from "react-redux";
 
 export default function BoardCard({ position, boardCard }) {
+  const dispatch = useDispatch();
+  
   const boardCards = useSelector((state) => state.hand.board);
+
+  const playerBoardCards = useMemo(() => boardCards.player, [boardCards.player]);
+  const enemyBoardCards = useMemo(() => boardCards.enemy, [boardCards.enemy]);
+
   useEffect(() => {
-    const playerBoardCards = boardCards.player;
-    const enemyBoardCards = boardCards.enemy;
     playerBoardCards.forEach((card) => {
-      card.cardHealth <= 0 && dispatch(removeBoardCard(card));
+      if (card.cardHealth <= 0) {
+        dispatch(removeBoardCard(card));
+      }
     });
     enemyBoardCards.forEach((card) => {
-      card.cardHealth <= 0 && dispatch(removeBoardCard(card));
+      if (card.cardHealth <= 0) {
+        dispatch(removeBoardCard(card));
+      }
     });
-  }, [boardCards]);
+  }, [playerBoardCards, enemyBoardCards, dispatch]);
 
-  const dispatch = useDispatch();
-  const onMouseOver = (card) => {
+  const onMouseOver = useCallback((card) => {
     setTimeout(() => {
       dispatch(hoverSingleCard(card));
     }, 200);
-  };
+  }, [dispatch]);
 
-  const onMouseLeave = (card) => {
+  const onMouseLeave = useCallback((card) => {
     setTimeout(() => {
       dispatch(hoverSingleCard(card));
     }, 200);
-  };
+  }, [dispatch]);
 
-  const onClickBoardCard = (card) => {
+  const onClickBoardCard = useCallback((card) => {
     if (card.isPlayedLastTurn || card.cardOwner !== "player") {
-      //do not chech last turn if not player (is enemy)
       dispatch(closeSingleCard());
       dispatch(clickBoardCard({ clickedCard: card, actionMaker: "player" }));
     }
-  };
+  }, [dispatch]);
 
   return (
     <div
@@ -61,13 +67,13 @@ export default function BoardCard({ position, boardCard }) {
     >
       <img src="/cards/card-images/board_blank.png" className="board-frame" />
       <img
-        className=" board-card-image absolute"
+        className="board-card-image absolute"
         src={`/cards/card-images/${boardCard?.cardPack}/${boardCard?.cardImageName}.png`}
       />
-      <span className=" board-card-attack absolute text-white">
+      <span className="board-card-attack absolute text-white">
         {boardCard?.cardAttack}
       </span>
-      <span className=" board-card-health absolute text-white">
+      <span className="board-card-health absolute text-white">
         {boardCard?.cardHealth}
       </span>
     </div>

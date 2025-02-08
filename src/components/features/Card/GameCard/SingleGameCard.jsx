@@ -2,23 +2,26 @@ import "./SingleGameCard.css";
 import { useSelector } from "react-redux";
 import { closeSingleCard } from "../../hand/handSlice";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function SingleGameCard({ position }) {
   const { t } = useTranslation();
   const singleCard = useSelector((state) => state.hand.singleCard);
   const dispatch = useDispatch();
+
+  const cardStyle = useMemo(() => ({
+    left: position?.left,
+    bottom: position?.bottom,
+  }), [position?.left, position?.bottom]);
+
   return (
     singleCard && (
       <div
         className="single-game-card absolute"
         onMouseLeave={() => dispatch(closeSingleCard(singleCard))}
         onClick={() => dispatch(closeSingleCard())}
-        style={{
-          left: position?.left,
-          bottom: position?.bottom,
-        }}
+        style={cardStyle}
       >
         <img
           src="/cards/card-images/blank.png"

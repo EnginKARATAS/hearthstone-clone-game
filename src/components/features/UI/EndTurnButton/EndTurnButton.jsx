@@ -17,7 +17,7 @@ import {
   clickedProfile,
   makeLastCardsPlayable,
 } from "../../hand/handSlice";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { useState } from "react";
 import GameConstants from "../../../GameConstants";
 import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
@@ -25,8 +25,9 @@ import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
 export default function EndTurnButton() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const dispatch = useDispatch();
-  const dispatchActions = (actions) =>
+  const dispatchActions = useCallback((actions) => {
     actions.forEach((action) => dispatch(action));
+  }, [dispatch]);
   const isClientTurn = useSelector((state) => state.counter.isClientTurn);
   const playerCardBaseCount = useSelector(
     (state) => state.hand.cardBaseCount.player

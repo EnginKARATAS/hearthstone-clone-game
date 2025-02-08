@@ -10,29 +10,28 @@ export default function Hand({ player, position }) {
   );
 
   const renderedHandCards = useMemo(() => {
-    return (
-      handCards &&
-        handCards.map((card) => {
-          return (
-              <GameCard
-                player={player}
-                card={card}
-                deg={card.deg}
-                position={{
-                  x: card.cardPosition.x,
-                  y: player === "player" ? -15 : -97,
-                  size: WINDOW_HEIGHT > 768 ? 150 : 100,
-                  offset: -card.cardPosition.offset,
-                  top: WINDOW_HEIGHT > 768 ? card.cardPosition.top : -18,
-                }}
-                key={card.cardId}
-              />
-        );
-      })
-    );
+    if (!handCards) return null;
+
+    return handCards.map((card) => {
+      if (!card || !card.cardPosition) return null;
+
+      return (
+        <GameCard
+          key={card.cardId}
+          player={player}
+          card={card}
+          deg={card.deg || 0}
+          position={{
+            x: card.cardPosition.x || 0,
+            y: player === "player" ? -15 : -97,
+            size: WINDOW_HEIGHT > 768 ? 150 : 100,
+            offset: -(card.cardPosition?.offset || 0),
+            top: WINDOW_HEIGHT > 768 ? (card.cardPosition?.top || 0) : -18,
+          }}
+        />
+      );
+    }).filter(Boolean); // Remove any null elements
   }, [handCards, player]);
-
-
 
   return (
     <div

@@ -1,7 +1,7 @@
 import "./GameCard.css";
 import { useDispatch } from "react-redux";
 import { hoverSingleCard, addCardToBoard } from "../../hand/handSlice.ts";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { decrement, isCardPlayable } from "../../counter/counterSlice";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -30,12 +30,12 @@ export default function GameCard({ position, card, player, deg }) {
     }, 200);
   };
 
-  const onClick = async () => {
+  const onClick = useCallback(async () => {
     const res = await dispatch(isCardPlayable(card));
     if (res && isClientTurn === true && inGameMana[card.cardOwner] >= card.cardCost && boardCards.length < 7) {
       dispatch(addCardToBoard(card, player));
     }
-  };
+  }, [dispatch, isClientTurn, inGameMana, card, boardCards.length, player]);
 
   return (
     <div>
