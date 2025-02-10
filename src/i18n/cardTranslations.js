@@ -167,7 +167,7 @@ export const cardTranslations = {
         description: "Coming from the depths of space, this card gives 1 health to all friendly units."
       },
       "climbing_turtle": {
-        name: "Obstacle Enemy Tortoise",
+        name: "Enemy Tortoise",
         description: ""
       },
       "better_call_saul_jimmy": {
