@@ -17,7 +17,7 @@ export const gameSlice = createSlice({
       state.loadingProgress = 0;
     },
     setGameOver: (state, action) => {
-      isGameOver();
+      state.gameOver = action.payload;
     },
     setGameState: (state, action) => {
       state.gameState = action.payload;

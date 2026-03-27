@@ -87,7 +87,7 @@ const borderColorCode: string[] = [
   "gray",
 ];
 
-const isCard_CachePlayable = (state: InitialState, clickedCard: Card | any) => {
+const isCard_CachePlayable = (state: InitialState, clickedCard: Card) => {
   //loking for cache of current move
   let isPlayable = true;
   state.cardCache.forEach((moveCards, index) => {
@@ -132,9 +132,9 @@ const decideDuelDestiny = (
   );
 
   const enemyProfile = state.profile.enemy;
-  const clientProfile = state.profile.enemy;
+  const clientProfile = state.profile.player;
   !enemyCard && (enemyCard = enemyProfile);
-  !clientProfile && (playerCard = clientProfile);
+  !playerCard && (playerCard = clientProfile);
 
   if (cacheEnemyCard.borderColor === cachePlayerCard.borderColor) {
     //Defender(Health)-Attacker(Attack)<=0 destroy defender card
@@ -329,7 +329,7 @@ export const handSlice = createSlice({
     clickBoardCard: (
       state: InitialState,
       action: {
-        payload: { clickedCard: Card | any; actionMaker: "enemy" | "player" };
+        payload: { clickedCard: Card; actionMaker: "enemy" | "player" };
       }
     ) => {
       const actionMaker = action.payload.actionMaker;
