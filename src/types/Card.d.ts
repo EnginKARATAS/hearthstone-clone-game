@@ -38,6 +38,7 @@ export interface Card {
   cardHealth: number;
   cardPack: string;
  
+  cardPosition: { x: number; y: number; top: number; size: number; offset: number };
   deg: number;
   move: number;
   boardPairId: number | null;

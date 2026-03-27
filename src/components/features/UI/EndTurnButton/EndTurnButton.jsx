@@ -17,10 +17,20 @@ import {
   clickedProfile,
   makeLastCardsPlayable,
 } from "../../hand/handSlice";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { useState } from "react";
 import GameConstants from "../../../../constants/GameConstants";
 import { WINDOW_HEIGHT } from "../../../../constants/dimensions";
+import { isGameOver } from "../../game/gameSlice";
+
+const fisherYatesShuffle = (length) => {
+  const arr = Array.from(Array(length).keys());
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+};
 
 export default function EndTurnButton() {
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -78,10 +88,11 @@ export default function EndTurnButton() {
         await delay(GameConstants.controlDelayWithDebug(cardCache.length * 2000)).then(async () => {
           if (enemyHandCard.length >= 1)
             dispatch(playCardToBoard({ isEnemy: true }));
-          enemyDecide();
+          await enemyDecide();
           isEnemyLowOnCards(enemyCardBaseCount, playerCardBaseCount);
           await delay(GameConstants.controlDelayWithDebug(enemyBoardCard.length * 2000));
           dispatch(advanceScenarioMove());
+          dispatch(isGameOver());
           setTurnCount(turnCount + 1);
           dispatchActions([
             makeLastCardsPlayable("player"),
@@ -96,11 +107,9 @@ export default function EndTurnButton() {
       return () => clearTimeout(timer);
     }
   }, [isClientTurn, dispatch]);
-  const shuffleSequenceNoEnemy = Array.from(
-    Array(enemyBoardCard.length).keys()
-  ).sort(() => Math.random() - 0.5);
   const enemyDecide = async () => {
     if (playerBoardCard.length < 1) {
+      const shuffleSequenceNoEnemy = fisherYatesShuffle(enemyBoardCard.length);
       for (let i = 0; i < enemyBoardCard.length; i++) {
         await delay(200);
         dispatch(
@@ -117,12 +126,8 @@ export default function EndTurnButton() {
     }
 
     const pairCount = enemyBoardCard.length - cannotPairedCardCount;
-    const shuffleSequence = Array.from(Array(pairCount).keys()).sort(
-      () => Math.random() - 0.5
-    );
-    const shuffleSequenceEnemy = Array.from(
-      Array(enemyBoardCard.length).keys()
-    ).sort(() => Math.random() - 0.5);
+    const shuffleSequence = fisherYatesShuffle(pairCount);
+    const shuffleSequenceEnemy = fisherYatesShuffle(enemyBoardCard.length);
 
     for (let i = 0; i < enemyBoardCard.length; i++) {
       const enemyCard = enemyBoardCard[shuffleSequenceEnemy[i]];
