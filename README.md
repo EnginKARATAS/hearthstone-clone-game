@@ -144,7 +144,7 @@ Thanks to the people for their support and contributions.
 
 ## Card Process Stream
 
-![image](https://github.com/user-attachments/assets/64b745da-e3b6-401f-a399-346d52fbcb20)
+<img width="1580" height="780" alt="image" src="https://github.com/user-attachments/assets/dbe7ec1c-8411-4c47-b6e1-85091c417b70" />
 
 ## Card Pairing Algorithm
 
